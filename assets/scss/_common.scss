@@ -232,13 +232,13 @@ img {
 
 /* Background Image */
 .bg_image-hv2{
-    background-image: url("../images/bg/bk-home-v2.png");
+    background-image: url("https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/bg/bk-home-v2.png");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .bg_image-hv4{
-    background-image: url("../images/bg/bk-banner-home-4-v1.png");
+    background-image: url("https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/bg/bk-banner-home-4-v1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -255,7 +255,7 @@ img {
 
 @for $i from 1 through 20 {
     .bg_image--#{$i} {
-        background-image: url(../images/bg/bg_image--#{$i}.jpg);
+        background-image: url(https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/bg/bg_image--#{$i}.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -1066,7 +1066,7 @@ blockquote.blockquote {
     overflow: hidden;
     &::before {
         position: absolute;
-        content: url(../images/icons/quote-left.png);
+        content: url(https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/icons/quote-left.png);
         left: -5px;
         top: -10px;
         z-index: -1;
