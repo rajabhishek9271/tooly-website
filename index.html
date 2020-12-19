@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <!-- Modernizr JS -->
     <script src="assets/js/vendor/modernizr-3.10.0.min.js"></script>
+    <style type="text/css">
+        #menu_nax ul li ul li ul
+        {
+        
+           left: 100%;
+            
+        }
+    </style>
 </head>
 
 <body class="template-color-1">
@@ -50,17 +58,17 @@
 
                         <!--Menu start-->
                         <div class="col-xl-7 col-lg-7 col-12">
-                            <nav class="main-menu">
+                            <nav class="main-menu" id="menu_nax">
                                 <ul>
-                                    <li><a href="index.html">Home <small class="icon-arrow"></small></a>
-                                        <ul class="sub-menu">
+                                    <li><a href="index.html">Home <!--small class="icon-arrow"></small--></a>
+                                        <!--ul class="sub-menu">
                                             <li><a href="index.html">Home V1</a></li>
                                             <li><a href="index-2.html">Home V2</a></li>
                                             <li><a href="index-3.html">Home V3</a></li>
                                             <li><a href="index-4.html">Home V4</a></li>
-                                        </ul>
+                                        </ul-->
                                     </li>
-                                    <li><a href="job-listing.html"><span class="label-status hot">hot</span>Jobs <small class="icon-arrow"></small></a>
+                                    <li><a href="job-listing.html"><!--span class="label-status hot">hot</span-->Jobs <small class="icon-arrow"></small></a>
                                         <ul class="sub-menu">
                                             <li><a href="job-listing.html">Jobs Listing</a></li>
                                             <li><a href="job-with-map.html">Jobs With Map</a></li>
@@ -72,7 +80,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="candidates-listing.html"><span class="label-status new">new</span> Candidates <small class="icon-arrow"></small></a>
+
+                                    <!--li><a href="candidates-listing.html"><span class="label-status new">new</span> Candidates <small class="icon-arrow"></small></a>
                                         <ul class="sub-menu">
                                             <li><a href="candidates-listing.html">Candidates Listing</a></li>
                                             <li><a href="candidate-details.html">Candidate Detail <small class="icon-arrow"></small></a>
@@ -83,7 +92,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Employers <small class="icon-arrow"></small></a>
+                                    <!--li><a href="#">Employers <small class="icon-arrow"></small></a>
                                         <ul class="sub-menu">
                                             <li><a href="employer-listing.html">Employers Listing</a></li>
                                             <li><a href="employer-details.html">Employer Details <small class="icon-arrow"></small></a>
@@ -94,7 +103,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog <small class="icon-arrow"></small></a>
+                                    <!--li><a href="blog.html">Blog <small class="icon-arrow"></small></a>
                                         <ul class="sub-menu">
                                             <li><a href="blog-details.html">Single Post</a></li>
                                         </ul>
@@ -118,7 +127,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li-->
                                 </ul>
                             </nav>
                         </div>
@@ -128,14 +137,17 @@
                         <div class="col-xl-3 col-lg-3 col-12">
                             <div class="header-btn-action d-flex justify-content-end">
                                 <div class="btn-action-wrap d-flex">
-                                    <div class="jp-author item">
+                                    <!--div class="jp-author item">
                                         <a href="login-register.html">
                                             <i class="lnr lnr-user"></i>
                                             <span>Login</span>
                                         </a>
+                                    </div-->
+                                    <div class="jp-author-action item">
+                                        <a href="#quick-view-modal-container" data-toggle="modal"> <span>Employee Login</span> <span class="fw-400">Find a job</span></a>
                                     </div>
                                     <div class="jp-author-action item">
-                                        <a href="#quick-view-modal-container" data-toggle="modal"> <span>Employer</span> <span class="fw-400">Post a job</span></a>
+                                        <a href="#quick-view-modal-container" data-toggle="modal"> <span>Employer Login</span> <span class="fw-400">Post a job</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -1919,13 +1931,47 @@
                                 <h6 class="title">Useful Links</h6>
                                 <div class="footer-widget-link">
                                     <ul>
-                                        <li><a href="#">Press Corner</a></li>
+                                        <!--li><a href="#">Press Corner</a></li>
                                         <li><a href="#">Policy Privacy</a></li>
                                         <li><a href="#">Terms And Conditions</a></li>
                                         <li><a href="#">Partner</a></li>
                                         <li><a href="#">Help Center</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                    </ul>
+                                        <li><a href="#">Contact Us</a></li-->
+                                        <li><a href="about.html">About us</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="faq.html">FAQS</a></li>
+                                            <!--li><a href="pricing.html">Pricing & Plan</a></li>
+                                            <li><a href="login-register.html">Login & Register</a></li>
+                                            <li><a href="dashboard.html">Dashboard</a></li>
+                                        <li><a href="candidates-listing.html"><span class="label-status new">new</span> Candidates <small class="icon-arrow"></small></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="candidates-listing.html">Candidates Listing</a></li>
+                                            <li><a href="candidate-details.html">Candidate Detail <small class="icon-arrow"></small></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="candidate-details.html">Candidate Details V1</a></li>
+                                                    <li><a href="candidate-details-two.html">Candidate Details V2</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Employers <small class="icon-arrow"></small></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="employer-listing.html">Employers Listing</a></li>
+                                            <li><a href="employer-details.html">Employer Details <small class="icon-arrow"></small></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="employer-details.html">Employer Detail V1</a></li>
+                                                    <li><a href="employer-details-two.html">Employer Detail V2</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li-->
+                                    <li><a href="blog.html">Blog <small class="icon-arrow"></small></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog-details.html">Single Post</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
                                 </div>
                             </div>
                             <!-- Footer Widget End -->
