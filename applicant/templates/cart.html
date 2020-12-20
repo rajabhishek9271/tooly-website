@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-breadcrumb-content">
+                            <ul class="page-breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Cart</li>
+                            </ul>
+                            <h1>Cart</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Section Start -->
+
+        <!--Cart section start-->
+        <div class="cart-section section bg_color--5 pb-120 pb-lg-100 pb-md-80 pb-sm-60 pb-xs-50">
+            <div class="container faq-wrapper">
+                <div class="row">
+
+                    <div class="col-12">
+                        <!-- Cart Table -->
+                        <div class="cart-table table-responsive mb-30">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="pro-thumbnail">Image</th>
+                                        <th class="pro-title">Product</th>
+                                        <th class="pro-price">Price</th>
+                                        <th class="pro-quantity">Quantity</th>
+                                        <th class="pro-subtotal">Total</th>
+                                        <th class="pro-remove">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product-small/product1.jpg" alt="Product"></a></td>
+                                        <td class="pro-title"><a href="#">Flying Ninja</a></td>
+                                        <td class="pro-price"><span>$25.00</span></td>
+                                        <td class="pro-quantity">
+                                            <div class="pro-qty"><input type="number" value="1"></div>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$25.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="lnr lnr-trash"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product-small/product2.jpg" alt="Product"></a></td>
+                                        <td class="pro-title"><a href="#">Happy Ninja</a></td>
+                                        <td class="pro-price"><span>$25.00</span></td>
+                                        <td class="pro-quantity">
+                                            <div class="pro-qty"><input type="number" value="1"></div>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$25.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="lnr lnr-trash"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product-small/product3.jpg" alt="Product"></a></td>
+                                        <td class="pro-title"><a href="#">Ship Your Idea</a></td>
+                                        <td class="pro-price"><span>$25.00</span></td>
+                                        <td class="pro-quantity">
+                                            <div class="pro-qty"><input type="number" value="1"></div>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$25.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="lnr lnr-trash"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-12 mb-5">
+                                <!-- Calculate Shipping -->
+                                <div class="calculate-shipping">
+                                    <h4>Calculate Shipping</h4>
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <select class="nice-select">
+                                                    <option>Bangladesh</option>
+                                                    <option>China</option>
+                                                    <option>country</option>
+                                                    <option>India</option>
+                                                    <option>Japan</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <select class="nice-select">
+                                                    <option>Dhaka</option>
+                                                    <option>Barisal</option>
+                                                    <option>Khulna</option>
+                                                    <option>Comilla</option>
+                                                    <option>Chittagong</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <input type="text" placeholder="Postcode / Zip">
+                                            </div>
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <button class="ht-btn black-btn">Estimate</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Discount Coupon -->
+                                <div class="discount-coupon">
+                                    <h4>Discount Coupon Code</h4>
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <input type="text" placeholder="Coupon Code">
+                                            </div>
+                                            <div class="col-md-6 col-12 mb-25">
+                                                <button class="ht-btn black-btn">Apply Code</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Cart Summary -->
+                            <div class="col-lg-6 col-12 mb-30 d-flex">
+                                <div class="cart-summary">
+                                    <div class="cart-summary-wrap">
+                                        <h4>Cart Summary</h4>
+                                        <p>Sub Total <span>$75.00</span></p>
+                                        <p>Shipping Cost <span>$00.00</span></p>
+                                        <h2>Grand Total <span>$75.00</span></h2>
+                                    </div>
+                                    <div class="cart-summary-button">
+                                        <button class="ht-btn black-btn">Checkout</button>
+                                        <button class="ht-btn black-btn">Update Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Cart section end-->
+
+
+
+        <!-- Modal Area Strat -->
+        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4">
+                                    <div class="login-register-form-area">
+                                        <div class="login-tab-menu">
+                                            <ul class="nav">
+                                                <li><a class="active show" data-toggle="tab" href="#login">Login</a></li>
+                                                <li><a data-toggle="tab" href="#register">Register</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="login" class="tab-pane fade show active">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Login to Jotopa with your registered account</p>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Username or Email" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-remember" id="login-form-remember">
+                                                                    <label for="login-form-remember">Remember me</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Login</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="register" class="tab-pane fade">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Create Your account</p>
+                                                        <div class="row row-5">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Your Username" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="email" placeholder="Your Email Address" name="emain">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Confirm Password" name="conPassword">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-candidate" id="login-form-candidate">
+                                                                    <label for="login-form-candidate">I am a candidate</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-employer" id="login-form-employer">
+                                                                    <label for="login-form-employer">I am a employer</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="register-account">
+                                                                    <input id="register-terms-conditions" type="checkbox" class="checkbox" checked="" required="">
+                                                                    <label for="register-terms-conditions">I read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Register</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-instruction">
+                                        <div class="login-instruction-content">
+                                            <h3 class="title">Why Login To Us</h3>
+                                            <p>It’s important for you to have an account and login in order to have full access at Jotopa. We need to know your account details in order to allow work together</p>
+                                            <ul class="list-reasons">
+                                                <li class="reason">Be alerted to the latest jobs</li>
+                                                <li class="reason">Apply for jobs with a single click</li>
+                                                <li class="reason">Showcase your CV to thousands of employers</li>
+                                                <li class="reason">Keep a record of all your applications</li>
+                                            </ul>
+                                            <span class="sale-text theme-color border-color">Login today &amp; Get 15% Off Coupon for the first planning purchase</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Area End -->
+
+{% endblock %}

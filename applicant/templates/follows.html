@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Dashboard Content Section Start -->
+        <div class="dashboard-content-section section bg_color--5">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="dashboard-sidebar">
+                            <div class="dashboard-menu">
+                                <ul class="nav">
+                                    <li>
+                                        <h3>Main</h3>
+                                        <ul>
+                                            <li><a href="dashboard.html"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
+                                            <li><a href="message.html"><i class="lnr lnr-bubble"></i> Messages </a></li>
+                                            <li><a href="job-alerts.html"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
+                                            <li><a href="reviews.html"><i class="lnr lnr-star"></i> Reviews </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Jobs</h3>
+                                        <ul>
+                                            <li><a href="applications.html"><i class="lnr lnr-briefcase"></i> Applications </a></li>
+                                            <li><a href="bookmarks.html"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
+                                            <li><a class="active" href="follows.html"><i class="lnr lnr-pointer-right"></i> Follows </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Account</h3>
+                                        <ul>
+                                            <li><a href="profile.html"><i class="lnr lnr-user"></i> Profile </a></li>
+                                            <li><a href="orders.html"><i class="lnr lnr-cart"></i> Orders </a></li>
+                                            <li><a href="login-register.html"><i class="lnr lnr-exit-up"></i> Logout </a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-9">
+
+                        <div class="dashboard-main-inner">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-breadcrumb-content mb-40">
+                                        <h1>Follows</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard-overview">
+                                <div class="row">
+                                    <div class="col-xl-12 col-12">
+                                        <div class="job-applications mb-50">
+                                            <div class="applications-heading d-flex">
+                                                <div class="message-fields-form p-0 border-0">
+                                                    <form action="#">
+                                                        <div class="message-form review-from mt-0">
+                                                            <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                                                            <input type="text" placeholder="Search in messages">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="job-applications-main-block">
+                                                <div class="job-applications-table">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="width-35">Company</th>
+                                                                <th>Location</th>
+                                                                <th>Categories</th>
+                                                                <th class="width-15">Opening Jobs</th>
+                                                                <th class="width-15">Contact</th>
+                                                                <th class="text-right">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="job-application-item">
+                                                                <td class="application-job">
+                                                                    <h3><a href="#">BowThemes</a></h3>
+                                                                    <div class="follow-meta">
+                                                                        <p class="employer-rate">
+                                                                            <span class="value-rate">3.9 </span>
+                                                                            <span class="total-rate">3 Ratings </span>
+                                                                        </p>
+                                                                        <p class="totals-follow">
+                                                                            <span>5 followers </span></p>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td class="application-location">
+                                                                    <span> Hamburg, Hamburg </span>
+                                                                </td>
+
+                                                                <td class="application-categories">
+                                                                    <span> Digital Marketing </span>
+                                                                </td>
+
+                                                                <td class="open-job">
+                                                                    <a href="#"> 2 Open Jobs</a>
+                                                                </td>
+
+                                                                <td class="application-contact">
+                                                                    <a href="#"><i class="lnr lnr-envelope"></i><span>Send Message</span></a>
+                                                                </td>
+
+                                                                <td class="delete-application text-right">
+                                                                    <a href="#"><i class="lnr lnr-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr class="job-application-item">
+                                                                <td class="application-job">
+                                                                    <h3><a href="#">InwaveThemes</a></h3>
+                                                                    <div class="follow-meta">
+                                                                        <p class="employer-rate">
+                                                                            <span class="value-rate">4.5 </span>
+                                                                            <span class="total-rate">2 Ratings </span>
+                                                                        </p>
+                                                                        <p class="totals-follow">
+                                                                            <span>3 followers </span></p>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td class="application-location">
+                                                                    <span> Hanoi, Hà Nội </span>
+                                                                </td>
+
+                                                                <td class="application-categories">
+                                                                    <span> Teachers </span>
+                                                                </td>
+
+                                                                <td class="open-job">
+                                                                    <a href="#"> 3 Open Jobs</a>
+                                                                </td>
+
+                                                                <td class="application-contact">
+                                                                    <a href="#"><i class="lnr lnr-envelope"></i><span>Send Message</span></a>
+                                                                </td>
+
+                                                                <td class="delete-application text-right">
+                                                                    <a href="#"><i class="lnr lnr-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr class="job-application-item">
+                                                                <td class="application-job">
+                                                                    <h3><a href="#">Digital Vine</a></h3>
+                                                                    <div class="follow-meta">
+                                                                        <p class="employer-rate">
+                                                                            <span class="value-rate">4.0 </span>
+                                                                            <span class="total-rate">1 Ratings </span>
+                                                                        </p>
+                                                                        <p class="totals-follow">
+                                                                            <span>2 followers </span></p>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td class="application-location">
+                                                                    <span> Seville, Andalusia </span>
+                                                                </td>
+
+                                                                <td class="application-categories">
+                                                                    <span> Teachers </span>
+                                                                </td>
+
+                                                                <td class="open-job">
+                                                                    <a href="#"> 2 Open Jobs</a>
+                                                                </td>
+
+                                                                <td class="application-contact">
+                                                                    <a href="#"><i class="lnr lnr-envelope"></i><span>Send Message</span></a>
+                                                                </td>
+
+                                                                <td class="delete-application text-right">
+                                                                    <a href="#"><i class="lnr lnr-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="application-pagination mb-30">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul class="page-pagination justify-content-center">
+                                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard Content Section End -->
+{% endblock %}

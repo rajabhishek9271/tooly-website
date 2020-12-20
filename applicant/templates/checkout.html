@@ -1,0 +1,420 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-breadcrumb-content">
+                            <ul class="page-breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Checkout</li>
+                            </ul>
+                            <h1>Checkout</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Section Start -->
+
+        <!--Checkout section start-->
+        <div class="checkout-section section bg_color--5 pb-120 pb-lg-100 pb-md-80 pb-sm-60 pb-xs-50">
+            <div class="container faq-wrapper">
+                <div class="row">
+                    <div class="col-12">
+
+                        <!-- Checkout Form Start-->
+                        <form action="#" class="checkout-form">
+                            <div class="row row-40">
+
+                                <div class="col-lg-7">
+
+                                    <!-- Billing Address -->
+                                    <div id="billing-form" class="mb-10">
+                                        <h4 class="checkout-title">Billing Address</h4>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>First Name*</label>
+                                                <input type="text" placeholder="First Name">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Last Name*</label>
+                                                <input type="text" placeholder="Last Name">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Email Address*</label>
+                                                <input type="email" placeholder="Email Address">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Phone no*</label>
+                                                <input type="text" placeholder="Phone number">
+                                            </div>
+
+                                            <div class="col-12 mb-20">
+                                                <label>Company Name</label>
+                                                <input type="text" placeholder="Company Name">
+                                            </div>
+
+                                            <div class="col-12 mb-20">
+                                                <label>Address*</label>
+                                                <input type="text" placeholder="Address line 1">
+                                                <input type="text" placeholder="Address line 2">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Country*</label>
+                                                <select class="nice-select">
+                                                    <option>Bangladesh</option>
+                                                    <option>China</option>
+                                                    <option>country</option>
+                                                    <option>India</option>
+                                                    <option>Japan</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Town/City*</label>
+                                                <input type="text" placeholder="Town/City">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>State*</label>
+                                                <input type="text" placeholder="State">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Zip Code*</label>
+                                                <input type="text" placeholder="Zip Code">
+                                            </div>
+
+                                            <div class="col-12 mb-20">
+                                                <div class="check-box">
+                                                    <input type="checkbox" id="create_account">
+                                                    <label for="create_account">Create an Acount?</label>
+                                                </div>
+                                                <div class="check-box">
+                                                    <input type="checkbox" id="shiping_address" data-shipping>
+                                                    <label for="shiping_address">Ship to Different Address</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Shipping Address -->
+                                    <div id="shipping-form">
+                                        <h4 class="checkout-title">Shipping Address</h4>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>First Name*</label>
+                                                <input type="text" placeholder="First Name">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Last Name*</label>
+                                                <input type="text" placeholder="Last Name">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Email Address*</label>
+                                                <input type="email" placeholder="Email Address">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Phone no*</label>
+                                                <input type="text" placeholder="Phone number">
+                                            </div>
+
+                                            <div class="col-12 mb-20">
+                                                <label>Company Name</label>
+                                                <input type="text" placeholder="Company Name">
+                                            </div>
+
+                                            <div class="col-12 mb-20">
+                                                <label>Address*</label>
+                                                <input type="text" placeholder="Address line 1">
+                                                <input type="text" placeholder="Address line 2">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Country*</label>
+                                                <select class="nice-select">
+                                                    <option>Bangladesh</option>
+                                                    <option>China</option>
+                                                    <option>country</option>
+                                                    <option>India</option>
+                                                    <option>Japan</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Town/City*</label>
+                                                <input type="text" placeholder="Town/City">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>State*</label>
+                                                <input type="text" placeholder="State">
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb-20">
+                                                <label>Zip Code*</label>
+                                                <input type="text" placeholder="Zip Code">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <div class="row">
+
+                                        <!-- Cart Total -->
+                                        <div class="col-12 mb-60">
+
+                                            <h4 class="checkout-title">Cart Total</h4>
+
+                                            <div class="checkout-cart-total">
+
+                                                <h4>Product <span>Total</span></h4>
+
+                                                <ul>
+                                                    <li>Teritory Quentily X 01 <span>$35.00</span></li>
+                                                    <li>Adurite Silocone X 02 <span>$59.00</span></li>
+                                                    <li>Baizidale Momone X 01 <span>$78.00</span></li>
+                                                    <li>Makorone Cicile X 01 <span>$65.00</span></li>
+                                                </ul>
+
+                                                <p>Sub Total <span>$296.00</span></p>
+                                                <p>Shipping Fee <span>$00.00</span></p>
+
+                                                <h4>Grand Total <span>$296.00</span></h4>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Payment Method -->
+                                        <div class="col-12 mb-30">
+
+                                            <h4 class="checkout-title">Payment Method</h4>
+
+                                            <div class="checkout-payment-method">
+
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_check" name="payment-method" value="check">
+                                                    <label for="payment_check">Check Payment</label>
+                                                    <p data-method="check">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                </div>
+
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_bank" name="payment-method" value="bank">
+                                                    <label for="payment_bank">Direct Bank Transfer</label>
+                                                    <p data-method="bank">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                </div>
+
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_cash" name="payment-method" value="cash">
+                                                    <label for="payment_cash">Cash on Delivery</label>
+                                                    <p data-method="cash">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                </div>
+
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_paypal" name="payment-method" value="paypal">
+                                                    <label for="payment_paypal">Paypal</label>
+                                                    <p data-method="paypal">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                </div>
+
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_payoneer" name="payment-method" value="payoneer">
+                                                    <label for="payment_payoneer">Payoneer</label>
+                                                    <p data-method="payoneer">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                </div>
+
+                                                <div class="single-method">
+                                                    <input type="checkbox" id="accept_terms">
+                                                    <label for="accept_terms">I’ve read and accept the terms & conditions</label>
+                                                </div>
+
+                                            </div>
+
+                                            <button class="ht-btn black-btn mt-40">Place order</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Checkout section end-->
+
+
+
+        <!-- Modal Area Strat -->
+        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4">
+                                    <div class="login-register-form-area">
+                                        <div class="login-tab-menu">
+                                            <ul class="nav">
+                                                <li><a class="active show" data-toggle="tab" href="#login">Login</a></li>
+                                                <li><a data-toggle="tab" href="#register">Register</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="login" class="tab-pane fade show active">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Login to Jotopa with your registered account</p>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Username or Email" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-remember" id="login-form-remember">
+                                                                    <label for="login-form-remember">Remember me</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Login</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="register" class="tab-pane fade">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Create Your account</p>
+                                                        <div class="row row-5">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Your Username" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="email" placeholder="Your Email Address" name="emain">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Confirm Password" name="conPassword">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-candidate" id="login-form-candidate">
+                                                                    <label for="login-form-candidate">I am a candidate</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-employer" id="login-form-employer">
+                                                                    <label for="login-form-employer">I am a employer</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="register-account">
+                                                                    <input id="register-terms-conditions" type="checkbox" class="checkbox" checked="" required="">
+                                                                    <label for="register-terms-conditions">I read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Register</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-instruction">
+                                        <div class="login-instruction-content">
+                                            <h3 class="title">Why Login To Us</h3>
+                                            <p>It’s important for you to have an account and login in order to have full access at Jotopa. We need to know your account details in order to allow work together</p>
+                                            <ul class="list-reasons">
+                                                <li class="reason">Be alerted to the latest jobs</li>
+                                                <li class="reason">Apply for jobs with a single click</li>
+                                                <li class="reason">Showcase your CV to thousands of employers</li>
+                                                <li class="reason">Keep a record of all your applications</li>
+                                            </ul>
+                                            <span class="sale-text theme-color border-color">Login today &amp; Get 15% Off Coupon for the first planning purchase</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Area End -->
+
+{% endblock %}

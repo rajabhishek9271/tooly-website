@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Dashboard Content Section Start -->
+        <div class="dashboard-content-section section bg_color--5">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="dashboard-sidebar">
+                            <div class="dashboard-menu">
+                                <ul class="nav">
+                                    <li>
+                                        <h3>Main</h3>
+                                        <ul>
+                                            <li><a href="dashboard.html"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
+                                            <li><a class="active" href="message.html"><i class="lnr lnr-bubble"></i> Messages </a></li>
+                                            <li><a href="job-alerts.html"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
+                                            <li><a href="reviews.html"><i class="lnr lnr-star"></i> Reviews </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Jobs</h3>
+                                        <ul>
+                                            <li><a href="applications.html"><i class="lnr lnr-briefcase"></i> Applications </a></li>
+                                            <li><a href="bookmarks.html"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
+                                            <li><a href="follows.html"><i class="lnr lnr-pointer-right"></i> Follows </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Account</h3>
+                                        <ul>
+                                            <li><a href="profile.html"><i class="lnr lnr-user"></i> Profile </a></li>
+                                            <li><a href="orders.html"><i class="lnr lnr-cart"></i> Orders </a></li>
+                                            <li><a href="login-register.html"><i class="lnr lnr-exit-up"></i> Logout </a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-9">
+
+                        <div class="dashboard-main-inner">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-breadcrumb-content mb-40">
+                                        <h1>Messages</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="messages-overview">
+                                <div class="row no-gutters">
+                                    <div class="col-xl-3 col-lg-4">
+                                        <div class="messages-heading">
+                                            <div class="message-fields-form">
+                                                <form action="#">
+                                                    <div class="message-select">
+                                                        <select class="nice-select wide">
+                                                            <option value="unread">Unread</option>
+                                                            <option value="recent-chat">Recent Chat</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="message-form">
+                                                        <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
+                                                        <input type="text" placeholder="Search in messages">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8">
+                                        <div class="message-box-wrap mb-sm-80 mb-xs-80">
+                                            <div class="message-box-content"></div>
+                                            <div class="message-reply">
+                                                <textarea cols="40" rows="4" placeholder="Type your message..."></textarea>
+                                                <div class="btn-actions">
+                                                    <button class="ht-btn theme-btn theme-btn-two">Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard Content Section End -->
+
+{% endblock %}

@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-breadcrumb-content">
+                            <ul class="page-breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Contact Us</li>
+                            </ul>
+                            <h1>Contact Us</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Section Start -->
+
+        <!-- Contact Section Start -->
+        <div class="contact-section section bg_color--5 pb-120 pb-lg-100 pb-md-80 pb-sm-60 pb-xs-50">
+            <div class="container contact-wrapper">
+                <div class="row row-30">
+
+                    <div class="col-lg-4">
+                        <!-- Map Area Start -->
+                        <div class="contact-info mb-30">
+                            <h2 class="title">Location</h2>
+                            <div class="contact-map-area">
+                                <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                        <!-- Map Area End -->
+                    </div>
+
+                    <div class="col-lg-4">
+                        <!-- Contact info Start -->
+                        <div class="contact-info mb-30">
+                            <h2 class="title">Contact info</h2>
+                            <div class="contact-information">
+                                <div class="info">
+                                    <span class="title">Email:</span>
+                                    <span class="text">jetpato@gmail.com</span>
+                                </div>
+                                <div class="info">
+                                    <span class="title">Phone:</span>
+                                    <span class="text phone">(+1) 000 987-1234</span>
+                                </div>
+                                <div class="info">
+                                    <span class="title">Address:</span>
+                                    <span class="text">142 West newton, New York 19088 United States</span>
+                                </div>
+                                <div class="info">
+                                    <span class="title">Follow us:</span>
+                                    <ul class="social-icon">
+                                        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                        <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact info End -->
+                    </div>
+
+                    <div class="col-lg-4">
+                        <!-- Contact info Start -->
+                        <div class="contact-info mb-30">
+                            <h2 class="title">Contact form</h2>
+                            <div class="contact-form">
+                                <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+                                    <p>Please send us a message by filling out the form below and we will get back with you</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <input type="text" placeholder="Your Name *" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <input type="email" placeholder="Email *" name="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <textarea name="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-40">
+                                            <button class="ht-btn">Send</button>
+                                            <p class="form-messege"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Contact info End -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section End -->
+
+
+        <!-- Modal Area Strat -->
+        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4">
+                                    <div class="login-register-form-area">
+                                        <div class="login-tab-menu">
+                                            <ul class="nav">
+                                                <li><a class="active show" data-toggle="tab" href="#login">Login</a></li>
+                                                <li><a data-toggle="tab" href="#register">Register</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="login" class="tab-pane fade show active">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Login to Jotopa with your registered account</p>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Username or Email" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-remember" id="login-form-remember">
+                                                                    <label for="login-form-remember">Remember me</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Login</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="register" class="tab-pane fade">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Create Your account</p>
+                                                        <div class="row row-5">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Your Username" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="email" placeholder="Your Email Address" name="emain">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Confirm Password" name="conPassword">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-candidate" id="login-form-candidate">
+                                                                    <label for="login-form-candidate">I am a candidate</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-employer" id="login-form-employer">
+                                                                    <label for="login-form-employer">I am a employer</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="register-account">
+                                                                    <input id="register-terms-conditions" type="checkbox" class="checkbox" checked="" required="">
+                                                                    <label for="register-terms-conditions">I read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Register</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-instruction">
+                                        <div class="login-instruction-content">
+                                            <h3 class="title">Why Login To Us</h3>
+                                            <p>It’s important for you to have an account and login in order to have full access at Jotopa. We need to know your account details in order to allow work together</p>
+                                            <ul class="list-reasons">
+                                                <li class="reason">Be alerted to the latest jobs</li>
+                                                <li class="reason">Apply for jobs with a single click</li>
+                                                <li class="reason">Showcase your CV to thousands of employers</li>
+                                                <li class="reason">Keep a record of all your applications</li>
+                                            </ul>
+                                            <span class="sale-text theme-color border-color">Login today &amp; Get 15% Off Coupon for the first planning purchase</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Area End -->
+
+{% endblock %}

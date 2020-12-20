@@ -1,0 +1,548 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-breadcrumb-content">
+                            <ul class="page-breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Shop</li>
+                            </ul>
+                            <h1>Shop</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Section Start -->
+
+        <!-- Shop Section Start -->
+        <div class="shop-section section bg_color--5 pb-120 pb-lg-100 pb-md-80 pb-sm-60 pb-xs-50">
+            <div class="container faq-wrapper">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 order-lg-1 order-2">
+                        <div class="sidebar-wrapper-shop mt-sm-40 mt-xs-30">
+                            <div class="common-sidebar-widget sidebar-four">
+                                <h2 class="sidebar-title">Product categories</h2>
+                                <div class="sidebar-list">
+                                    <ul>
+                                        <li><a href="#">Clothing (13)</a></li>
+                                        <li><a href="#">Hoodies (6)</a></li>
+                                        <li><a href="#">T-shirts (7)</a></li>
+                                        <li><a href="#">Music (7)</a></li>
+                                        <li><a href="#">Albums (4)</a></li>
+                                        <li><a href="#">Singles (3)</a></li>
+                                        <li><a href="#">Posters (5)</a></li>
+                                        <li><a href="#">Uncategorized (1)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="common-sidebar-widget sidebar-four">
+                                <h2 class="sidebar-title">Filter by price</h2>
+                                <div class="sidebar-salary">
+                                    <div id="salary-range" class="mb-20"></div>
+                                    <div class="salary-range-group">
+                                        <label for="salary-amount-txt">Price</label>
+                                        <input type="text" id="salary-amount-txt" class="salary-amount" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-sidebar-widget sidebar-four">
+                                <h2 class="sidebar-title">Filter by color</h2>
+                                <div class="sidebar-list">
+                                    <ul>
+                                        <li><a href="#">Black (4)</a></li>
+                                        <li><a href="#">Blue (3)</a></li>
+                                        <li><a href="#">Green (3)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="common-sidebar-widget sidebar-four">
+                                <h2 class="sidebar-title">Filter by size</h2>
+                                <div class="sidebar-list">
+                                    <ul>
+                                        <li><a href="#">Large (2)</a></li>
+                                        <li><a href="#">Medium (4)</a></li>
+                                        <li><a href="#">Small (4)</a></li>
+                                        <li><a href="#">X Large (2)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-12 order-lg-2 order-1">
+                        <div class="row">
+
+                            <div class="col-lg-12">
+                                <div class="archive-shop-actions mb-30">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="archive-shop-inner text-center text-sm-left">
+                                                <p>Showing 1–8 of 10 results</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="archive-shop-inner text-center text-sm-right">
+                                                <select class="nice-select">
+                                                    <option value="1">Title</option>
+                                                    <option value="2">Date</option>
+                                                    <option value="3">Salary</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop-product">
+                                    <div class="row">
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product1.jpg" alt="">
+                                                        <span class="onsale">Sale!</span>
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Flying Ninja</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$100.00</span><span class="new">$80.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product2.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Happy Ninja</a></h4>
+                                                    <h4 class="price"><span class="old">$90.00</span><span class="new">$70.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product3.jpg" alt="">
+                                                        <span class="onsale">Sale!</span>
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Happy Ninja</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="new">$80.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product4.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Ninja Silhouette</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="new">$20.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product5.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Ninja Silhouette</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="new">$30.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product6.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Patient Ninja</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$50.00</span><span class="new">$35.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product7.jpg" alt="">
+                                                        <span class="onsale">Sale!</span>
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Premium Quality</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$15.00</span><span class="new">$12.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product8.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Premium Quality</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="new">$20.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product9.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Ship Your Idea</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$100.00</span><span class="new">$80.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product10.jpg" alt="">
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Ship Your Idea</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="new">$20.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product7.jpg" alt="">
+                                                        <span class="onsale">Sale!</span>
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Ship Your Idea</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$30.00</span><span class="new">$35.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                        <!-- Start Single Product -->
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="single-product mb-30">
+                                                <div class="product-image">
+                                                    <a href="product-details.html">
+                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/product/product10.jpg" alt="">
+                                                        <span class="onsale">Sale!</span>
+                                                    </a>
+                                                    <a href="cart.html" class="add-to-cart">Add to Cart</a>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4 class="title"><a href="product-details.html">Test Product</a></h4>
+                                                    <span class="ratting">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                                    <h4 class="price"><span class="old">$100.00</span><span class="new">$80.00</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Product -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <ul class="page-pagination">
+                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Shop Section End -->
+
+
+        <!-- Modal Area Strat -->
+        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="row no-gutters">
+
+                                <div class="col-lg-4">
+                                    <div class="login-register-form-area">
+                                        <div class="login-tab-menu">
+                                            <ul class="nav">
+                                                <li><a class="active show" data-toggle="tab" href="#login">Login</a></li>
+                                                <li><a data-toggle="tab" href="#register">Register</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="login" class="tab-pane fade show active">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Login to Jotopa with your registered account</p>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Username or Email" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-remember" id="login-form-remember">
+                                                                    <label for="login-form-remember">Remember me</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Login</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="register" class="tab-pane fade">
+                                                <div class="login-register-form">
+                                                    <form action="#" method="post">
+                                                        <p>Create Your account</p>
+                                                        <div class="row row-5">
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="text" placeholder="Your Username" name="name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="single-input">
+                                                                    <input type="email" placeholder="Your Email Address" name="emain">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Password" name="password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="single-input">
+                                                                    <input type="password" placeholder="Confirm Password" name="conPassword">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-candidate" id="login-form-candidate">
+                                                                    <label for="login-form-candidate">I am a candidate</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="checkbox-input">
+                                                                    <input type="checkbox" name="login-form-employer" id="login-form-employer">
+                                                                    <label for="login-form-employer">I am a employer</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="register-account">
+                                                                    <input id="register-terms-conditions" type="checkbox" class="checkbox" checked="" required="">
+                                                                    <label for="register-terms-conditions">I read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-25"><button class="ht-btn">Register</button></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="divider">
+                                                        <span class="line"></span>
+                                                        <span class="circle">or login with</span>
+                                                    </div>
+                                                    <div class="social-login">
+                                                        <ul class="social-icon">
+                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-instruction">
+                                        <div class="login-instruction-content">
+                                            <h3 class="title">Why Login To Us</h3>
+                                            <p>It’s important for you to have an account and login in order to have full access at Jotopa. We need to know your account details in order to allow work together</p>
+                                            <ul class="list-reasons">
+                                                <li class="reason">Be alerted to the latest jobs</li>
+                                                <li class="reason">Apply for jobs with a single click</li>
+                                                <li class="reason">Showcase your CV to thousands of employers</li>
+                                                <li class="reason">Keep a record of all your applications</li>
+                                            </ul>
+                                            <span class="sale-text theme-color border-color">Login today &amp; Get 15% Off Coupon for the first planning purchase</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Area End -->
+
+{% endblock %}

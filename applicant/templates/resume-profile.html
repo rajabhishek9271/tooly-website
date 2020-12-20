@@ -1,0 +1,539 @@
+{% extends 'base.html' %}
+{% load static %}
+{% body body_block %}
+
+        <!-- Dashboard Content Section Start -->
+        <div class="dashboard-content-section section bg_color--5">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="dashboard-sidebar">
+                            <div class="dashboard-menu">
+                                <ul class="nav">
+                                    <li>
+                                        <h3>Main</h3>
+                                        <ul>
+                                            <li><a href="dashboard.html"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
+                                            <li><a href="message.html"><i class="lnr lnr-bubble"></i> Messages </a></li>
+                                            <li><a href="job-alerts.html"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
+                                            <li><a href="reviews.html"><i class="lnr lnr-star"></i> Reviews </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Jobs</h3>
+                                        <ul>
+                                            <li><a href="applications.html"><i class="lnr lnr-briefcase"></i> Applications </a></li>
+                                            <li><a href="bookmarks.html"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
+                                            <li><a href="follows.html"><i class="lnr lnr-pointer-right"></i> Follows </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Account</h3>
+                                        <ul>
+                                            <li><a class="active" href="profile.html"><i class="lnr lnr-user"></i> Profile </a></li>
+                                            <li><a href="orders.html"><i class="lnr lnr-cart"></i> Orders </a></li>
+                                            <li><a href="login-register.html"><i class="lnr lnr-exit-up"></i> Logout </a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-9">
+
+                        <div class="dashboard-main-inner">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-breadcrumb-content mb-40">
+                                        <h1>Resume profile</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        This profile is under admin review
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-overview">
+                                <div class="row">
+                                    <div class="col-xl-12 col-12">
+                                        <div class="profile-applications mb-50">
+                                            <div class="profile-applications-heading">
+                                                <ul class="nav">
+                                                    <li><a href="profile.html">My profile</a></li>
+                                                    <li><a class="active" href="resume-profile.html">Resume profile</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="profile-applications-main-block pt-0">
+                                                <div class="profile-applications-form">
+                                                    <form action="#">
+                                                        <div class="row mb-30">
+                                                            <div class="col-12">
+                                                                <div class="cover-image">
+                                                                    <div class="image-preview bg_image--1">
+                                                                        <div class="image-holder">
+                                                                            <input type="file" name="myFile" id="customfile" class="sr-only">
+                                                                            <label for="customfile"><i class="lnr lnr-cloud-upload"></i></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="profile-avatar-upload">
+                                                                    <input type="file" name="myFile" id="customfiletwo" class="sr-only">
+                                                                    <label for="customfiletwo">+</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-9">
+                                                                <div class="row">
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="title">Title <span>*</span></label>
+                                                                            <input type="text" id="title" name="title" placeholder="Enter Title" value="temp-header">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="position">Position <span>*</span></label>
+                                                                            <input type="text" id="position" name="last-name" placeholder="Enter Position" value="Web Developer">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="rate">Hour Rate: USD </label>
+                                                                            <input type="number" id="rate" name="rate" placeholder="Enter your Hour Rate" value="600">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="phone">Phone</label>
+                                                                            <input type="text" id="phone" name="phone" placeholder="Enter your Phone Number" value="+880044123123">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="date">Date of Birth</label>
+                                                                            <input type="date" id="date" name="date" placeholder="Enter your Date of Birth">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="gender">Gender</label>
+                                                                            <select class="nice-select wide" name="gender" id="gender">
+                                                                                <option value="male">Male</option>
+                                                                                <option value="female">Female</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="marital">Marital status</label>
+                                                                            <select class="nice-select wide" name="marital" id="marital">
+                                                                                <option value="alone">Alone</option>
+                                                                                <option value="marred">Marred</option>
+                                                                                <option value="divorce">Divorce</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="language">Language</label>
+                                                                            <select class="nice-select wide" name="language" id="language">
+                                                                                <option value="eng">English</option>
+                                                                                <option value="bangla">Bangla</option>
+                                                                                <option value="arabic">Arabic</option>
+                                                                                <option value="french">French</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="address">Address</label>
+                                                                            <input type="text" id="address" name="address" placeholder="Enter your Address" value="">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-12">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="bio-profile">BIO Profile</label>
+                                                                            <textarea name="bio-profile" id="bio-profile" rows="2"></textarea>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="facebook">Facebook</label>
+                                                                            <input type="text" id="facebook" name="facebook" placeholder="" value="">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="twitter">Twitter</label>
+                                                                            <input type="text" id="twitter" name="twitter" placeholder="" value="#">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="linkedin">Linkedin</label>
+                                                                            <input type="text" id="linkedin" name="linkedin" placeholder="" value="#">
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Working Experience</h3>
+                                                                </div>
+                                                                <div class="row">
+
+                                                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="category">Category</label>
+                                                                            <select class="nice-select wide" name="category" id="category">
+                                                                                <option value="broadcasting">Broadcasting</option>
+                                                                                <option value="cccounting">Accounting</option>
+                                                                                <option value="customerService">Customer Service</option>
+                                                                                <option value="digitalMarketing">Digital Marketing</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="type">Type</label>
+                                                                            <select class="nice-select wide" name="type" id="type">
+                                                                                <option value="freelancer">Freelancer</option>
+                                                                                <option value="fullTime">Full Time</option>
+                                                                                <option value="internship">Internship</option>
+                                                                                <option value="partTime">Part Time</option>
+                                                                                <option value="remote">Remote</option>
+                                                                                <option value="temporary">Temporary</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="level">Level</label>
+                                                                            <select class="nice-select wide" name="level" id="level">
+                                                                                <option value="junior">Junior</option>
+                                                                                <option value="manager">Manager</option>
+                                                                                <option value="professional">Professional</option>
+                                                                                <option value="senior">Senior</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="single-input mb-25">
+                                                                            <label for="experience">Experience</label>
+                                                                            <select class="nice-select wide" name="experience" id="experience">
+                                                                                <option value="five">&gt; 5 years</option>
+                                                                                <option value="one"> &lt; 5 years</option>
+                                                                                <option value="oneToThree">1-3 years</option>
+                                                                                <option value="threeToFive">3-5 years</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Education</h3>
+                                                                </div>
+                                                                <div class="custom-form-box">
+                                                                    <div class="row">
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="title">Title</label>
+                                                                                <input type="text" id="title" name="title">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="school">School</label>
+                                                                                <input type="text" id="school" name="school">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="date-in-out">Date in-out</label>
+                                                                                <input type="text" id="date-in-out" name="date-in-out">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-12">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="descriptionOne">Description</label>
+                                                                                <textarea name="descriptionOne" id="descriptionOne" rows="2"></textarea>
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="add-more">
+                                                                    <a href="#" class="">+ Add More Education</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Experience</h3>
+                                                                </div>
+                                                                <div class="custom-form-box">
+                                                                    <div class="row">
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="title">Title</label>
+                                                                                <input type="text" id="title" name="title">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="company">Company</label>
+                                                                                <input type="text" id="company" name="company">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="date-in-out">Date in-out</label>
+                                                                                <input type="text" id="date-in-out" name="date-in-out">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-12">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="description">Description</label>
+                                                                                <textarea name="description" id="description" rows="2"></textarea>
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="add-more">
+                                                                    <a href="#" class="">+ Add More Experience</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Personal Skill</h3>
+                                                                </div>
+                                                                <div class="row">
+
+                                                                    <div class="col-12">
+                                                                        <!-- Single Input Start -->
+                                                                        <div class="skill-check-box mb-25">
+                                                                            <ul class="skill-cbx-list">
+                                                                                <li>
+                                                                                    <div class="filter-name-item">
+                                                                                        <input type="checkbox" name="expericence" id="level-cbx">
+                                                                                        <label for="level-cbx">Account Manager</label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="filter-name-item">
+                                                                                        <input type="checkbox" name="expericence" id="level-cbx-two">
+                                                                                        <label for="level-cbx-two"> Administrative</label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="filter-name-item">
+                                                                                        <input type="checkbox" name="expericence" id="level-cbx-three">
+                                                                                        <label for="level-cbx-three">Android</label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="filter-name-item">
+                                                                                        <input type="checkbox" name="expericence" id="level-cbx-four">
+                                                                                        <label for="level-cbx-four">App</label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- Single Input End -->
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Honors & Awards</h3>
+                                                                </div>
+                                                                <div class="custom-form-box">
+                                                                    <div class="row">
+
+                                                                        <div class="col-lg-6">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="title">Title</label>
+                                                                                <input type="text" id="title" name="title">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-6">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="year">Year</label>
+                                                                                <input type="text" id="year" name="year">
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                        <div class="col-lg-12">
+                                                                            <!-- Single Input Start -->
+                                                                            <div class="single-input mb-25">
+                                                                                <label for="descriptionTwo">Description</label>
+                                                                                <textarea name="descriptionTwo" id="descriptionTwo" rows="2"></textarea>
+                                                                            </div>
+                                                                            <!-- Single Input End -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="add-more">
+                                                                    <a href="#" class="">+ Add More Award</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Portfolio</h3>
+                                                                </div>
+                                                                <div class="row">
+
+                                                                    <div class="col-12">
+                                                                        <ul class="portfolio-list">
+                                                                            <li><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/portfolio/portfolio1.jpg" alt=""></a></li>
+                                                                            <li><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/portfolio/portfolio2.jpg" alt=""></a></li>
+                                                                            <li><a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/portfolio/portfolio3.jpg" alt=""></a></li>
+                                                                            <li>
+                                                                                <div class="profile-upload">
+                                                                                    <input type="file" name="myFile" id="customfilethree" class="sr-only">
+                                                                                    <label for="customfilethree">+</label>
+                                                                                </div>
+                                                                        </li>
+                                                                        </ul>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="custom-width-group">
+                                                                    <h3>Curriculum Vitae</h3>
+                                                                </div>
+                                                                <div class="row">
+
+                                                                    <div class="col-12">
+                                                                        <div class="cv-upload">
+                                                                            <input type="file" name="myFile" id="cv-upload" class="sr-only">
+                                                                            <label for="cv-upload">Select File</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="profile-action-btn">
+                                                                    <button class="ht-btn theme-btn theme-btn-two"> Save & Preview</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard Content Section End -->
+
+{% endblock %}
