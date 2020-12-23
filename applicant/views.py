@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
+from recruiter.models import Job, Company
 # Create your views here.
 
 class HomePage(TemplateView):
@@ -62,8 +63,16 @@ class JobDetailsTwoPage(TemplateView):
 class JobDetailsPage(TemplateView):
     template_name = "job-details.html"
 
-class JobListingPage(TemplateView):
-    template_name = "job-listing.html"
+class JobListingPage(View):
+    def get(self, request, *args, **kwargs):
+
+        jobs = Job.objects.all()
+
+        context = {
+            'jobs':jobs
+        }
+
+        return render(request, "job-listing.html", context=context)
 
 class JobwithMapPage(TemplateView):
     template_name = "job-with-map.html"

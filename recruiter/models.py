@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 # Create your models here.
 
 class Company(models.Model):
@@ -18,12 +19,29 @@ class Company(models.Model):
     address = models.CharField(max_length=500)
     pincode = models.IntegerField(blank=True)
 
+    class Meta:
+        verbose_name_plural = "Companies"
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.company_logo.url
+        except(e):
+            url = ''
+            print(e)
+        return url
+
+    def __str__(self):
+        return self.company_name
+
+
 
 class Job(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     job_title = models.CharField(max_length=100)
     job_description = models.CharField(max_length=1000)
+    job_type = models.CharField(max_length=100, default="Full Time")
     job_category = models.CharField(max_length=100)
     posted_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -36,3 +54,21 @@ class Job(models.Model):
     about_job = models.CharField(max_length=800)
     keywords = models.CharField(max_length=300)
     extra_description = models.CharField(max_length=500, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.job_title} -> {self.company.company_name}"
+
+    def get_skills(self):
+        return self.skills.split(", ")
+
+    def get_category(self):
+        return self.job_category.split(", ")
+
+
+# TODO: Check its functionality
+    def is_expired(self):
+        now = datetime.now()
+        if(now >= self.expires_on):
+            return True
+        else:
+            return False

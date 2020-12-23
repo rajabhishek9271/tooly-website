@@ -335,13 +335,15 @@
                             <div id="list" class="tab-pane fade show active">
                                 <div class="row">
 
+                                  {% for job in jobs %}
+
                                     <div class="col-lg-12 mb-20">
                                         <!-- Single Job Start  -->
                                         <div class="single-job style-two">
                                             <div class="info-top">
                                                 <div class="job-image">
                                                     <a href="job-details.html">
-                                                        <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/companies_logo/logo-100/logo1.jpg" alt="logo">
+                                                        <img src="{{ job.company.imageURL }}" alt="logo">
                                                     </a>
                                                 </div>
                                                 <div class="job-info">
@@ -349,32 +351,31 @@
                                                         <div class="job-info-top">
                                                             <div class="saveJob for-listing">
                                                                 <span class="featured-label">featured</span>
-                                                                <a class="job-type-label ml-20 mr-20">Full Time</a>
+                                                                <a class="job-type-label ml-20 mr-20">{{ job.job_type }}</a>
                                                                 <a class="save-job" href="#quick-view-modal-container" data-toggle="modal">
                                                                     <i class="far fa-heart"></i>
                                                                 </a>
                                                             </div>
                                                             <div class="title-name">
                                                                 <h3 class="job-title">
-                                                                    <a href="job-details.html">Chief Accountant</a>
+                                                                    <a href="job-details.html">{{ job.job_title }}</a>
                                                                 </h3>
                                                                 <div class="employer-name">
-                                                                    <a href="job-details.html">Shippo Company</a>
+                                                                    <a href="job-details.html">{{ job.company.company_name }}</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="job-meta-two">
                                                             <div class="field-salary_from">
-                                                                $500 - $1,000 / month
+                                                                ${{ job.salary }}
                                                             </div>
-                                                            <div class="field-datetime"><i class="lnr lnr-clock"></i>8 months ago</div>
-                                                            <div class="field-map"><i class="lnr lnr-map-marker"></i>Hanoi, Hanoi</div>
+                                                            <div class="field-datetime"><i class="lnr lnr-clock"></i>{{ job.posted_on }}</div>
+                                                            <div class="field-map"><i class="lnr lnr-map-marker"></i>{{ job.company.address }}</div>
                                                         </div>
                                                         <div class="job-skill-tag">
-                                                            <a href="#">Android</a>
-                                                            <a href="#">app</a>
-                                                            <a href="#">ReactJs</a>
-                                                            <a href="#">Ruby</a>
+                                                          {% for skill in job.get_skills %}
+                                                            <a href="#">{{ skill }}</a>
+                                                          {% endfor %}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -382,6 +383,8 @@
                                         </div>
                                         <!-- Single Job End -->
                                     </div>
+
+                                    {% endfor %}
 
                                     <div class="col-lg-12 mb-20">
                                         <!-- Single Job Start  -->
