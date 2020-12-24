@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from recruiter.models import Job, Company
+from .forms import UserForm
 # Create your views here.
 
 class HomePage(TemplateView):
@@ -77,8 +78,38 @@ class JobListingPage(View):
 class JobwithMapPage(TemplateView):
     template_name = "job-with-map.html"
 
-class LoginRegisterPage(TemplateView):
-    template_name = "login-register.html"
+class RegisterPage(View):
+    def get(self, request, *args, **kwargs):
+        user_form = UserForm()
+        return render(request, 'register.html', {'form':user_form})
+
+
+    def post(self, request, *args, **kwargs):
+
+        registered = False
+
+        if request.method == 'POST':
+
+            user_form = UserForm(data=request.POST)
+
+            # Check to see both forms are valid
+            if user_form.is_valid():
+
+                # Save User Form to Database
+                user = user_form.save()
+
+                # Hash the password
+                user.set_password(user.password)
+
+                # Update with Hashed password
+                user.save()
+
+                # Registration Successful!
+                registered = True
+
+        # This is the render and context dictionary to feed
+        # back to the registration.html file page.
+        return render(request,'index.html')
 
 class MessagePage(TemplateView):
     template_name = "message.html"
