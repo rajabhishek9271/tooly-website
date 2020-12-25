@@ -9,12 +9,13 @@ class Applicant(models.Model):
 
     # Create relationship (don't inherit from User!)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_pic = models.ImageField(upload_to='applicants/profile_pics')
-    resume = models.FileField(upload_to='applicants/resumes', max_length=300)
-    country = models.CharField(max_length=100)
-    phone_no = models.BigIntegerField()
-    address = models.CharField(max_length=500)
-    pincode = models.IntegerField(blank=True)
+    profile_pic = models.ImageField(upload_to='applicants/profile_pics', null=True, blank=True)
+    resume = models.FileField(upload_to='applicants/resumes', max_length=300, null=True, blank=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
+    phone_no = models.BigIntegerField(null=True, blank=True)
+    address_line1 = models.CharField(max_length=500, null=True, blank=True)
+    address_line2 = models.CharField(max_length=500, null=True, blank=True)
+    zipcode = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
