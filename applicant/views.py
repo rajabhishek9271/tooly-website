@@ -134,38 +134,38 @@ class PricingPage(TemplateView):
 class ProductDetailsPage(TemplateView):
     template_name = "product-details.html"
 
-class ProfilePage(TemplateView):
-    template_name = "profile.html"
+class ProfilePage(View):
+    def get(self, request, *args, **kwargs):
+
+        return render(request, 'profile.html')
 
 
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
 
-        form = request.POST
+        data = request.POST
         user = request.user
-        profile_pic = form.get('profile_pic')
+        profile_pic = data.get('profile_pic')
         # resume = form.get('myFile')
-        first_name = form.get('first_name')
-        last_name = form.get('last_name')
-        email = form.get('email')
-        phone = form.get('phone')
-        address1 = form.get('address-one')
-        address2 = form.get('address-two')
-        country = form.get('country')
-        zipcode = form.get('zipcode')
-        new_password = form.get('new-password')
-        confirm_password = form.get('confirm-password')
+        first_name = data.get('first_name')
+        last_name = data.get('last_name')
+        email = data.get('email')
+        phone = int(data.get('phone'))
+        address1 = data.get('address-one')
+        address2 = data.get('address-two')
+        country = data.get('country')
+        zipcode = data.get('zipcode')
+        new_password = data.get('new-password')
+        confirm_password = data.get('confirm-password')
 
         new_applicant = models.Applicant.objects.get(
             user = request.user
-
-        ).update(
-            # new_applicant.resume=resume,
-            phone=phone,
-            address1=address1,
-            address2=address2,
-            country=country,
-            zipcode=zipcode,
         )
+
+        new_applicant.phone_no=phone
+        new_applicant.address_line1=address1
+        new_applicant.address_line2=address2
+        new_applicant.country=country
+        new_applicant.zipcode=zipcode
 
         new_applicant.save()
 
@@ -178,7 +178,7 @@ class ProfilePage(TemplateView):
         user.save()
 
         # new_applicant.profile_pic=profile_pic,
-
+        return render(request, 'index.html')
 
 
 

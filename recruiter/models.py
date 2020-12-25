@@ -6,12 +6,12 @@ from datetime import datetime
 class Company(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    representative_position = models.CharField(max_length=100)
+    # representative_position = models.CharField(max_length=100)
     company_name = models.CharField(max_length=300)
-    company_logo = models.ImageField(upload_to='companies/logos')
+    company_logo = models.ImageField(upload_to='companies/logos', null=True, blank=True)
     company_description = models.CharField(max_length=1000)
     company_website = models.URLField(blank=True, null=True)
-    employees_number = models.BigIntegerField(blank=True, null=True)
+    employees_number = models.CharField(max_length=50, blank=True, null=True)
     company_email = models.EmailField()
     source = models.CharField(max_length=200, blank=True, null=True)
     country = models.CharField(max_length=100)
