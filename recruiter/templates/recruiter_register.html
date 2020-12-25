@@ -43,6 +43,11 @@
                                                             </div>
                                                             <div class="col-lg-10">
                                                                 <div class="row">
+
+                                                                  <div class="single-input mb-25">
+                                                                      <label for="first-name">Company Name<span>*</span></label>
+                                                                      <input type="text" id="first-name" name="company_name" placeholder="Company Name" value="">
+                                                                  </div>
                                                                         <!-- Single Input Start -->
                                                                         {% for field in form %}
                                                                             <div class="single-input mb-25">
@@ -53,10 +58,9 @@
 
                                                                             </div>
                                                                         {% endfor %}
-                                                                        <!-- <div class="single-input mb-25">
-                                                                            <label for="first-name">Company Name<span>*</span></label>
-                                                                            <input type="text" id="first-name" name="company_name" placeholder="Company Name" value="">
-                                                                        </div> -->
+
+
+
                                                                         <!-- Single Input Start -->
                                                                         <div class="single-input mb-25">
                                                                             <label for="confirm-password">Confirm Password</label>

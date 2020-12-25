@@ -8,7 +8,7 @@ class Company(models.Model):
 
     # representative_position = models.CharField(max_length=100)
     company_name = models.CharField(max_length=300)
-    company_logo = models.ImageField(upload_to='companies/logos', null=True, blank=True)
+    company_logo = models.ImageField(upload_to='companies/logos', blank=True, null=True)
     company_description = models.CharField(max_length=1000)
     company_website = models.URLField(blank=True, null=True)
     employees_number = models.CharField(max_length=50, blank=True, null=True)
@@ -22,7 +22,7 @@ class Company(models.Model):
     class Meta:
         verbose_name_plural = "Companies"
 
-    @property
+
     def imageURL(self):
         try:
             url = self.company_logo.url
