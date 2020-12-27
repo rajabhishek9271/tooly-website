@@ -66,16 +66,7 @@ class JobDetailsTwoPage(TemplateView):
 class JobDetailsPage(TemplateView):
     template_name = "job-details.html"
 
-class JobListingPage(View):
-    def get(self, request, *args, **kwargs):
 
-        jobs = Job.objects.all()
-
-        context = {
-            'jobs':jobs
-        }
-
-        return render(request, "job-listing.html", context=context)
 
 class JobwithMapPage(TemplateView):
     template_name = "job-with-map.html"
@@ -179,6 +170,25 @@ class ProfilePage(View):
 
         # new_applicant.profile_pic=profile_pic,
         return render(request, 'index.html')
+
+
+        # def delete_view(request, id):
+        # # dictionary for initial data with
+        # # field names as keys
+        #     context ={}
+        #
+        # # fetch the object related to passed id
+        # obj = get_object_or_404(Applicant, username = username)
+        #
+        #
+        # if request.method =="POST":
+        #     # delete object
+        #     obj.delete()
+        #     # after deleting redirect to
+        #     # home page
+        #     return HttpResponseRedirect("/")
+        #
+        # return render(request, "profie.html", context)
 
 
 

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, View
+from django.views.generic.detail import DetailView
 from .forms import RecruiterForm
-from .models import Company
+from .models import Company, Job
 
 # Create your views here.
 
@@ -52,3 +53,24 @@ class RecruiterRegisterPage(View):
                 registered = True
 
         return render(request,'index.html')
+
+
+class JobListingPage(View):
+    def get(self, request, *args, **kwargs):
+
+        jobs = Job.objects.all()
+
+        context = {
+            'jobs':jobs
+        }
+
+        return render(request, "job-listing.html", context=context)
+
+
+
+
+class JobDetailView(DetailView):
+
+    context_object_name ='job_detail'
+    model = Job
+    template_name = 'job-details.html'
