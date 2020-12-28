@@ -11,21 +11,21 @@
                             <ul class="page-breadcrumb">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="job-listing.html">Jobs Listing</a></li>
-                                <li>Senior PHP Web Developer</li>
+                                <li>{{ job_detail.job_title }}</li>
                             </ul>
-                            <h1>Senior PHP Web Developer</h1>
+                            <h1>{{ job_detail.job_title }}</h1>
                         </div>
                         <div class="job-meta-detail">
                             <ul>
                                 <li class="posted">
                                     <i class="lnr lnr-clock"></i>
-                                    <span class="text">Posted date: </span>
-                                    <span class="time">8 months ago </span>
+                                    <span class="text">Posted date:</span>
+                                    <span class="time">{{ job_detail.posted_on }}</span>
                                 </li>
                                 <li class="expries">
                                     <i class="lnr lnr-hourglass"></i>
                                     <span class="text">Expries in: </span>
-                                    <span class="date theme-color"> October 26, 2019 </span>
+                                    <span class="date theme-color">{{ job.job_detail.expires_on }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -47,7 +47,7 @@
                                 <i class="lnr lnr-map-marker"></i>
                                 <span>Work Location: </span>
                             </div>
-                            <div class="field-value">Chicago, Illinois</div>
+                            <div class="field-value">{{ job_detail.company.country }}</div>
                         </div>
                         <!-- Single Meta Field Start -->
                     </div>
@@ -59,7 +59,7 @@
                                 <i class="lnr lnr-thumbs-up"></i>
                                 <span>Salary </span>
                             </div>
-                            <div class="field-value salary">$500 - $1,000 / month</div>
+                            <div class="field-value salary">{{ job_detail.salary }}</div>
                         </div>
                         <!-- Single Meta Field Start -->
                     </div>
@@ -71,7 +71,7 @@
                                 <i class="lnr lnr-briefcase"></i>
                                 <span>Type </span>
                             </div>
-                            <div class="field-value"><a class="fw-600" href="#">Part Time</a></div>
+                            <div class="field-value"><a class="fw-600" href="#">{{ job_detail.job_type }}</a></div>
                         </div>
                         <!-- Single Meta Field Start -->
                     </div>
@@ -83,7 +83,7 @@
                                 <i class="lnr lnr-tag"></i>
                                 <span>Category </span>
                             </div>
-                            <div class="field-value"><a href="#">Accounting</a></div>
+                            <div class="field-value"><a href="#">{{ job_detail.job_category }}</a></div>
                         </div>
                         <!-- Single Meta Field Start -->
                     </div>
@@ -95,7 +95,7 @@
                                 <i class="lnr lnr-graduation-hat"></i>
                                 <span>Experience </span>
                             </div>
-                            <div class="field-value"><a href="#">> 5 years</a></div>
+                            <div class="field-value"><a href="#">{{ job_detail.experience }}</a></div>
                         </div>
                         <!-- Single Meta Field Start -->
                     </div>
@@ -109,9 +109,9 @@
                             </div>
                             <div class="field-value">
                                 <div class="job-skill-tag">
-                                    <a href="#">CSS</a>
-                                    <a href="#">PHP</a>
-                                    <a href="#">WordPress</a>
+                                  {% for skill in job_detail.get_skills %}
+                                    <a href="#">{{ skill }}</a>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -273,12 +273,7 @@
 
                                 <h3>Job Description</h3>
 
-                                <ul>
-                                    <li>To interact with <strong>US Design Team</strong> in developing elesig-nsfiuvireframes in order to meet feature requirements in new/existing software systems.</li>
-                                    <li>To provide graphics and styles for the design of wirefrarnes.</li>
-                                    <li>To track daily progress and communicate changes (and their impact) to management team</li>
-                                    <li>To work with project teams to create the best possible application design, understanding our clients’ requirements and users’ needs. Projects may be any combination of web, applications, and mobile.</li>
-                                </ul>
+                              <p>{{ job_detail.job_description }}</p>
 
                                 <h3>Your Skills and Experience</h3>
 
@@ -308,9 +303,6 @@
                                     <li>Like project managers, business associates and deveLopers).</li>
                                 </ul>
 
-                                <p><strong>How to apply?</strong></p>
-
-                                <p>PLease send us a Resume and PortfoLios. Pixel-perfect mockups, UX )AraLkthroughs, UI designs, Live product Links and code are aft accepted. Send us via clinavine@career.com</p>
 
                                 <h3>Why You’ll Love Working Here</h3>
 

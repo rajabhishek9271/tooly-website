@@ -15,6 +15,7 @@ class Company(models.Model):
     company_email = models.EmailField()
     source = models.CharField(max_length=200, blank=True, null=True)
     country = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
     phone_no = models.BigIntegerField()
     address = models.CharField(max_length=500)
     pincode = models.IntegerField(blank=True)
@@ -53,6 +54,7 @@ class Job(models.Model):
     skills = models.CharField(max_length=300)
     about_job = models.CharField(max_length=800)
     keywords = models.CharField(max_length=300)
+    experience = models.CharField(max_length=100)
     extra_description = models.CharField(max_length=500, blank=True, null=True)
 
     def __str__(self):
