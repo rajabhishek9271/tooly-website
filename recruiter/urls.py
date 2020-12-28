@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
-
+app_name = 'recruiter'
 urlpatterns = [
     path('register/', views.RecruiterRegisterPage.as_view(), name="recruiter_register"),
     path('jobs_list/<int:pk>/',views.JobDetailView.as_view(),name='job_detail'),

@@ -96,7 +96,7 @@
                   <div class="col-xl-7 col-lg-7 col-12">
                       <nav class="main-menu" id="menu_nax">
                           <ul>
-                              <li><a href="{% url 'home' %}">Home <!--small class="icon-arrow"></small--></a>
+                              <li><a href="{% url 'applicant:home' %}">Home <!--small class="icon-arrow"></small--></a>
                                   <!--ul class="sub-menu">
                                       <li><a href="index.html">Home V1</a></li>
                                       <li><a href="index-2.html">Home V2</a></li>
@@ -104,16 +104,11 @@
                                       <li><a href="index-4.html">Home V4</a></li>
                                   </ul-->
                               </li>
-                              <li><a href="{% url 'jobs_list' %}"><!--span class="label-status hot">hot</span-->Jobs <small class="icon-arrow"></small></a>
+                              <li><a href="{% url 'recruiter:jobs_list' %}"><!--span class="label-status hot">hot</span-->Jobs <small class="icon-arrow"></small></a>
                                   <ul class="sub-menu">
-                                      <li><a href="{% url 'jobs_list' %}">Jobs Listing</a></li>
-                                      <li><a href="{% url 'jobs_maps' %}">Jobs With Map</a></li>
-                                      <li><a href="{% url 'job_detail1' %}">Job Detail <small class="icon-arrow"></small></a>
-                                          <ul class="sub-menu">
-                                              <li><a href="{% url 'job_detail1' %}">Job Detail V1</a></li>
-                                              <li><a href="{% url 'job_detail2' %}">Job Detail V2</a></li>
-                                          </ul>
-                                      </li>
+                                      <li><a href="{% url 'recruiter:jobs_list' %}">Jobs Listing</a></li>
+                                      <li><a href="{% url 'applicant:jobs_maps' %}">Jobs With Map</a></li>
+
                                   </ul>
                               </li>
 
@@ -277,12 +272,7 @@
 
                   <li class="has-mega-menu"><a href="#"><span>Jobs</span></a>
                       <!-- Start Dropdown Menu -->
-                      <ul class="object-submenu">
-                          <li><a href="job-listing.html"><span>Jobs Listing</span></a></li>
-                          <li><a href="job-with-map.html"><span>Jobs With Map</span></a></li>
-                          <li><a href="job-details.html"><span>Job Detail V1</span></a></li>
-                          <li><a href="job-details-two.html"><span>Job Detail V2</span></a></li>
-                      </ul>
+
                       <!-- End Dropdown Menu -->
                   </li>
 
