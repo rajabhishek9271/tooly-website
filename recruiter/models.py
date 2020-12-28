@@ -27,9 +27,8 @@ class Company(models.Model):
     def imageURL(self):
         try:
             url = self.company_logo.url
-        except(e):
+        except():
             url = ''
-            print(e)
         return url
 
     def __str__(self):
