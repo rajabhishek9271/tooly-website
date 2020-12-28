@@ -74,3 +74,6 @@ class JobDetailView(DetailView):
     context_object_name ='job_detail'
     model = Job
     template_name = 'job-details.html'
+
+class PostJobView(TemplateView):
+    template_name = 'post_job.html'
