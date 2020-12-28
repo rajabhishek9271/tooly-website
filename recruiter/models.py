@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
+from django.utils import timezone
+
 # Create your models here.
 
 class Company(models.Model):
@@ -19,6 +21,7 @@ class Company(models.Model):
     phone_no = models.BigIntegerField()
     address = models.CharField(max_length=500)
     pincode = models.IntegerField(blank=True)
+    # registered_on = models.DateField(default=datetime.now, blank=True)
 
     class Meta:
         verbose_name_plural = "Companies"

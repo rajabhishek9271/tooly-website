@@ -29,9 +29,9 @@
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Find a job</h2>
                                 <div class="sidebar-search-form-two">
-                                    <form action="#">
+                                    <form method="POST"> {% csrf_token %}
                                         <div class="input-group">
-                                            <input type="text" name="search" placeholder="Search...">
+                                            <input type="text" name="keyword" placeholder="Search..." value="{{ keyword }}">
                                             <i class="lnr lnr-magnifier"></i>
                                         </div>
                                         <button type="submit" class="ht-btn theme-btn theme-btn-two w-100">Search</button>
@@ -283,7 +283,7 @@
                         <div class="filter-form">
                             <div class="result-sorting">
                                 <div class="total-result">
-                                    <span class="total">(22)</span>
+                                    <span class="total">({{ jobs.count }})</span>
                                     Jobs &amp; Vacancies
                                 </div>
                                 <div class="job-alert-form">

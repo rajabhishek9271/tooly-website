@@ -25,7 +25,7 @@
                             <ul class="page-breadcrumb">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="job-listing.html">Employers</a></li>
-                                <li>HasTech</li>
+                                <li>{{ company.company_name }}</li>
                             </ul>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                 <a href="#"><img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/companies_logo/logo-big/logo5.jpg" alt=""></a>
                             </div>
                             <div class="employer-content">
-                                <h1 class="employer-name">HasTech <i class="fas fa-check-circle"></i></h1>
+                                <h1 class="employer-name">{{ company.company_name }} <i class="fas fa-check-circle"></i></h1>
                                 <div class="employer-rate">
                                     <div class="star">
                                         <i class="fa fa-star"></i>
@@ -109,9 +109,9 @@
                             <div class="single-meta-field meta-field-three">
                                 <div class="field-label">
                                     <i class="lnr lnr-users"></i>
-                                    <span>Size </span>
+                                    <span>Number Of Employees</span>
                                 </div>
-                                <div class="field-value"><a href="#">20-40</a></div>
+                                <div class="field-value"><a href="#">{{ company.employees_number }}</a></div>
                             </div>
                             <!-- Single Meta Field Start -->
                         </div>
@@ -121,9 +121,9 @@
                             <div class="single-meta-field meta-field-three">
                                 <div class="field-label">
                                     <i class="lnr lnr-earth"></i>
-                                    <span>Website </span>
+                                    <span>Company's Website</span>
                                 </div>
-                                <div class="field-value">inwavethemes.com</div>
+                                <div class="field-value">{{ company.company_website }}</div>
                             </div>
                             <!-- Single Meta Field Start -->
                         </div>
@@ -135,7 +135,7 @@
                                     <i class="lnr lnr-map-marker"></i>
                                     <span>Location </span>
                                 </div>
-                                <div class="field-value"><a href="#">Hanoi, Hà Nội</a></div>
+                                <div class="field-value"><a href="#">{{ company.city }}, {{ company.country }}</a></div>
                             </div>
                             <!-- Single Meta Field Start -->
                         </div>
@@ -196,15 +196,9 @@
                             <div class="field-description">
                                 <h6>Praesent vitae ipsum eu magna pretium aliquam. Curabitur interdum quis velit non tincidunt. Donec pretium gravida erat, a faucibus velit egestas eget.</h6>
 
-                                <h3>Overview</h3>
+                                <h3>Company Description</h3>
 
-                                <p>Upperside Group has been established as a marketing company in North and South America. Our traditional business model is based on the accomplishment of properties in the commercial markets in America. Based on the decision of the company to diversify our properties; we have now established this corporation in Toronto. The revenues of our company are expected to be nearly US$50,000 per month depending on the variables that are factored in with investments in the commercial industry. There is a great need for certified or official bank checks in the future to deal with some trading transactions.</p>
-
-                                <p>In addition to marketing investments, the company has invested portions of its assets in the purchase and sale of securities such as stocks and bonds as well as Forex trading on global markets. Upperside Group conducts marketing as well as consulting. The company undertakes all maintenance duties for marketing facilities and organizations and conducts all the security and surveillance for the properties.</p>
-
-                                <h3>What You Will Get</h3>
-
-                                <p>While salary is a major deciding factor in accepting a job offer, employees experience job satisfaction beyond monetary value. Hiring managers need to know how to attract the best and most dedicated candidates, and having the right benefits package is sure to attract the right people. So, what benefits do employees value most?</p>
+                              <p>  {{ company.company_description }} </p>
 
                                 <ul>
                                     <li>Extra Private health insurance coverage by the company to help you getting better focus on working</li>
