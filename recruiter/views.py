@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, View
 from django.views.generic.detail import DetailView
 from .forms import RecruiterForm
@@ -58,13 +58,34 @@ class RecruiterRegisterPage(View):
 class JobListingPage(View):
     def get(self, request, *args, **kwargs):
 
-        jobs = Job.objects.all()
+
+
+        keyword = request.session['keyword']
+        jobs=Job.objects.filter(job_title__contains=keyword)
+
+        # jobs = Job.objects.all()
+
+
 
         context = {
-            'jobs':jobs
+        'jobs':jobs,
+        'keyword':keyword
         }
 
+
         return render(request, "job-listing.html", context=context)
+
+    def post(self, request, *args,**kwargs):
+
+        form = request.POST
+
+        keyword = form.get('keyword')
+
+        request.session['keyword'] = keyword
+
+        return redirect('recruiter:jobs_list')
+
+
 
 
 
@@ -74,6 +95,12 @@ class JobDetailView(DetailView):
     context_object_name ='job_detail'
     model = Job
     template_name = 'job-details.html'
+
+class CompanyDetailView(DetailView):
+    context_object_name = 'company'
+    model = Company
+    template_name = 'employer_detail.html'
+
 
 class PostJobView(TemplateView):
     template_name = 'post_job.html'

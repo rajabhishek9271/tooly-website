@@ -17,7 +17,7 @@
 
                                 <div class="job-search-wrap mt-90 mt-md-70 mt-sm-50 mt-xs-30">
                                     <div class="job-search-form">
-                                        <form action="#" autocomplete="off">
+                                        <form method="POST" autocomplete="off">{% csrf_token %}
                                             <div class="row row-5">
                                                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                                                     <!-- Single Field Item Start  -->
@@ -423,7 +423,7 @@
             </div>
         </div>
         <!-- Job Location Section End -->
-    
+
         <!-- Job Section Start -->
         <div class="job-section section bg-image-proparty bg_image--2 pt-115 pt-lg-95 pt-md-75 pt-sm-55 pt-xs-45 pb-120 pb-lg-100 pb-md-80 pb-sm-60 pb-xs-50">
             <div class="container">
@@ -1788,7 +1788,7 @@ autocomplete(document.getElementById("myInput1"), jobs);
 }
 
 body {
-  font: 16px Arial;  
+  font: 16px Arial;
 }
 
 /*the container must be positioned relative:*/
@@ -1830,19 +1830,19 @@ input[type=submit] {
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 /*when hovering an item:*/
 .autocomplete-items div:hover {
-  background-color: #e9e9e9; 
+  background-color: #e9e9e9;
 }
 
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+  background-color: DodgerBlue !important;
+  color: #ffffff;
 }
 </style>
 

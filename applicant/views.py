@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View, TemplateView
 from recruiter.models import Job, Company
 from django.contrib.auth.models import User
@@ -8,6 +8,17 @@ from .forms import UserForm
 
 class HomePage(TemplateView):
     template_name = "index.html"
+
+    def post(self, request, *args,**kwargs):
+
+        form = request.POST
+
+        keyword = form.get('keyword')
+
+        request.session['keyword'] = keyword
+
+        return redirect('recruiter:jobs_list')
+
 
 class AboutPage(TemplateView):
     template_name = "about.html"
