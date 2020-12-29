@@ -3,6 +3,8 @@ from django.views.generic import TemplateView, View
 from django.views.generic.detail import DetailView
 from .forms import RecruiterForm
 from .models import Company, Job
+from django.http import JsonResponse
+
 
 # Create your views here.
 
@@ -65,8 +67,30 @@ class JobListingPage(View):
 
         # jobs = Job.objects.all()
 
+        if request.is_ajax():
+            exp = request.GET.get('exp')
+            jobs=Job.objects.filter(job_title__contains=keyword)
+            total_ids=[]
+            for job in jobs:
+                total_ids.append(job.id)
+
+            if exp == ">5":
+                ids=[]
+                jobs=Job.objects.filter(job_title__contains=keyword).filter(experience__gte=5)
+                for job in jobs:
+                    ids.append(job.id)
+
+                context = {
+                    'ids':ids,
+                    'total_ids':total_ids
+                }
+                print("returning from ajax")
+                return JsonResponse(context)
 
 
+
+
+        print("returning from view")
         context = {
         'jobs':jobs,
         'keyword':keyword
