@@ -8,6 +8,9 @@
     height: 200px;
     overflow-y: inherit;
   }
+  .hide-input > .nice-select{
+    display: none;
+  }
 
 </style>
 
@@ -67,7 +70,7 @@
                                                                             <input type="text" id="desc" name="description" placeholder="Mention the required job details" value="">
                                                                         </div>
                                                                         <!-- Single Input End -->
-                                                                        
+
                                                                         <!-- Single Input Start -->
                                                                         <div class="single-input mb-25">
                                                                             <label for="type">Job Type</label>
@@ -80,7 +83,7 @@
                                                                         </div>
                                                                         <!-- Single Input End -->
                                                                         <!-- Single Input Start -->
-                                                                        <div class="single-input mb-25" >
+                                                                        <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Job Category</label>
                                                                             <br>
                                                                             <select id="mselect" class="" tabindex="8" multiple >
@@ -99,15 +102,15 @@
                                                                                 <option value="hs">High School</option>
                                                                                 <option value="grad">Graduate</option>
                                                                                 <option value="postg">Post Graduate</option>
-                                                                            
+
                                                                             </select>
                                                                         </div>
-                                                                        
+
                                                                         <div class="single-input mb-25">
                                                                             <label for="date">Date</label>
                                                                             <input type="datetime-local"id="date" name="date"  value="">
                                                                         </div>
-                                                                        
+
                                                                         <div class="single-input mb-25">
                                                                             <label for="first-name">Vaccancies</label>
                                                                             <input type="number" id="vacancy" name="vacant"  value="">
@@ -123,7 +126,7 @@
                                                                             <input type="number" id="salary" name="vacant" value="">
                                                                         </div>
 
-                                                                        <div class="single-input mb-25" >
+                                                                        <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Skills</label>
                                                                             <br>
                                                                             <select id="msselect"  tabindex="8" multiple >
@@ -141,10 +144,10 @@
                                                                         </div>
 
 
-                                                                        
+
 
                                                                         <!-- Single Input Start -->
-                                                                        <div class="single-input mb-25" >
+                                                                        <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Keywords</label>
                                                                             <br>
                                                                             <select id="mkselect"  tabindex="8" multiple >
@@ -162,7 +165,7 @@
                                                                         </div>
 
 
-                                                                        
+
 
 
 
@@ -198,6 +201,6 @@
             </div>
         </div>
         <!-- Dashboard Content Section End -->
-        
+
 
 {% endblock %}
