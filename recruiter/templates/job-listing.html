@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
+
+
+
         <!-- Breadcrumb Section Start -->
         <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
             <div class="container">
@@ -396,11 +399,22 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <ul class="page-pagination">
-                                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                            <li class="active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                          {% if jobs.has_previous %}
+                                            <li><a href="{% url 'recruiter:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                            {% endif %}
+
+                                            {% for pg in page_range %}
+                                             {% if jobs.number == pg %}
+                                                 <li><a href="?page={{pg}}" style="background-color: #1dae0e; color: white" class="btn">{{pg}}</a></li>
+                                             {% else %}
+                                                 <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+                                             {% endif %}
+                                            {% endfor %}
+
+                                            {% if jobs.has_next %}
+                                            <li><a href="{% url 'recruiter:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                            {% endif %}
+
                                         </ul>
                                     </div>
                                 </div>
@@ -467,11 +481,15 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <ul class="page-pagination">
+                                          {% if jobs.has_previous %}
                                             <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                            <li class="active"><a href="#">1</a></li>
+                                            {% endif %}
+                                            <!-- <li class="active"><a href="#">1</a></li>
                                             <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">3</a></li> -->
+                                            {% if jobs.has_next %}
                                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            {% endif %}
                                         </ul>
                                     </div>
                                 </div>

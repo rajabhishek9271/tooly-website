@@ -4,6 +4,7 @@ from django.views.generic.detail import DetailView
 from .forms import RecruiterForm
 from .models import Company, Job
 from django.http import JsonResponse
+from django.core.paginator import Paginator
 
 
 # Create your views here.
@@ -62,8 +63,25 @@ class JobListingPage(View):
 
 
 
+
         keyword = request.session['keyword']
         jobs=Job.objects.filter(job_title__contains=keyword)
+
+        p = Paginator(jobs,10)
+        page_no = request.GET.get('page',1)
+        jobs = p.page(page_no)
+
+
+        index = jobs.number - 1
+         # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+        max_index = len(p.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+        start_index = index - 3 if index >= 3 else 0
+        end_index = index + 3 if index <= max_index - 3 else max_index
+    # Get our new page range. In the latest versions of Django page_range returns
+    # an iterator. Thus pass it to list, to make our slice possible again.
+        page_range = list(p.page_range)[start_index:end_index]
 
         # jobs = Job.objects.all()
 
@@ -93,7 +111,8 @@ class JobListingPage(View):
         print("returning from view")
         context = {
         'jobs':jobs,
-        'keyword':keyword
+        'keyword':keyword,
+        'page_range': page_range
         }
 
 
