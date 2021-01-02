@@ -3,6 +3,7 @@ from django.views.generic import View, TemplateView
 from recruiter.models import Job, Company
 from django.contrib.auth.models import User
 from . import models
+from django.contrib.auth.decorators import login_required
 from .forms import UserForm
 # Create your views here.
 
@@ -136,10 +137,20 @@ class PricingPage(TemplateView):
 class ProductDetailsPage(TemplateView):
     template_name = "product-details.html"
 
+# @login_required(login_url='profile.html')
 class ProfilePage(View):
     def get(self, request, *args, **kwargs):
 
-        return render(request, 'profile.html')
+        new_user = models.Applicant.objects.get(
+            user = request.user
+        )
+
+        context = {
+        'new_user':new_user
+        }
+
+
+        return render(request, 'profile.html', context=context)
 
 
     def post(self, request, *args, **kwargs):
@@ -170,6 +181,7 @@ class ProfilePage(View):
         new_applicant.zipcode=zipcode
 
         new_applicant.save()
+
 
         user.first_name = first_name
         user.last_name = last_name
