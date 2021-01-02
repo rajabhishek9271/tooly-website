@@ -112,7 +112,6 @@ class RegisterPage(View):
                 user.save()
 
                 new_applicant = models.Applicant.objects.create(
-
                     user = user
                 )
 
