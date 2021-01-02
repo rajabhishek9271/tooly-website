@@ -150,4 +150,4 @@ class PostJobView(TemplateView):
 
 
 class RecruiterHomePage(TemplateView):
-    template_name = 'index.html'
+    template_name = 'index1.html'

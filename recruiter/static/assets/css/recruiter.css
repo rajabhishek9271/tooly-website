@@ -2,6 +2,10 @@
   height: 200px;
   overflow-y: inherit;
 }
+.logo a {
+  display: inline-block; }
+  .logo a img {
+    max-width: 80%; }
 
 body{
   background: white;
