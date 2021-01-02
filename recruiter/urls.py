@@ -9,5 +9,6 @@ urlpatterns = [
     path('jobs_list/', views.JobListingPage.as_view(),name='jobs_list'),
     path('post_job/', views.PostJobView.as_view(), name='post_job'),
     path('employer_detail/<int:pk>/', views.CompanyDetailView.as_view(),name='employer_detail'),
+    path('recruiter_home/', views.RecruiterHomePage.as_view(),name='home'),
 
     ]

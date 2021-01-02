@@ -147,3 +147,7 @@ class CompanyDetailView(DetailView):
 
 class PostJobView(TemplateView):
     template_name = 'post_job.html'
+
+
+class RecruiterHomePage(TemplateView):
+    template_name = 'index.html'
