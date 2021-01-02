@@ -50,13 +50,13 @@
                   <!--Logo start-->
                   <div class="col-xl-2 col-lg-2 col-12">
                       <div class="logo">
-                          <a href=" "><img style="background-coLor: white;" src="{% static 'assets\images\Toolylogo-LOGO-1A-final.png' %}" alt=""></a>
+                          <a href=" "><img src="{% static 'assets\images\Toolylogo-LOGO-1A-final.png' %}" alt=""></a>
                       </div>
                   </div>
                   <!--Logo end-->
 
                   <!--Menu start-->
-                  <div class="col-xl-7 col-lg-7 col-12">
+                  <div class="col-xl-5 col-lg-7 col-12">
                       <nav class="main-menu" id="menu_nax">
                           <ul>
                               <li><a href="{% url 'applicant:home' %}">Home <!--small class="icon-arrow"></small--></a>
@@ -128,20 +128,20 @@
                   <!--Menu end-->
 
                   <!-- Cart & Search Area Start -->
-                  <div class="col-xl-3 col-lg-3 col-12">
+                  <div class="col-xl-5 col-lg-3 col-12">
                       <div class="header-btn-action d-flex justify-content-end">
                           <div class="btn-action-wrap d-flex">
-                              <!--div class="jp-author item">
-                                  <a href="login-register.html">
-                                      <i class="lnr lnr-user"></i>
+                              <div class="jp-author-action item">
+                                  <a href="{% url 'account_login' %}">
+                                      <!--i class="lnr lnr-user"></i-->
                                       <span>Login</span>
                                   </a>
+                              </div>
+                              <!--div class="jp-author-action item">
+                                  <a href="{% url 'account_login' %}"> <span>Employee Login</span> <span class="fw-400">Find a job</span></a>
                               </div-->
                               <div class="jp-author-action item">
-                                  <a href="{% url 'account_login' %}"> <span>Employee Login</span> <span class="fw-400">Find a job</span></a>
-                              </div>
-                              <div class="jp-author-action item">
-                                  <a href="{% url 'recruiter:recruiter_register' %}"> <span>Employer Login</span> <span class="fw-400">Post a job</span></a>
+                                  <a href="{% url 'recruiter:recruiter_register' %}"><span>Post a job</span></a>
                               </div>
                           </div>
                       </div>
