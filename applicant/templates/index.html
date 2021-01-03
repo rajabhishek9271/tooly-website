@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
+
+
+
+
         <!--slider section start-->
         <div class="hero-section section position-relative">
             <!--Hero Item start-->
@@ -11,6 +15,23 @@
 
                             <!--Hero Content start-->
                             <div class="hero-content-2 left">
+                              <!-- alert-messages -->
+                                                <div style="    width: 100%;
+                                                    margin-left: 35%;
+                                                    text-align: center;
+                                                    margin-right: auto;" class="row">
+                                                  {% if messages %}
+                                                      {% for message in messages %}
+                                                      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                                    {{ message }}
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                  </div>
+                                                      {% endfor %}
+                                                  {% endif %}
+                                                </div>
+                                          <!-- alert-messages-ends -->
                                 <h2 class="title">Top Recruiting Website</h2>
                                 <h3 class="sub-title">For Professionals</h3>
                                 <p><span>Get your Dream Job at the ease of a click. Just browse and we look after the rest.</span></p><!--p>Jobs & Job search. Find jobs in global. Executive jobs & work. Employment</p-->

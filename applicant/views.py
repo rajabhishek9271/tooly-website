@@ -2,11 +2,15 @@ from django.shortcuts import render, redirect
 from django.views.generic import View, TemplateView
 from recruiter.models import Job, Company
 from django.contrib.auth.models import User
-from django.contrib.auth import logout
+from django.contrib.auth import logout, authenticate, login
 from . import models
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserForm
 from .mixins import MustBeApplicantMixin
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+from django.contrib import messages
+
 # Create your views here.
 
 class HomePage(TemplateView):
@@ -122,8 +126,18 @@ class RegisterPage(View):
                 # Registration Successful!
                 registered = True
 
+
+
+                username = request.POST['username']
+                password = request.POST['password']
+                user = authenticate(request, username=username, password=password)
+                if user is not None:
+                    login(request, user)
+
+
         # This is the render and context dictionary to feed
         # back to the registration.html file page.
+        messages.success(request, "You have been successfully registered.")
         return render(request,'index.html')
 
 class MessagePage(TemplateView):
@@ -217,7 +231,18 @@ class ProfilePage(LoginRequiredMixin, MustBeApplicantMixin, View):
 
 def logout_view(request):
     logout(request)
+    messages.success(request, "You have been logged out.")
+
     return redirect('applicant:home')
+
+
+def delete_user(request):
+    if request.method == 'POST':
+        User.objects.filter(id=request.user.id).delete()
+        messages.info(request, "Your Account has been successfully deleted.")
+        return redirect('applicant:home')
+    else:
+        return redirect('applicant:home')
 
 
 
@@ -232,3 +257,14 @@ class ShopPage(TemplateView):
 
 class WishlistPage(TemplateView):
     template_name = "wishlist.html"
+
+
+def handler404(request, exception):
+
+    return render(request, 'errors/404.html')
+
+
+
+def handler403(request, exception):
+
+    return render(request, 'errors/403.html')

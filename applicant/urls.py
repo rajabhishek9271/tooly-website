@@ -4,7 +4,14 @@ from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+
+
+
 app_name = 'applicant'
+
+handler404 = views.handler404
+handler403 = views.handler403
+
 urlpatterns = [
     path('', views.HomePage.as_view(),name='home'),
     path('about/', views.AboutPage.as_view(),name='about'),
