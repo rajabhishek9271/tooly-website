@@ -137,8 +137,7 @@ USE_TZ = True
 
 
 # For allauth
-LOGIN_REDIRECT_URL = '/'
-
+ACCOUNT_ADAPTER = 'tooly_proj.adapter.GetURLAdapter'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

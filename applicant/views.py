@@ -4,8 +4,9 @@ from recruiter.models import Job, Company
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from . import models
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserForm
+from .mixins import MustBeApplicantMixin
 # Create your views here.
 
 class HomePage(TemplateView):
@@ -137,8 +138,9 @@ class PricingPage(TemplateView):
 class ProductDetailsPage(TemplateView):
     template_name = "product-details.html"
 
-# @login_required(login_url='profile.html')
-class ProfilePage(View):
+class ProfilePage(LoginRequiredMixin, MustBeApplicantMixin, View):
+    login_url = '/accounts/login/'
+
     def get(self, request, *args, **kwargs):
 
         new_user = models.Applicant.objects.get(

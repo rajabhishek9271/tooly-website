@@ -39,6 +39,11 @@
         .btn{
           background-color: #0055D9;
         }
+
+        #profile{
+          background: white;
+          color: #0055D9;
+        }
     </style>
 </head>
 
@@ -139,15 +144,15 @@
                               <div class="jp-author-action item">
                                 {% if user.is_authenticated %}
 
-                                <a style="padding-left:20px;padding-right: 20px;
+                                <a id="profile" style="padding-left:20px;padding-right: 20px;
                                   padding-top: 10px; padding-bottom: 10px;" class="btn"
                                   href="{% url 'applicant:profile' %}">
-                                  <span class="fw-400">Profile</span>
+                                  <span class="fw-400"><i class="fas fa-user-alt"></i>&nbsp;Profile</span>
                                 </a>
                                   <a style="padding-left:20px;padding-right: 20px;
                                   padding-top: 10px; padding-bottom: 10px;" class="btn"
                                   href="{% url 'logout' %}">
-                                    <span class="fw-400">Logout</span>
+                                    <span class="fw-400"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</span>
                                   </a>
 
                                 {% else %}
@@ -156,19 +161,21 @@
                                   padding-top: 10px; padding-bottom: 10px;" class="btn"
                                   href="{% url 'account_login' %}">
                                     <!--i class="lnr lnr-user"></i-->
-                                    <span class="fw-400">Login</span>
+                                    <span class="fw-400"><i class="fas fa-sign-in-alt"></i>&nbsp;Login</span>
                                   </a>
+
+                                  <div class="jp-author-action item">
+                                      <a style="padding-left:20px;padding-right: 20px;
+                                      padding-top: 10px; padding-bottom: 10px;" class="btn"
+                                      href="{% url 'applicant:home' %}">
+                                      <span class="fw-400"><i class="fas fa-user-tie"></i>&nbsp;Looking for a job?</span></a>
+                                  </div>
                                 {% endif %}
                               </div>
                               <!--div class="jp-author-action item">
                                   <a href="{% url 'account_login' %}"> <span>Employee Login</span> <span class="fw-400">Find a job</span></a>
                               </div-->
-                              <div class="jp-author-action item">
-                                  <a style="padding-left:20px;padding-right: 20px;
-                                  padding-top: 10px; padding-bottom: 10px;" class="btn"
-                                  href="{% url 'recruiter:recruiter_register' %}">
-                                  <span class="fw-400">Post a job</span></a>
-                              </div>
+
                           </div>
                       </div>
                   </div>
