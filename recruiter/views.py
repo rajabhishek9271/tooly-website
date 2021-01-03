@@ -61,10 +61,10 @@ class RecruiterRegisterPage(View):
 class JobListingPage(View):
     def get(self, request, *args, **kwargs):
 
-
-
-
-        keyword = request.session['keyword']
+        try:
+            keyword = request.session['keyword']
+        except KeyError:
+            keyword = ""
         jobs=Job.objects.filter(job_title__contains=keyword)
 
         p = Paginator(jobs,10)
@@ -105,9 +105,6 @@ class JobListingPage(View):
                 print("returning from ajax")
                 return JsonResponse(context)
 
-
-
-
         print("returning from view")
         context = {
         'jobs':jobs,
@@ -127,10 +124,6 @@ class JobListingPage(View):
         request.session['keyword'] = keyword
 
         return redirect('recruiter:jobs_list')
-
-
-
-
 
 
 class JobDetailView(DetailView):

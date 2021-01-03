@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from applicant import views
 
 
 urlpatterns = [
@@ -22,4 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('applicant.urls')),
     path('recruiter/', include('recruiter.urls')),
+    path('logout/', views.logout_view, name="logout")
 ]

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import View, TemplateView
 from recruiter.models import Job, Company
 from django.contrib.auth.models import User
+from django.contrib.auth import logout
 from . import models
 from django.contrib.auth.decorators import login_required
 from .forms import UserForm
@@ -212,7 +213,9 @@ class ProfilePage(View):
         #
         # return render(request, "profie.html", context)
 
-
+def logout_view(request):
+    logout(request)
+    return redirect('applicant:home')
 
 
 
