@@ -5,3 +5,4 @@ faker
 mysqlclient
 django-environ
 gunicorn
+whitenoise
