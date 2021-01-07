@@ -5,10 +5,10 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     01. Theme default CSS
     02. Color Variation CSS
     03. Mixin CSS
@@ -161,7 +161,7 @@ ul {
 img {
   max-width: 100%; }
 
-/*-- 
+/*--
     - Common Classes
 -----------------------------------------*/
 .p-40 {
@@ -456,7 +456,7 @@ img {
   #scrollUp:hover {
     background: #0055d9; }
 
-/*-- 
+/*--
     - Input Placeholder
 -----------------------------------------*/
 input:-moz-placeholder, textarea:-moz-placeholder {
@@ -488,7 +488,7 @@ body.template-color-3 .text-color {
 body.template-color-4 .text-color {
   color: #ff5d3c; }
 
-/*-- 
+/*--
     - Tab Content & Pane Fix
 ------------------------------------------*/
 .tab-content {
@@ -506,10 +506,10 @@ body.template-color-4 .text-color {
       opacity: 1;
       overflow: visible; }
 
-/*-- 
+/*--
     - Main Wrapper
 ------------------------------------------*/
-/*-- 
+/*--
     - Section Title
 ------------------------------------------*/
 .section-title-wrap {
@@ -647,7 +647,7 @@ body.template-color-4 .text-color {
     line-height: 21px;
     font-weight: 500; }
 
-/*-- 
+/*--
     - Button
 ------------------------------------------*/
 a.ht-btn,
@@ -792,7 +792,7 @@ button.ht-btn {
   button.ht-btn:hover {
     opacity: 0.9; }
 
-/*-- 
+/*--
     - Page Banner Section
 ------------------------------------------*/
 /*-- Page Banner --*/
@@ -891,7 +891,7 @@ button.ht-btn {
 /* -----------------
     Instafeed css
 ---------------------*/
-/*-- 
+/*--
     - Page Pagination
 ------------------------------------------*/
 .page-pagination {
@@ -1149,7 +1149,7 @@ blockquote.blockquote {
     display: block;
     line-height: 18px; }
 
-/*==================== 
+/*====================
     Map CSS
 =======================*/
 #map {
@@ -1164,7 +1164,7 @@ blockquote.blockquote {
 -----------------------------------------*/
 body.template-color-1 {
   /*-- Common CSS --*/
-  /*-- 
+  /*--
             - Button
         ------------------------------------------*/
   /*-- Main Menu --*/
@@ -1294,7 +1294,7 @@ body.template-color-1 {
 
 body.template-color-2 {
   /*-- Common CSS --*/
-  /*-- 
+  /*--
             - Button
         ------------------------------------------*/
   /*-- Main Menu --*/
@@ -1424,7 +1424,7 @@ body.template-color-2 {
 
 body.template-color-3 {
   /*-- Common CSS --*/
-  /*-- 
+  /*--
             - Button
         ------------------------------------------*/
   /*-- Main Menu --*/
@@ -1554,7 +1554,7 @@ body.template-color-3 {
 
 body.template-color-4 {
   /*-- Common CSS --*/
-  /*-- 
+  /*--
             - Button
         ------------------------------------------*/
   /*-- Main Menu --*/
@@ -1724,7 +1724,7 @@ body.template-color-4 {
   top: 0;
   width: 100%;
   z-index: 999;
-  background-color: rgba(5,5,5,0.32);
+  background-color: grey;
   /*background-color: transparent;*/
   backdrop-filter:transparent; }
 
@@ -1742,7 +1742,7 @@ body.template-color-4 {
   animation-name: slideInDown;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  background-color: rgba(37, 37, 49, 0.94);
+  background-color: grey;
   width: 100%;
   z-index: 999; }
   .is-sticky.sticky-white {
@@ -2072,7 +2072,7 @@ body.template-color-4 {
         .btn-action-wrap .item.jp-author a i {
           padding-right: 5px; } }*/
   .btn-action-wrap .item.jp-author-action {
-     
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2294,7 +2294,7 @@ body.template-color-4 {
           transform: none; }
 
 /* =======================
-    Header menu 
+    Header menu
 ==========================*/
 .object-custom-menu {
   padding: 0;

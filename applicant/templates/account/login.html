@@ -17,10 +17,10 @@
                     <div class="col-12">
                         <div class="page-breadcrumb-content">
                             <ul class="page-breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Login</li>
+                                <li><a href="index.html"></a></li>
+                                <li></li>
                             </ul>
-                            <h1>Login</h1>
+                            <h1></h1>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                                               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                               {% endif %}
                                               <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-                                              
+
                                               <div class="col-12 mb-25">
 
                                                 <button style="box-shadow: 0px 5px 8px -6px rgba(0,0,0,.5);" class="primaryAction ht-btn" type="submit">{% trans "Sign In" %}</button>
@@ -85,6 +85,17 @@
                                             <img width="40" src="https://img-authors.flaticon.com/google.jpg" alt="">
                                               Sign in with Google
                                             </a>
+                                        </div>
+
+                                        <div style="margin-top: 50px;" class="divider">
+                                            <span class="line"></span>
+
+                                        </div>
+
+                                        <div class="text-center col-12 mb-25">
+                                          <b><p>Not registered yet?</p></b><br>
+                                          <a style="box-shadow: 0px 5px 8px -6px rgba(0,0,0,.5);"
+                                          class="primaryAction ht-btn" type="button" href="{% url 'applicant:register' %}">Register here</a>
                                         </div>
                                     </div>
                                 </div>

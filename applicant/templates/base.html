@@ -69,7 +69,7 @@
                   <div class="col-xl-5 col-lg-7 col-12">
                       <nav class="main-menu" id="menu_nax">
                           <ul>
-                              <li><a href="{% url 'applicant:home' %}">Home <!--small class="icon-arrow"></small--></a>
+                              <li><a href="{% url 'applicant:home' %}">Home</a>
                                   <!--ul class="sub-menu">
                                       <li><a href="index.html">Home V1</a></li>
                                       <li><a href="index-2.html">Home V2</a></li>
@@ -84,6 +84,11 @@
 
                                   </ul>
                               </li>
+                              {% if user.is_authenticated %}
+
+                                <li><a href="{% url 'applicant:dashboard' %}">Dashboard</a></li>
+
+                              {% endif %}
 
                               <!--li><a href="candidates-listing.html"><span class="label-status new">new</span> Candidates <small class="icon-arrow"></small></a>
                                   <ul class="sub-menu">
@@ -459,9 +464,11 @@
                                   <li><a href="#">Partner</a></li>
                                   <li><a href="#">Help Center</a></li>
                                   <li><a href="#">Contact Us</a></li-->
-                                  <li><a href="about.html">About us</a></li>
-                                      <li><a href="contact.html">Contact Us</a></li>
-                                      <li><a href="faq.html">FAQS</a></li>
+                                  <li><a href="{% url 'applicant:about' %}">About us</a></li>
+                                      <li><a href="{% url 'applicant:contact' %}">Contact Us</a></li>
+                                      <li><a href="{% url 'applicant:faq' %}">FAQS</a></li>
+                                      <li><a href="{% url 'applicant:pricing' %}">Pricing Page</a></li>
+
                                       <!--li><a href="pricing.html">Pricing & Plan</a></li>
                                       <li><a href="login-register.html">Login & Register</a></li>
                                       <li><a href="dashboard.html">Dashboard</a></li>
