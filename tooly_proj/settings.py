@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import environ
 import mimetypes
+from urllib.parse import urlparse
+
 mimetypes.add_type("text/css", ".css", True)
 
 env = environ.Env()
