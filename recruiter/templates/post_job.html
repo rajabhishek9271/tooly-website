@@ -49,7 +49,7 @@
 
                                                                   <div class="single-input mb-25">
                                                                       <label for="first-name">Job Title<span>*</span></label>
-                                                                      <input type="text" id="first-name" name="company_name" placeholder="Title"  value="">
+                                                                      <input type="text" id="first-name" name="job_title" placeholder="Title"  value="">
                                                                   </div>
                                                                         <!-- Single Input Start -->
                                                                         {% for field in form %}
@@ -67,7 +67,7 @@
                                                                         <!-- Single Input Start -->
                                                                         <div class="single-input mb-25">
                                                                             <label for="confirm-password">Job Description</label>
-                                                                            <input type="text" id="desc" name="description" placeholder="Mention the required job details" value="">
+                                                                            <input type="text" id="desc" name="job_description" placeholder="Mention the required job details" value="">
                                                                         </div>
                                                                         <!-- Single Input End -->
 
@@ -86,7 +86,7 @@
                                                                         <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Job Category</label>
                                                                             <br>
-                                                                            <select id="mselect" class="" tabindex="8" multiple >
+                                                                            <select id="mselect" name="job_category" class="" tabindex="8" multiple >
                                                                               <option value="1">All categories</option>
                                                                               <option value="2">Accounting</option>
                                                                               <option value="3">Broadcasting</option>
@@ -110,7 +110,7 @@
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="type">Education level</label>
-                                                                            <select class="nice-select wide" name="level" id="level" >
+                                                                            <select class="nice-select wide" name="education_level" id="level" >
                                                                                 <option value="hs">High School</option>
                                                                                 <option value="grad">Graduate</option>
                                                                                 <option value="postg">Post Graduate</option>
@@ -120,28 +120,28 @@
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="date">Date</label>
-                                                                            <input type="datetime-local"id="date" name="date"  value="">
+                                                                            <input type="datetime-local"id="date" name="posted_on"  value="">
                                                                         </div>
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="first-name">Vaccancies</label>
-                                                                            <input type="number" id="vacancy" name="vacant"  value="">
+                                                                            <input type="number" id="vacancy" name="vaccancies"  value="">
                                                                         </div>
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="applicants">No of Applicants</label>
-                                                                            <input type="number" id="applicants" name="vacant" value="">
+                                                                            <input type="number" id="applicants" name="no_of_applicants" value="">
                                                                         </div>
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="salary">Salary</label>
-                                                                            <input type="number" id="salary" name="vacant" value="">
+                                                                            <input type="number" id="salary" name="salary" value="">
                                                                         </div>
 
                                                                         <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Skills</label>
                                                                             <br>
-                                                                            <select id="msselect"  tabindex="8" multiple >
+                                                                            <select id="msselect" name="skills"  tabindex="8" multiple >
                                                                                 <option value="1">Web Developer</option>
                                                                                 <option value="2">App Developer</option>
                                                                                 <option value="3">Graphic Designer</option>
@@ -155,7 +155,7 @@
 
                                                                         <div class="single-input mb-25">
                                                                             <label for="desc">About Job<span>*</span></label>
-                                                                            <textarea type="text" name="description" placeholder="Description" value=""></textarea>
+                                                                            <textarea type="text" name="about_job" placeholder="Description" value=""></textarea>
                                                                         </div>
 
 
@@ -165,7 +165,7 @@
                                                                         <div class="hide-input single-input mb-25" >
                                                                             <label for="type">Keywords</label>
                                                                             <br>
-                                                                            <select id="mkselect"  tabindex="8" multiple >
+                                                                            <select id="mkselect"  name="keywords" tabindex="8" multiple >
                                                                                 <option value="1">abc</option>
                                                                                 <option value="2">def</option>
                                                                                 <option value="3">ghi</option>
@@ -176,7 +176,7 @@
                                                                         <!-- Single Input End -->
                                                                         <div class="single-input mb-25">
                                                                             <label for="experience">Experience</label>
-                                                                            <input type="number" id="exp" name="vacant"  value="">
+                                                                            <input type="number" id="exp" name="experience"  value="">
                                                                         </div>
 
 

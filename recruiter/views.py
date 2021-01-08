@@ -5,6 +5,7 @@ from .forms import RecruiterForm
 from .models import Company, Job
 from django.http import JsonResponse
 from django.core.paginator import Paginator
+from . import models
 
 
 # Create your views here.
@@ -140,6 +141,34 @@ class CompanyDetailView(DetailView):
 
 class PostJobView(TemplateView):
     template_name = 'post_job.html'
+
+    def post(self, request, *args,**kwargs):
+
+        form = request.POST
+        company = models.Company.objects.get(
+            user = request.user
+        )
+        new_job = models.Job.objects.create(
+                company = company,
+                job_title = form.get('job_title'),
+                job_description = form.get('job_description'),
+                job_type = form.get('job_type'),
+                job_category = form.get('job_category'),
+                education_level = form.get('education_level'),
+                posted_on = form.get('posted_on'),
+                vaccancies = form.get('vaccancies'),
+                no_of_applicants = form.get('no_of_applicants'),
+                salary = form.get('salary'),
+                skills = form.get('skills'),
+                about_job = form.get('about_job'),
+                keywords = form.get('keywords'),
+                experience = form.get('experience'),
+
+        )
+        new_job.save()
+        print(form.get('job_title'))
+
+        return render(request,'index.html')
 
 
 class RecruiterHomePage(TemplateView):
