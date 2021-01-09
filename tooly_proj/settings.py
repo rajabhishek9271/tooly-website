@@ -16,6 +16,7 @@ import environ
 import mimetypes
 from urllib.parse import urlparse
 import django_heroku
+import socket
 
 
 mimetypes.add_type("text/css", ".css", True)
@@ -36,9 +37,13 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(env("DEBUG"))
+DEBUG = False
+if (socket.gethostname() == 'LAPTOP-KSPUN68R'): # Add your Local Computer's hostname TO RUN IN DEBUG MODE
 
-ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website-zlftl.ondigitalocean.app', 'tooly-website.herokuapp.com']
+    DEBUG = True
+
+
+ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website.herokuapp.com']
 
 
 # Application definition
@@ -109,7 +114,6 @@ DATABASES = {
 
     }
 }
-# else:
 #     DATABASES = {
 #         'default':{
 #             'ENGINE': 'django.db.backends.sqlite3',

@@ -23,29 +23,29 @@ def get_data():
         'Node JS', 'PHP', 'C', 'C++'
     )
 
-    # for i in range(20):
-    #     username = fakegen.first_name()
-    #     new_user = User.objects.get_or_create(
-    #         username=username,
-    #         email=fakegen.email(),
-    #         password=fakegen.ean(length=8)
-    #
-    #     )[0]
-    #     new_company = Company.objects.get_or_create(
-    #         user=User.objects.get(username=username),
-    #         company_name=fakegen.company(),
-    #         company_description=fakegen.text(),
-    #         company_website=fakegen.url(),
-    #         employees_number=fakegen.random_number(digits=2),
-    #         company_email=fakegen.company_email(),
-    #         country=fakegen.country(),
-    #         city=fakegen.city(),
-    #         phone_no=fakegen.random_number(digits=10),
-    #         address=fakegen.address(),
-    #         pincode=fakegen.random_number(digits=6),
-    #     )[0]
-    #
-    #     new_company.save()
+    for i in range(30):
+        username = fakegen.first_name()
+        new_user = User.objects.get_or_create(
+            username=username,
+            email=fakegen.email(),
+            password=fakegen.ean(length=8)
+
+        )[0]
+        new_company = Company.objects.get_or_create(
+            user=User.objects.get(username=username),
+            company_name=fakegen.company(),
+            company_description=fakegen.text(),
+            company_website=fakegen.url(),
+            employees_number=fakegen.random_number(digits=2),
+            company_email=fakegen.company_email(),
+            country=fakegen.country(),
+            city=fakegen.city(),
+            phone_no=fakegen.random_number(digits=10),
+            address=fakegen.address(),
+            pincode=fakegen.random_number(digits=6),
+        )[0]
+
+        new_company.save()
 
     for company in Company.objects.all():
 
