@@ -37,7 +37,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 if (socket.gethostname() == 'LAPTOP-KSPUN68R'): # Add your Local Computer's hostname TO RUN IN DEBUG MODE
 
     DEBUG = True
