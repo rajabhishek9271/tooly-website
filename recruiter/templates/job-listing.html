@@ -347,9 +347,9 @@
                                                 <div class="job-image">
                                                     <a href="{{ job.id }}">
                                                       {% if job.company.company_logo %}
-                                                          <img src="{{ job.company.imageURL }}">
+                                                        <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{{ job.company.imageURL }}"></a>
                                                       {% else %}
-                                                        <img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo">
+                                                      <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>  
 
                                                       {% endif %}
                                                     </a>
@@ -369,7 +369,7 @@
                                                                     <a href="{{ job.id }}">{{ job.job_title }}</a>
                                                                 </h3>
                                                                 <div class="employer-name">
-                                                                    <a href="job-details.html">{{ job.company.company_name }}</a>
+                                                                    <a href="{% url 'recruiter:employer_detail' job.company.id %}">{{ job.company.company_name }}</a>
                                                                 </div>
                                                             </div>
                                                         </div>

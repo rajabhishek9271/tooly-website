@@ -23,7 +23,7 @@ def get_data():
         'Node JS', 'PHP', 'C', 'C++'
     )
 
-    for i in range(30):
+    for i in range(10):
         username = fakegen.first_name()
         new_user = User.objects.get_or_create(
             username=username,

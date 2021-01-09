@@ -6,6 +6,7 @@ from .models import Company, Job
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from . import models
+from django.views.generic.edit import FormMixin
 
 
 # Create your views here.
@@ -133,11 +134,18 @@ class JobDetailView(DetailView):
     model = Job
     template_name = 'job-details.html'
 
-class CompanyDetailView(DetailView):
+class CompanyDetailView(DetailView, FormMixin):
     context_object_name = 'company'
     model = Company
     template_name = 'employer_detail.html'
 
+    def post(self, request, *args, **kwargs):
+        print('HELLO')
+        self.object = self.get_object()
+        form = self.get_form()
+        # form = request.POST
+        # print(request.path)
+        return render(request, 'index1.html')
 
 class PostJobView(TemplateView):
     template_name = 'post_job.html'
