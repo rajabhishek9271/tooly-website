@@ -36,9 +36,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+DEBUG = bool(env("DEBUG"))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website-zlftl.ondigitalocean.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website-zlftl.ondigitalocean.app', 'tooly-website.herokuapp.com']
 
 
 # Application definition
@@ -98,28 +98,24 @@ WSGI_APPLICATION = 'tooly_proj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-if os.getenv("DATABASE_URL" ,"") != "":
-    r = urlparse(os.environ.get("DATABASE_URL"))
+DATABASES = {
+    'default': {
+        'NAME': 'defaultdb',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': env('DATABASE_USER'),
+        'PORT': 25060,
+        'PASSWORD': env('DATABASE_PASS'),
+        'HOST': env('DATABASE_HOST'),
 
-    DATABASES = {
-        'default': {
-            'NAME': 'defaultdb',
-            'ENGINE': 'django.db.backends.mysql',
-            'USER': r.username,
-            'PORT': r.port,
-            'PASSWORD': r.password,
-            'HOST': r.hostname,
-            'OPTIONS':{"sslmode":"require"},
-
-        }
     }
-else:
-    DATABASES = {
-        'default':{
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': str(os.path.join(BASE_DIR, "db.sqlite3"))
-        }
-    }
+}
+# else:
+#     DATABASES = {
+#         'default':{
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': str(os.path.join(BASE_DIR, "db.sqlite3"))
+#         }
+#     }
 
 
 AUTHENTICATION_BACKENDS = [
