@@ -1071,34 +1071,34 @@ a.ui-button:active,
 	width: 16px;
 	height: 16px;
 }
-.ui-icon,
+/* .ui-icon,
 .ui-widget-content .ui-icon {
 	background-image: url("images/ui-icons_444444_256x240.png");
 }
 .ui-widget-header .ui-icon {
 	background-image: url("images/ui-icons_444444_256x240.png");
-}
-.ui-state-hover .ui-icon,
+} */
+/* .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-button:focus .ui-icon {
 	background-image: url("images/ui-icons_555555_256x240.png");
-}
-.ui-state-active .ui-icon,
+} */
+/* .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
 	background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
 	background-image: url("images/ui-icons_777620_256x240.png");
-}
-.ui-state-error .ui-icon,
+} */
+/* .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
 	background-image: url("images/ui-icons_cc0000_256x240.png");
 }
 .ui-button .ui-icon {
 	background-image: url("images/ui-icons_777777_256x240.png");
-}
+} */
 
 /* positioning */
 .ui-icon-blank { background-position: 16px 16px; }
@@ -1318,7 +1318,7 @@ a.ui-button:active,
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
 }
-	
+
 
 /*--------------------------------
     Nice Select CSS
@@ -1468,7 +1468,7 @@ a.ui-button:active,
 
 .no-csspointerevents .nice-select.open .list {
 	display: block; }
-	
+
 	/* -------------------------
     venobox.css
 ----------------------------*/
@@ -1640,8 +1640,8 @@ a.ui-button:active,
       height: 540px;
   }
 }
-/* 
-Please do NOT edit this part! 
+/*
+Please do NOT edit this part!
 or at least read this note: http://i.imgur.com/7C0ws9e.gif
 */
 .vbox-open{
@@ -5351,4 +5351,3 @@ img.figlio{
   Issues: http://github.com/kenwheeler/slick/issues
  */
 .slick-list,.slick-slider,.slick-track{position:relative;display:block}.slick-loading .slick-slide,.slick-loading .slick-track{visibility:hidden}.slick-slider{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{top:0;left:0;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
-
