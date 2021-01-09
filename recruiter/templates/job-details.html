@@ -2,6 +2,43 @@
 {% load static %}
 {% block body_block %}
 
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Confirmation</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        You can review your Profile before applying
+        <a href="{% url 'applicant:profile' %}" type="button" class="btn btn-primary" name="button">Preview</a>
+        <br>
+        OR
+        <br>
+        <form  method="POST">{% csrf_token %}
+          <input type="submit" class="btn btn-primary" name="button" value="Submit Your Application">
+
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
         <!-- Breadcrumb Section Start -->
         <div class="breadcrumb-section section bg_color--5 pt-60 pt-sm-50 pt-xs-40 pb-60 pb-sm-50 pb-xs-40">
             <div class="container">
@@ -133,11 +170,9 @@
                             <div class="common-sidebar-widget sidebar-three">
                                 <div class="sidebar-job-apply">
                                     <div class="action-button">
-                                        <a class="ht-btn text-center" href="#">Apply now <i class="ml-10 mr-0 fa fa-paper-plane"></i></a>
-                                        <span>Or Apply With</span>
-                                        <div class="line"></div>
-                                        <a class="ht-btn facebook-btn text-center" href="#">Apply With Facebook <i class="ml-10 mr-0 fab fa-facebook-f"></i></a>
-                                        <a class="ht-btn linkedin-btn text-center" href="#">Apply With Linkedin <i class="ml-10 mr-0 fab fa-linkedin-in"></i></a>
+                                        <button class="ht-btn text-center" data-toggle="modal" data-target="#myModal">Apply now <i class="ml-10 mr-0 fa fa-paper-plane"></i></button>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +391,7 @@
                                 </div>
                             </div>
                             <div class="job-apply">
-                                <a class="ht-btn text-center" href="#">Apply now <i class="ml-10 mr-0 fa fa-paper-plane"></i></a>
+                                <button class="ht-btn text-center" data-toggle="modal" data-target="#myModal">Apply now <i class="ml-10 mr-0 fa fa-paper-plane"></i></button>
                             </div>
                         </div>
 
@@ -750,5 +785,7 @@
             </div>
         </div>
         <!-- Modal Area End -->
+
+
 
 {% endblock %}
