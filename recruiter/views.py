@@ -6,7 +6,10 @@ from .models import Company, Job
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from . import models
-from django.views.generic.edit import FormMixin
+from applicant.models import Application, Applicant
+from django.contrib import messages
+from django.db import IntegrityError
+
 
 
 # Create your views here.
@@ -107,7 +110,6 @@ class JobListingPage(View):
                 print("returning from ajax")
                 return JsonResponse(context)
 
-        print("returning from view")
         context = {
         'jobs':jobs,
         'keyword':keyword,
@@ -134,18 +136,29 @@ class JobDetailView(DetailView):
     model = Job
     template_name = 'job-details.html'
 
-class CompanyDetailView(DetailView, FormMixin):
+    def post(self, request, *args, **kwargs):
+        user = request.user
+        job_id = (request.path[-2])
+        job = models.Job.objects.get(id=job_id)
+        applicant = Applicant.objects.get(user=user)
+
+        try:
+            application = Application.objects.create(
+            applicant=applicant,
+            applied_job=job,
+            )
+            application.save()
+        except IntegrityError:
+            messages.warning(request, "You have already applied to this job! You can check its status in the Dashboard")
+            return redirect('applicant:home')
+
+        messages.success(request, "Your Application has been submited! You can check its status in the Dashboard")
+        return render(request, 'index1.html')
+
+class CompanyDetailView(DetailView):
     context_object_name = 'company'
     model = Company
     template_name = 'employer_detail.html'
-
-    def post(self, request, *args, **kwargs):
-        print('HELLO')
-        self.object = self.get_object()
-        form = self.get_form()
-        # form = request.POST
-        # print(request.path)
-        return render(request, 'index1.html')
 
 class PostJobView(TemplateView):
     template_name = 'post_job.html'

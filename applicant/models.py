@@ -27,6 +27,9 @@ class Application(models.Model):
     applied_date = models.DateTimeField(auto_now_add=True)
     is_accepted = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = (('applied_job', 'applicant'),)
+
     def __str__(self):
         return f"{self.applicant.user.first_name} -> {self.applied_job.job_title}"
 
