@@ -61,43 +61,21 @@ Our platform makes it easy for foreign job seekers to find the perfect<br>job pr
                                                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                                                     <!-- Single Field Item Start  -->
                                                     <div class="single-field-item">
-                                                        <i class="lnr lnr-list"></i>
-                                                        <select class="nice-select wide">
-                                                            <option value="1">All categories</option>
-                                                            <option value="2">Accounting</option>
-                                                            <option value="3">Broadcasting</option>
-                                                            <option value="4">Customer Service</option>
-                                                            <option value="5">Digital Marketing</option>
-                                                            <option value="6">Finance & Accounting</option>
-                                                            <option value="7">Game Mobile</option>
-                                                            <option value="8">Graphics & Design</option>
-                                                            <option value="9">Human Resources</option>
-                                                            <option value="10">Medical Doctor</option>
-                                                            <option value="11">Restaurant</option>
-                                                            <option value="12">Sale & Marketing</option>
-                                                            <option value="13">Sale Assistance</option>
-                                                            <option value="14">Science & Analitycs</option>
-                                                            <option value="15">Teachers</option>
-                                                            <option value="16">Web & Software Dev</option>
-                                                            <option value="17">Writing & Translations</option>
+                                                        <select id="location" class="nice-select wide location">
+                                                            <option value="0">
+                                                              <i class="lnr lnr-map-marker"></i>Looking for jobs in?
+                                                            </option>
+                                                            <option value="USA">
+                                                              USA</option>
+                                                            <option value="Canada">Canada</option>
                                                         </select>
                                                     </div>
                                                     <!-- Single Field Item End  -->
                                                 </div>
-                                                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                                    <!-- Single Field Item Start  -->
-                                                    <div class="single-field-item">
-                                                        <i class="lnr lnr-map-marker"></i>
-                                                        <input class="input-field input-field-location" placeholder="Location" name="location" type="text">
-                                                        <span class="btn-action-location">
-                                                        <i class="far fa-dot-circle"></i>
-                                                    </span>
-                                                    </div>
-                                                    <!-- Single Field Item End  -->
-                                                </div>
+
                                                 <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                                                     <div class="submit-btn">
-                                                        <button class="ht-btn" type="submit"> Search</button>
+                                                        <button class="ht-btn" type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1764,8 +1742,6 @@ input[type=submit] {
   color: #ffffff;
 }
 </style>
-<script type="text/javascript" src='{% static 'assets/js/noc.js' %}' >
 
-</script>
 
     {% endblock %}
