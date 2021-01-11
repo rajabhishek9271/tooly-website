@@ -25,7 +25,7 @@ class Application(models.Model):
     applicant = models.ForeignKey(Applicant, on_delete=models.CASCADE)
     applied_job = models.ForeignKey(Job, on_delete=models.CASCADE)
     applied_date = models.DateTimeField(auto_now_add=True)
-    is_accepted = models.BooleanField(default=False)
+    status = models.CharField(max_length=30, default="Pending")
 
     class Meta:
         unique_together = (('applied_job', 'applicant'),)
@@ -36,7 +36,7 @@ class Application(models.Model):
     def save(self, *args, **kwargs):
 
         required_job = Job.objects.get(id=self.applied_job.id)
-        if(self.is_accepted):
+        if(self.status == "Approved"):
             required_job.vaccancies -= 1
             required_job.save()
 

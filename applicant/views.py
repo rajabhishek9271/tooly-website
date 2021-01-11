@@ -1,15 +1,20 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View, TemplateView
+from django.views.generic.detail import DetailView
+from django.template.loader import render_to_string
+
 from recruiter.models import Job, Company
 from django.contrib.auth.models import User
-from django.contrib.auth import logout, authenticate, login
 from . import models
-from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserForm
+
+from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .mixins import MustBeApplicantMixin
-from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django.contrib import messages
+from django.core.paginator import Paginator
+
 
 # Create your views here.
 
@@ -24,7 +29,7 @@ class HomePage(TemplateView):
 
         request.session['keyword'] = keyword
 
-        return redirect('recruiter:jobs_list')
+        return redirect('applicant:jobs_list')
 
 
 class AboutPage(TemplateView):
@@ -33,8 +38,77 @@ class AboutPage(TemplateView):
 class ErrorPage(TemplateView):
     template_name = "404.html"
 
-class ApplicationsPage(TemplateView):
-    template_name = "applications.html"
+class ApplicationsPage(LoginRequiredMixin, MustBeApplicantMixin, View):
+
+    login_url='/accounts/login/'
+    def get(self, request, *args, **kwargs):
+
+        curr_user = request.user
+        curr_applicant = models.Applicant.objects.get(user=curr_user)
+
+        applications = models.Application.objects.filter(
+            applicant=curr_applicant
+        ).order_by('-id')
+
+        p = Paginator(applications,10)
+        page_no = request.GET.get('page',1)
+        applications = p.page(page_no)
+
+
+        index = applications.number - 1
+         # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+        max_index = len(p.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+        start_index = index - 3 if index >= 3 else 0
+        end_index = index + 3 if index <= max_index - 3 else max_index
+    # Get our new page range. In the latest versions of Django page_range returns
+    # an iterator. Thus pass it to list, to make our slice possible again.
+        page_range = list(p.page_range)[start_index:end_index]
+
+        # jobs = Job.objects.all()
+        context = {
+            'applications':applications,
+            'page_range': page_range
+
+        }
+        return render(request, 'applications.html', context)
+
+class DashboardPage(LoginRequiredMixin, MustBeApplicantMixin, View):
+
+    login_url='/accounts/login/'
+    def get(self, request, *args, **kwargs):
+
+        curr_user = request.user
+        curr_applicant = models.Applicant.objects.get(user=curr_user)
+
+        applications = models.Application.objects.filter(
+            applicant=curr_applicant
+        ).order_by('-id')[:5]  # TAKE ONLY THE 5 MOST RECENT APPLICATIONS
+
+        p = Paginator(applications,10)
+        page_no = request.GET.get('page',1)
+        applications = p.page(page_no)
+
+
+        index = applications.number - 1
+         # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+        max_index = len(p.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+        start_index = index - 3 if index >= 3 else 0
+        end_index = index + 3 if index <= max_index - 3 else max_index
+    # Get our new page range. In the latest versions of Django page_range returns
+    # an iterator. Thus pass it to list, to make our slice possible again.
+        page_range = list(p.page_range)[start_index:end_index]
+
+        # jobs = Job.objects.all()
+        context = {
+            'applications':applications,
+            'page_range': page_range
+
+        }
+        return render(request, 'dashboard.html', context)
 
 class BlogdetailsPage(TemplateView):
     template_name = "blog-details.html"
@@ -56,9 +130,6 @@ class CheckoutPage(TemplateView):
 
 class ContactPage(TemplateView):
     template_name = "contact.html"
-
-class DashboardPage(TemplateView):
-    template_name = "dashboard.html"
 
 class EmployerDetailsTwoPage(TemplateView):
     template_name = "employer-details-two.html"
@@ -84,6 +155,100 @@ class JobDetailsTwoPage(TemplateView):
 class JobDetailsPage(TemplateView):
     template_name = "job-details.html"
 
+
+
+class JobListingPage(View):
+    def get(self, request, *args, **kwargs):
+
+        try:
+            keyword = request.session['keyword']
+        except KeyError:
+            # If user did'nt search anything and pressed search button
+            keyword = ""
+        jobs=Job.objects.filter(job_title__contains=keyword)
+
+        p = Paginator(jobs,10)
+        page_no = request.GET.get('page',1)
+        jobs = p.page(page_no)
+
+
+        index = jobs.number - 1
+         # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+        max_index = len(p.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+        start_index = index - 3 if index >= 3 else 0
+        end_index = index + 3 if index <= max_index - 3 else max_index
+    # Get our new page range. In the latest versions of Django page_range returns
+    # an iterator. Thus pass it to list, to make our slice possible again.
+        page_range = list(p.page_range)[start_index:end_index]
+
+        # jobs = Job.objects.all()
+
+        if request.is_ajax():
+            exp = request.GET.get('exp')
+            jobs=Job.objects.filter(job_title__contains=keyword)
+            total_ids=[]
+            for job in jobs:
+                total_ids.append(job.id)
+
+            if exp == ">5":
+                ids=[]
+                jobs=Job.objects.filter(job_title__contains=keyword).filter(experience__gte=5)
+                for job in jobs:
+                    ids.append(job.id)
+
+                context = {
+                    'ids':ids,
+                    'total_ids':total_ids
+                }
+                print("returning from ajax")
+                return JsonResponse(context)
+
+        context = {
+        'jobs':jobs,
+        'keyword':keyword,
+        'page_range': page_range
+        }
+
+
+        return render(request, "job-listing.html", context=context)
+
+    def post(self, request, *args,**kwargs):
+
+        form = request.POST
+
+        keyword = form.get('keyword')
+
+        request.session['keyword'] = keyword
+
+        return redirect('applicant:jobs_list')
+
+
+class JobDetailView(DetailView):
+
+    context_object_name ='job_detail'
+    model = Job
+    template_name = 'job-details.html'
+
+    def post(self, request, *args, **kwargs):
+        user = request.user
+        job_id = (request.path[-2])
+        job = Job.objects.get(id=job_id)
+        applicant = Applicant.objects.get(user=user)
+
+        try:
+            application = Application.objects.create(
+            applicant=applicant,
+            applied_job=job,
+            )
+            application.save()
+        except IntegrityError:
+            messages.warning(request, "You have already applied to this job! You can check its status in the Dashboard")
+            return redirect('applicant:home')
+
+        messages.success(request, "Your Application has been submited! You can check its status in the Dashboard")
+        return render(request, 'index1.html')
 
 
 class JobwithMapPage(TemplateView):

@@ -349,7 +349,7 @@
                                                       {% if job.company.company_logo %}
                                                         <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{{ job.company.imageURL }}"></a>
                                                       {% else %}
-                                                      <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>  
+                                                      <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>
 
                                                       {% endif %}
                                                     </a>
@@ -400,7 +400,7 @@
                                     <div class="col-12">
                                         <ul class="page-pagination">
                                           {% if jobs.has_previous %}
-                                            <li><a href="{% url 'recruiter:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                            <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
                                             {% endif %}
 
                                             {% for pg in page_range %}
@@ -412,7 +412,7 @@
                                             {% endfor %}
 
                                             {% if jobs.has_next %}
-                                            <li><a href="{% url 'recruiter:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                            <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
                                             {% endif %}
 
                                         </ul>
@@ -422,7 +422,7 @@
                             <div id="grid" class="tab-pane fade">
 
                                 <div class="row">
-                                    {% for job in jobs%}
+                                    {% for job in jobs %}
                                     <div class="col-md-6 mb-20">
                                         <!-- Single Job Start  -->
 

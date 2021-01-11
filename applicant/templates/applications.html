@@ -46,7 +46,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="page-breadcrumb-content mb-40">
-                                        <h1>Applications</h1>
+                                        <h1>My Applications</h1>
                                     </div>
                                 </div>
                             </div>
@@ -54,16 +54,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-12">
                                         <div class="job-applications mb-50">
-                                            <div class="applications-heading d-flex">
-                                                <div class="message-fields-form p-0 border-0">
-                                                    <form action="#">
-                                                        <div class="message-form review-from mt-0">
-                                                            <button class="search-btn"><i class="lnr lnr-magnifier"></i></button>
-                                                            <input type="text" placeholder="Search in messages">
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
+
                                             <div class="job-applications-main-block">
                                                 <div class="job-applications-table">
                                                     <table class="table">
@@ -72,179 +63,48 @@
                                                                 <th class="width-35">Applied Job</th>
                                                                 <th>Employer</th>
                                                                 <th>Applied Date</th>
-                                                                <th class="width-23"></th>
-                                                                <th class="width-15 text-right">Action</th>
+                                                                <th>Status</th>
+
+                                                                <th class="width-23">Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                          {% for application in applications %}
                                                             <tr class="job-application-item">
                                                                 <td class="application-job">
-                                                                    <h3><a href="#">tester</a></h3>
+                                                                    <h3><a href="{% url 'applicant:job_detail' application.applied_job.id %}">
+                                                                      {{ application.applied_job.job_title }}</a>
+                                                                    </h3>
                                                                 </td>
 
                                                                 <td class="application-employer">
-                                                                    <a class="dotted" href="#">Unknown</a>
+                                                                    <a class="dotted" href="{% url 'recruiter:employer_detail' application.applied_job.company.id %}">
+                                                                      {{ application.applied_job.company.company_name }}
+                                                                    </a>
+                                                                </td>
+
+                                                                <td class="status">
+                                                                    {% if application.status == "Pending" %}
+                                                                      <span class="pending">Pending</span>
+                                                                    {% elif application.status == "Rejected" %}
+                                                                      <span class="rejected">Rejected</span>
+                                                                    {% elif application.status == "Approved" %}
+                                                                      <span class="approved">Approved</span>
+                                                                    {% endif %}
                                                                 </td>
 
                                                                 <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
+                                                                    <span>{{ application.applied_date }}</span>
                                                                 </td>
 
                                                                 <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
+                                                                    <a href="{{ application.applicant.resume }}"><i class="lnr lnr-download"></i> Download CV</a>
                                                                 </td>
 
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
+
                                                             </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Android & IOS Developer</a></h3>
-                                                                </td>
+                                                            {% endfor %}
 
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Inwave Studio</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Tax Manager</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Vsmarttech</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Apr 27, 2020 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">IOS & Android Developer</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Radio Game</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Apr 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Android & IOS Developer</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Inwave Studio</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Construction Worker</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Digital Vine</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Jr. Developer Shopify</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">InwaveThemes</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="job-application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Receptionist</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Digital Vine</a>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="download-cv">
-                                                                    <a href="#"><i class="lnr lnr-download"></i> Download CV</a>
-                                                                </td>
-
-                                                                <td class="view-application-pop text-right">
-                                                                    <a href="#"><i class="lnr lnr-eye"></i><span>View</span></a>
-                                                                </td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -252,10 +112,21 @@
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <ul class="page-pagination justify-content-center">
-                                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                                                <li class="active"><a href="#">1</a></li>
-                                                                <li><a href="#">2</a></li>
-                                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                                              {% if jobs.has_previous %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                                                {% endif %}
+
+                                                                {% for pg in page_range %}
+                                                                 {% if jobs.number == pg %}
+                                                                     <li><a href="?page={{pg}}" style="background-color: #008080; color: black" class="btn">{{pg}}</a></li>
+                                                                 {% else %}
+                                                                     <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+                                                                 {% endif %}
+                                                                {% endfor %}
+
+                                                                {% if jobs.has_next %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                                                {% endif %}
                                                             </ul>
                                                         </div>
                                                     </div>

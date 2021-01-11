@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="page-breadcrumb-content mb-40">
-                                        <h1>Dashboard</h1>
+                                        <h1 style="text-transform: capitalize;">{{ request.user }}'s Dashboard</h1>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                     <div class="col-xl-8 col-12">
                                         <div class="submited-applications mb-50">
                                             <div class="applications-heading">
-                                                <h3>Already Applied</h3>
+                                                <h3>Most recent Applications</h3>
                                             </div>
                                             <div class="applications-main-block">
                                                 <div class="applications-table">
@@ -65,195 +65,41 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                          {% for application in applications %}
                                                             <tr class="application-item">
                                                                 <td class="application-job">
-                                                                    <h3><a href="#">tester</a></h3>
+                                                                    <h3><a href="{% url 'applicant:job_detail' application.applied_job.id %}">{{ application.applied_job.job_title }}
+                                                                    </a>
+                                                                  </h3>
                                                                 </td>
 
                                                                 <td class="application-employer">
-                                                                    <a class="dotted" href="#">Unknown</a>
+                                                                    <a class="dotted" href="{% url 'recruiter:employer_detail' application.applied_job.company.id %}">
+                                                                      {{ application.applied_job.company.company_name }}
+                                                                    </a>
                                                                 </td>
 
                                                                 <td class="status">
-                                                                    <span class="pending">Pending</span>
+                                                                    {% if application.status == "Pending" %}
+                                                                      <span class="pending">Pending</span>
+                                                                    {% elif application.status == "Rejected" %}
+                                                                      <span class="rejected">Rejected</span>
+                                                                    {% elif application.status == "Approved" %}
+                                                                      <span class="approved">Approved</span>
+                                                                    {% endif %}
                                                                 </td>
 
                                                                 <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
+                                                                    <span>{{ application.applied_date }}</span>
                                                                 </td>
 
                                                                 <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
+                                                                    <a href="{% url 'applicant:profile' %}" class="view-application">View Application</a>
                                                                 </td>
                                                             </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Android & IOS Developer</a></h3>
-                                                                </td>
+                                                          {% endfor %}
 
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Inwave Studio</a>
-                                                                </td>
 
-                                                                <td class="status">
-                                                                    <span class="pending">Pending</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> May 3, 2020 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Tax Manager</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Vsmarttech</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="pending">Pending</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Apr 27, 2020 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">IOS & Android Developer</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Radio Game</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="pending">Pending</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Apr 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Android & IOS Developer</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">HasTech</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="pending">Pending</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Construction Worker</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Digital Vine</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="rejected">Rejected</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Jr. Developer Shopify</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">HasThemes</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="rejected">Rejected</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> May 19, 2020 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Receptionist</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Digital Vine</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="approved">Approved</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="application-item">
-                                                                <td class="application-job">
-                                                                    <h3><a href="#">Recreation & Fitness Worker</a></h3>
-                                                                </td>
-
-                                                                <td class="application-employer">
-                                                                    <a class="dotted" href="#">Digital Asset</a>
-                                                                </td>
-
-                                                                <td class="status">
-                                                                    <span class="approved">Approved</span>
-                                                                </td>
-
-                                                                <td class="application-created">
-                                                                    <span> Dec 4, 2019 </span>
-                                                                </td>
-
-                                                                <td class="view-application text-xl-right">
-                                                                    <a href="#" class="view-application">View Application</a>
-                                                                </td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -261,10 +107,21 @@
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <ul class="page-pagination justify-content-center">
-                                                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                                                <li class="active"><a href="#">1</a></li>
-                                                                <li><a href="#">2</a></li>
-                                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                                              {% if jobs.has_previous %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                                                {% endif %}
+
+                                                                {% for pg in page_range %}
+                                                                 {% if jobs.number == pg %}
+                                                                     <li><a href="?page={{pg}}" style="background-color: #008080; color: black" class="btn">{{pg}}</a></li>
+                                                                 {% else %}
+                                                                     <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+                                                                 {% endif %}
+                                                                {% endfor %}
+
+                                                                {% if jobs.has_next %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                                                {% endif %}
                                                             </ul>
                                                         </div>
                                                     </div>

@@ -40,5 +40,7 @@ urlpatterns = [
     path('reviews/', views.ReviewsPage.as_view(),name='reviews'),
     path('shop/', views.ShopPage.as_view(),name='shop'),
     path('wishlist/', views.WishlistPage.as_view(),name='wishlist'),
+    path('jobs_list/<int:pk>/',views.JobDetailView.as_view(),name='job_detail'),
+    path('jobs_list/', views.JobListingPage.as_view(),name='jobs_list'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
