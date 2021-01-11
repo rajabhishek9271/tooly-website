@@ -1187,7 +1187,7 @@ body.template-color-1 {
     color: #0055d9; }
   body.template-color-1 a.ht-btn,
   body.template-color-1 button.ht-btn {
-    background-color: #0055d9; }
+    background-color: #008080; }
     body.template-color-1 a.ht-btn.normal-btn,
     body.template-color-1 button.ht-btn.normal-btn {
       background-color: #0055d9;
@@ -1724,7 +1724,7 @@ body.template-color-4 {
   top: 0;
   width: 100%;
   z-index: 999;
-  background-color: grey;
+  background-color:#00cccc;
   /*background-color: transparent;*/
   backdrop-filter:transparent; }
 
@@ -1742,7 +1742,7 @@ body.template-color-4 {
   animation-name: slideInDown;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  background-color: grey;
+  background-color: #00cccc;
   width: 100%;
   z-index: 999; }
   .is-sticky.sticky-white {
@@ -3144,7 +3144,7 @@ body.template-color-4 {
   padding: 0 7px;
   font-weight: 700;
   font-size: 14px;
-  color: #0055d9;
+  color: #008080;
   line-height: 20px;
   text-transform: capitalize;
   -webkit-border-radius: 3px;
@@ -3158,7 +3158,7 @@ body.template-color-4 {
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #069bff !important; }
+  color: #008080 !important; }
   .job-type-label.internship {
     color: #ff38f3 !important; }
   .job-type-label.remote {
