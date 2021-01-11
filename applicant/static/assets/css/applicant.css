@@ -878,9 +878,9 @@ button.ht-btn {
     .page-breadcrumb li:last-child::after {
       display: none; }
     .page-breadcrumb li a {
-      color: #0055d9; }
+      color: #008080; }
       .page-breadcrumb li a:hover {
-        color: #0055d9; }
+        color: #050808; }
   .page-breadcrumb.color-white li {
     color: #ffffff; }
     .page-breadcrumb.color-white li a {
@@ -3838,7 +3838,7 @@ body.template-color-4 {
       .filter-form .result-sorting .total-result {
         margin-bottom: 10px; } }
     .filter-form .result-sorting .total-result .total {
-      color: #0055d9; }
+      color: #008080; }
   .filter-form .result-sorting .job-alert-form .btn-open-form {
     display: inline-block;
     padding: 0 20px;
@@ -6279,14 +6279,14 @@ body.template-color-4 {
   .single-input input {
     width: 100%;
     padding: 10px 13px 10px 10px;
-    border: 1px solid #d1d3da;
+    border: 1px solid #008080;
     border-radius: 3px;
     color: #444444;
     margin-bottom: 10px; }
   .single-input textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #d1d3da;
+    border: 1px solid #008080;
     border-radius: 3px;
     color: #444444;
     height: 150px;

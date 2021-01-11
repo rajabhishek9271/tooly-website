@@ -31,19 +31,45 @@
     <style type="text/css">
         #menu_nax ul li ul li ul
         {
-
            left: 100%;
-
         }
-
+        .nice-select.wide .nice-select:focus{
+            border-color: #008080;
+        }
+        .nice-select{
+            border-color: #008080;
+        }
+        .chosen-container-multi .chosen-choices{
+            border: 1px solid #008080;
+        }
+        label{
+            color:#008080 ;
+            font-weight: bold;
+        }
         .btn{
           background-color: #008080 ;
+          border-radius: 5px;
+        }
+        .btn:hover{
+            background-color: black;
         }
 
         #profile{
           background: white;
           color: #008080;
         }
+        .fa-list{
+            color:#008080 ;
+        }
+        .page-breadcrumb li a {
+        color: #008080; }
+        .page-breadcrumb li a:hover {
+        color: #050808; }
+        .single-input input {
+        border: 1px solid #008080;
+        border-radius: 3px;
+        color: #444444;
+        margin-bottom: 10px; }
     </style>
 </head>
 
@@ -69,7 +95,7 @@
                   <div class="col-xl-5 col-lg-7 col-12">
                       <nav class="main-menu" id="menu_nax">
                           <ul>
-                              <li><a href="{% url 'recruiter:home' %}">Home <!--small class="icon-arrow"></small--></a>
+                              <li><a href="{% url 'recruiter:home' %}"><b>Home</b> <!--small class="icon-arrow"></small--></a>
                                   <!--ul class="sub-menu">
                                       <li><a href="index.html">Home V1</a></li>
                                       <li><a href="index-2.html">Home V2</a></li>
@@ -77,7 +103,7 @@
                                       <li><a href="index-4.html">Home V4</a></li>
                                   </ul-->
                               </li>
-                              <li><a href="{% url 'recruiter:jobs_list' %}"><!--span class="label-status hot">hot</span-->Jobs <small class="icon-arrow"></small></a>
+                              <li><a href="{% url 'recruiter:jobs_list' %}"><!--span class="label-status hot">hot</span--><b>Jobs</b>  <small class="icon-arrow"></small></a>
                                   <ul class="sub-menu">
                                       <li><a href="{% url 'recruiter:jobs_list' %}">Jobs Listing</a></li>
                                       <li><a href="{% url 'applicant:jobs_maps' %}">Jobs With Map</a></li>
