@@ -148,7 +148,7 @@ a:focus {
 
 a:hover {
   text-decoration: underline;
-  color: #0055d9; }
+  color: #008080; }
 
 button, input[type="submit"] {
   cursor: pointer; }
@@ -168,7 +168,7 @@ img {
   padding: 40px; }
 
 .theme-color {
-  color: #0055d9; }
+  color: #008080; }
 
 .heading-color {
   color: #333333 !important; }
@@ -433,7 +433,8 @@ img {
 
 .no-gutters {
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  background-color:#00cccc; }
   .no-gutters > .col, .no-gutters > [class*="col-"] {
     padding-right: 0;
     padding-left: 0;
@@ -454,7 +455,7 @@ img {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   #scrollUp:hover {
-    background: #0055d9; }
+    background: #008080; }
 
 /*--
     - Input Placeholder
@@ -477,7 +478,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /* This color is default color. It will change depending your body template color class like .template-color-1 to 4  */
 body.template-color-1 .text-color {
-  color: #0055d9; }
+  color: #008080; }
 
 body.template-color-2 .text-color {
   color: #4c53b6; }
@@ -529,7 +530,7 @@ body.template-color-4 .text-color {
   font-size: 15px;
   line-height: 22px;
   font-weight: 500;
-  color: #0055d9; }
+  color: #008080; }
   .jetapo-link a i {
     margin-left: 10px;
     font-size: 13px;
@@ -560,7 +561,7 @@ body.template-color-4 .text-color {
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out; }
     .jetapo-tab-menu ul li a.active {
-      color: #0055d9; }
+      color: #008080; }
 
 .jetapo-tab-menu ul.df-font-style li a {
   font-size: 16px;
@@ -663,7 +664,7 @@ button.ht-btn {
   color: #ffffff;
   font-weight: 700;
   padding: 0 10px;
-  background-color: #0055d9;
+  background-color: #008080;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
@@ -699,7 +700,7 @@ button.ht-btn {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    background-color: #0055d9;
+    background-color: #008080;
     padding: 13px 40px 15px; }
   a.ht-btn.green-btn,
   button.ht-btn.green-btn {
@@ -709,7 +710,7 @@ button.ht-btn {
     font-weight: 600;
     line-height: 1;
     color: #ffffff;
-    background-color: #0055d9;
+    background-color: #008080;
     border-radius: 3px;
     padding: 18px 32px 16px; }
   a.ht-btn.theme-btn,
@@ -732,9 +733,9 @@ button.ht-btn {
   a.ht-btn.transparent-btn,
   button.ht-btn.transparent-btn {
     background-color: transparent;
-    border: 1px solid #0055d9;
+    border: 1px solid #008080;
     padding: 16px 25px 18px;
-    color: #0055d9; }
+    color: #008080; }
     a.ht-btn.transparent-btn i,
     button.ht-btn.transparent-btn i {
       margin-right: 8px; }
@@ -744,11 +745,11 @@ button.ht-btn {
   a.ht-btn.transparent-btn-two,
   button.ht-btn.transparent-btn-two {
     background-color: transparent;
-    border: 1px solid #0055d9;
-    color: #0055d9; }
+    border: 1px solid #008080;
+    color: #008080; }
     a.ht-btn.transparent-btn-two:hover,
     button.ht-btn.transparent-btn-two:hover {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
   a.ht-btn.lg-btn,
   button.ht-btn.lg-btn {
@@ -929,13 +930,13 @@ button.ht-btn {
         line-height: 24px; }
     .page-pagination li:hover a {
       color: #ffffff !important;
-      background-color: #0055d9;
-      border-color: #0055d9;
+      background-color: #008080;
+      border-color: #008080;
       text-decoration: none; }
     .page-pagination li.active a {
       color: #ffffff !important;
-      background-color: #0055d9;
-      border-color: #0055d9; }
+      background-color: #008080;
+      border-color: #008080; }
 
 .grid-filter {
   display: -webkit-box;
@@ -963,7 +964,7 @@ button.ht-btn {
       position: absolute;
       left: 0;
       bottom: 4px;
-      background-color: #0055d9;
+      background-color: #008080;
       z-index: -1;
       -webkit-transition: all 0.3s ease 0s;
       -o-transition: all 0.3s ease 0s;
@@ -1072,7 +1073,7 @@ button.ht-btn {
       text-indent: -9999px;
       border-radius: 50px; }
     .slick-slider .slick-dots li.slick-active button {
-      background-color: #0055d9; }
+      background-color: #008080; }
 
 .gallery-item {
   position: relative; }
@@ -1182,115 +1183,115 @@ body.template-color-1 {
   /* Hero Content CSS */
   /*-- Copyright --*/ }
   body.template-color-1 .theme-color {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 a:hover {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 a.ht-btn,
   body.template-color-1 button.ht-btn {
     background-color: #008080; }
     body.template-color-1 a.ht-btn.normal-btn,
     body.template-color-1 button.ht-btn.normal-btn {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
     body.template-color-1 a.ht-btn.green-btn,
     body.template-color-1 button.ht-btn.green-btn {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
     body.template-color-1 a.ht-btn.transparent-btn,
     body.template-color-1 button.ht-btn.transparent-btn {
-      border: 1px solid #0055d9;
-      color: #0055d9;
+      border: 1px solid #008080;
+      color: #008080;
       background-color: transparent; }
     body.template-color-1 a.ht-btn.transparent-btn-two,
     body.template-color-1 button.ht-btn.transparent-btn-two {
       background-color: transparent;
-      border: 1px solid #0055d9;
-      color: #0055d9; }
+      border: 1px solid #008080;
+      color: #008080; }
       body.template-color-1 a.ht-btn.transparent-btn-two:hover,
       body.template-color-1 button.ht-btn.transparent-btn-two:hover {
-        background-color: #0055d9;
+        background-color: #008080;
         color: #ffffff; }
   body.template-color-1 .jetapo-link a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .jetapo-tab-menu ul li a.active {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .main-menu > ul > li > a .label-status.new {
-    background-color: #0055d9; }
+    background-color: #008080; }
   body.template-color-1 .main-menu > ul > li.active > a, body.template-color-1 .main-menu > ul > li:hover > a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .header-search-form form button {
-    background-color: #0055d9; }
+    background-color: #008080; }
   body.template-color-1 .popup-mobile-manu .inner .mobileheader {
-    background: #0055d9; }
+    background: #008080; }
   body.template-color-1 .object-custom-menu > li a:hover span {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .object-custom-menu > li.has-mega-menu > a::after {
-    background: #0055d9;
+    background: #008080;
     color: #ffffff; }
   body.template-color-1 .object-custom-menu > li.has-mega-menu .object-submenu li a:hover span {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .bottom-navbar-mobile .list-actions li a {
-    background-color: #0055d9; }
+    background-color: #008080; }
   body.template-color-1 .job-list-mobile .heading, body.template-color-1 .notifications-mobile .heading {
-    background-color: #0055d9; }
+    background-color: #008080; }
   body.template-color-1 .keywords.style-two ul li a:hover {
-    color: #0055d9;
-    border-color: #0055d9; }
+    color: #008080;
+    border-color: #008080; }
   body.template-color-1 .single-funfact.funfact-style-two .funfact-content .counter {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-job-categories .categories-image i {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-job-categories:hover {
-    border-color: #0055d9; }
+    border-color: #008080; }
     body.template-color-1 .single-job-categories:hover .categories-content h3 a {
-      color: #0055d9; }
+      color: #008080; }
     body.template-color-1 .single-job-categories:hover .categories-content .count-job {
-      color: #0055d9; }
+      color: #008080; }
   body.template-color-1 .single-job-categories-two {
     border: 1px solid #d0d0d0; }
     body.template-color-1 .single-job-categories-two:hover {
-      border-color: #0055d9; }
+      border-color: #008080; }
   body.template-color-1 .list-cat li a:hover {
-    background-color: #0055d9;
-    border-color: #0055d9;
+    background-color: #008080;
+    border-color: #008080;
     color: #ffffff; }
   body.template-color-1 .employer-item .employer-info-top .link-openjobs {
-    background-color: #0055d9; }
+    background-color: #008080; }
   body.template-color-1 .employer-item.border:hover {
-    border-color: #0055d9 !important; }
+    border-color: #008080 !important; }
   body.template-color-1 .job-section .container .row .col-lg-12:first-child .single-job.style-two:hover {
-    border-top: 1px solid #0055d9; }
+    border-top: 1px solid #008080; }
   body.template-color-1 .job-section .container .row .col-lg-12:last-child .single-job.style-two:hover {
-    border-bottom: 1px solid #0055d9; }
+    border-bottom: 1px solid #008080; }
   body.template-color-1 .single-job .job-info .job-info-inner .job-info-top .employer-name a:hover {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-job .job-info .job-info-inner .job-meta-three i {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-job .job-info .job-info-inner .job-skill-tag a:hover {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-job.style-two:hover {
-    border-color: #0055d9;
-    border-bottom: 1px solid #0055d9; }
+    border-color: #008080;
+    border-bottom: 1px solid #008080; }
   body.template-color-1 .all-job p a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-team .item-box .item-content .skills .skill-item a:hover {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-team:hover .team-content .team-title a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .all-team a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-list-blog .blog-content .blog-meta p .author {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .all-articale a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .hero-content-5 .play-btn {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .single-service .service-content a {
-    color: #0055d9; }
+    color: #008080; }
   body.template-color-1 .copyright p a {
-    color: #0055d9; }
+    color: #008080; }
     body.template-color-1 .copyright p a:hover {
-      color: #0055d9; }
+      color: #008080; }
 
 body.template-color-2 {
   /*-- Common CSS --*/
@@ -1324,7 +1325,7 @@ body.template-color-2 {
       color: #ffffff; }
     body.template-color-2 a.ht-btn.green-btn,
     body.template-color-2 button.ht-btn.green-btn {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
     body.template-color-2 a.ht-btn.transparent-btn,
     body.template-color-2 button.ht-btn.transparent-btn {
@@ -1454,7 +1455,7 @@ body.template-color-3 {
       color: #ffffff; }
     body.template-color-3 a.ht-btn.green-btn,
     body.template-color-3 button.ht-btn.green-btn {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
     body.template-color-3 a.ht-btn.transparent-btn,
     body.template-color-3 button.ht-btn.transparent-btn {
@@ -1584,7 +1585,7 @@ body.template-color-4 {
       color: #ffffff; }
     body.template-color-4 a.ht-btn.green-btn,
     body.template-color-4 button.ht-btn.green-btn {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
     body.template-color-4 a.ht-btn.transparent-btn,
     body.template-color-4 button.ht-btn.transparent-btn {
@@ -1692,7 +1693,7 @@ body.template-color-4 {
   background: #ffffff; }
 
 .bg_color--2 {
-  background: #0055d9; }
+  background: #008080; }
 
 .bg_color--3 {
   background: #f7f7f7; }
@@ -1844,7 +1845,7 @@ body.template-color-4 {
       line-height: 24px;
       padding: 13px 15px;
       border: none;
-      background-color: #0055d9;
+      background-color: #008080;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1907,7 +1908,7 @@ body.template-color-4 {
         .main-menu > ul > li > a .label-status.hot {
           background-color: #ff2626; }
         .main-menu > ul > li > a .label-status.new {
-          background-color: #0055d9; }
+          background-color: #008080; }
       .main-menu > ul > li > a .icon-arrow {
         padding: 0 0 0 10px;
         line-height: 1;
@@ -1946,7 +1947,7 @@ body.template-color-4 {
       pointer-events: none;
       z-index: 200; }
     .main-menu > ul > li.active > a, .main-menu > ul > li:hover > a {
-      color: #0055d9;
+      color: #008080;
       text-decoration: underline; }
     .main-menu > ul > li:hover > .sub-menu {
       opacity: 1;
@@ -2021,9 +2022,9 @@ body.template-color-4 {
     .sub-menu li:first-child a {
       border-top: 0; }
     .sub-menu li.active > a {
-      color: #0055d9; }
+      color: #008080; }
     .sub-menu li:hover > a {
-      color: #0055d9;
+      color: #008080;
       text-decoration: underline; }
     .sub-menu li:hover > .sub-menu {
       left: 100%;
@@ -2168,7 +2169,7 @@ body.template-color-4 {
       padding: 10px 5px;
       position: relative;
       cursor: pointer;
-      background-color: #0055d9; }
+      background-color: #008080; }
       .bottom-navbar-mobile .list-actions li a span {
         display: inline-block;
         line-height: 22px;
@@ -2249,7 +2250,7 @@ body.template-color-4 {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      background: #0055d9; }
+      background: #008080; }
       .popup-mobile-manu .inner .mobileheader .logo {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -2316,14 +2317,14 @@ body.template-color-4 {
         font-size: 14px;
         color: #333333; }
       .object-custom-menu > li a:hover span {
-        color: #0055d9; }
+        color: #008080; }
     .object-custom-menu > li.has-mega-menu > a::after {
       position: absolute;
       top: 50%;
       right: 0;
       width: 40px;
       height: 40px;
-      background: #0055d9;
+      background: #008080;
       color: #ffffff;
       text-align: center;
       line-height: 40px;
@@ -2365,7 +2366,7 @@ body.template-color-4 {
             font-size: 14px;
             color: #666; }
           .object-custom-menu > li.has-mega-menu .object-submenu li a:hover span {
-            color: #0055d9; }
+            color: #008080; }
 
 /* Bottom Mobile Popup CSS */
 .job-list-mobile, .notifications-mobile {
@@ -2395,7 +2396,7 @@ body.template-color-4 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background-color: #0055d9; }
+    background-color: #008080; }
     .job-list-mobile .heading .title, .notifications-mobile .heading .title {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2696,7 +2697,7 @@ body.template-color-4 {
 .hero-content-5 .play-btn {
   font-size: 16px;
   font-weight: 600;
-  color: #0055d9;
+  color: #008080;
   display: block;
   margin-top: 30px; }
   .hero-content-5 .play-btn i {
@@ -2792,7 +2793,7 @@ body.template-color-4 {
     padding-right: 20px;
     margin-right: 22px;
     border-right: 1px solid #e5e5e5;
-    color: #0055d9; }
+    color: #008080; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .single-feature .feature-icon {
         padding-right: 15px;
@@ -2824,7 +2825,7 @@ body.template-color-4 {
         font-size: 13px;
         line-height: 22px; } }
   .single-feature:hover {
-    background-color: #0055d9; }
+    background-color: #008080; }
     .single-feature:hover .feature-icon {
       color: #ffffff;
       border-right: 1px solid rgba(255, 255, 255, 0.2); }
@@ -3115,7 +3116,7 @@ body.template-color-4 {
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%); }
   .single-job-location:hover .location-info .count-job {
-    background: #0055d9;
+    background: #008080;
     color: #ffffff; }
 
 /*----------------------------------------*/
@@ -3126,11 +3127,11 @@ body.template-color-4 {
   .job-section .container .row .col-lg-12:first-child .single-job.style-two {
     border-top: 1px solid #e5e5e5; }
     .job-section .container .row .col-lg-12:first-child .single-job.style-two:hover {
-      border-top: 1px solid #0055d9; }
+      border-top: 1px solid #008080; }
   .job-section .container .row .col-lg-12:last-child .single-job.style-two {
     border-bottom: 1px solid #e5e5e5; }
     .job-section .container .row .col-lg-12:last-child .single-job.style-two:hover {
-      border-bottom: 1px solid #0055d9; }
+      border-bottom: 1px solid #008080; }
 
 .job-content-box {
   padding: 50px;
@@ -3312,7 +3313,7 @@ body.template-color-4 {
             display: inline-block;
             color: #666666; }
             .single-job .job-info .job-info-inner .job-info-top .employer-name a:hover {
-              color: #0055d9; }
+              color: #008080; }
       .single-job .job-info .job-info-inner .job-salary {
         font-size: 17px;
         line-height: 24px;
@@ -3433,7 +3434,7 @@ body.template-color-4 {
             font-weight: 600;
             margin-right: 5px; }
           .single-job .job-info .job-info-inner .job-meta-three div.field-experience-time a {
-            color: #0055d9;
+            color: #008080;
             display: inline-block; }
           .single-job .job-info .job-info-inner .job-meta-three div.field-hour-rate {
             font-weight: 600;
@@ -3442,11 +3443,11 @@ body.template-color-4 {
               color: #333333;
               margin-right: 5px; }
             .single-job .job-info .job-info-inner .job-meta-three div.field-hour-rate a {
-              color: #0055d9;
+              color: #008080;
               display: inline-block; }
         .single-job .job-info .job-info-inner .job-meta-three i {
           margin-right: 5px;
-          color: #0055d9; }
+          color: #008080; }
       .single-job .job-info .job-info-inner .job-skill-tag {
         margin-top: 15px; }
         .single-job .job-info .job-info-inner .job-skill-tag a {
@@ -3462,7 +3463,7 @@ body.template-color-4 {
           background: #eff1f8;
           color: #999; }
           .single-job .job-info .job-info-inner .job-skill-tag a:hover {
-            color: #0055d9; }
+            color: #008080; }
   .single-job.style-two {
     padding: 26px 30px 22px;
     -webkit-transition: all .4s ease-in-out;
@@ -3484,7 +3485,7 @@ body.template-color-4 {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
     .single-job.style-two:hover {
-      border-color: #0055d9;
+      border-color: #008080;
       z-index: 9; }
   .single-job.candidates-grid {
     padding: 25px;
@@ -3540,7 +3541,7 @@ body.template-color-4 {
   .all-job p {
     margin-bottom: 0; }
     .all-job p a {
-      color: #0055d9; }
+      color: #008080; }
 
 .job-section .row .col-lg-12:last-child .single-job.style-two {
   border-bottom: 1px solid #e5e5e5; }
@@ -3626,7 +3627,7 @@ body.template-color-4 {
       display: inline-block;
       border-radius: 3px;
       font-weight: 600;
-      color: #0055d9; }
+      color: #008080; }
       .single-job-grid .content-bottom .job-categories a.accounting {
         color: #BE52E2; }
       .single-job-grid .content-bottom .job-categories a.broadcasting {
@@ -3654,17 +3655,17 @@ body.template-color-4 {
       height: 36px;
       line-height: 34px;
       padding: 0 20px;
-      border: 1px solid #0055d9;
+      border: 1px solid #008080;
       font-size: 14px;
       font-weight: 600;
-      color: #0055d9;
+      color: #008080;
       border-radius: 4px; }
       .single-job-grid-two .saveJob-grid .save-job i {
         font-size: 18px;
         position: relative;
         top: 2px;
         margin-right: 4px;
-        color: #0055d9; }
+        color: #008080; }
       .single-job-grid-two .saveJob-grid .save-job:hover {
         color: #ff2626; }
         .single-job-grid-two .saveJob-grid .save-job:hover i {
@@ -3702,7 +3703,7 @@ body.template-color-4 {
       display: inline-block;
       color: #666666; }
       .single-job-grid-two .job-info .job-info-top .employer-name a:hover {
-        color: #0055d9; }
+        color: #008080; }
   .single-job-grid-two .job-info .job-meta-two {
     font-size: 14px;
     line-height: 24px;
@@ -3733,12 +3734,12 @@ body.template-color-4 {
       background: #eff1f8;
       color: #999; }
       .single-job-grid-two .job-info .job-skill-tag a:hover {
-        color: #0055d9; }
+        color: #008080; }
   .single-job-grid-two .job-info .field-descriptions p {
     font-size: 14px;
     line-height: 21px; }
   .single-job-grid-two:hover {
-    border-color: #0055d9; }
+    border-color: #008080; }
 
 .bg-image-job-post {
   background-image: url("https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/bg/bk-banner-home-4-2.png");
@@ -3910,7 +3911,7 @@ body.template-color-4 {
           font-size: 22px;
           color: #666666; }
           .filter-form .result-sorting .form-left .layout-switcher ul li a.active, .filter-form .result-sorting .form-left .layout-switcher ul li a:hover {
-            color: #0055d9; }
+            color: #008080; }
 
 .job-alert-form-box {
   position: absolute;
@@ -4082,7 +4083,7 @@ body.template-color-4 {
         flex-basis: 100%;
         width: 100%; } }
     .filter-advance .range-slider.ui-widget .ui-slider-range {
-      background-color: #0055d9;
+      background-color: #008080;
       border-radius: 50px; }
     .filter-advance .range-slider.ui-widget .ui-slider-handle {
       background-color: #fff;
@@ -4108,7 +4109,7 @@ body.template-color-4 {
         left: 50%;
         height: 12px;
         width: 12px;
-        background: #0055d9;
+        background: #008080;
         border-radius: 100%;
         opacity: 1;
         -webkit-transform: translate(-50%, -50%);
@@ -4225,7 +4226,7 @@ body.template-color-4 {
       -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
       transform: translateY(10px);
-      color: #0055d9; }
+      color: #008080; }
     .single-meta-field .field-label span {
       font-size: 14px;
       line-height: 24px;
@@ -4246,7 +4247,7 @@ body.template-color-4 {
       font-weight: 600;
       line-height: 23px; }
     .single-meta-field .field-value a {
-      color: #0055d9; }
+      color: #008080; }
     .single-meta-field .field-value .job-skill-tag a {
       display: inline-block;
       font-size: 13px;
@@ -4311,7 +4312,7 @@ body.template-color-4 {
       font-weight: 600;
       padding-left: 0px; }
       .single-meta-field.meta-field-three .field-value a {
-        color: #0055d9; }
+        color: #008080; }
       .single-meta-field.meta-field-three .field-value .job-skill-tag a {
         display: inline-block;
         font-size: 13px;
@@ -4443,7 +4444,7 @@ body.template-color-4 {
       left: 20px;
       font-size: 18px;
       border-radius: 3px;
-      color: #0055d9; }
+      color: #008080; }
   .single-job-categories .categories-content {
     padding: 25px;
     background-color: #fff;
@@ -4463,11 +4464,11 @@ body.template-color-4 {
       -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out; }
   .single-job-categories:hover {
-    border-color: #0055d9; }
+    border-color: #008080; }
     .single-job-categories:hover .categories-content h3 a {
-      color: #0055d9; }
+      color: #008080; }
     .single-job-categories:hover .categories-content .count-job {
-      color: #0055d9; }
+      color: #008080; }
 
 .single-job-categories-two {
   border: 1px solid #d0d0d0;
@@ -4511,7 +4512,7 @@ body.template-color-4 {
         .single-job-categories-two .item-info .title a:hover {
           color: #333333; }
   .single-job-categories-two:hover {
-    border-color: #0055d9; }
+    border-color: #008080; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .cate-left-text {
@@ -4559,8 +4560,8 @@ body.template-color-4 {
       .list-cat li a {
         padding: 12px 18px; } }
     .list-cat li a:hover {
-      background-color: #0055d9;
-      border-color: #0055d9;
+      background-color: #008080;
+      border-color: #008080;
       color: #ffffff; }
 
 .all-cate-link {
@@ -4600,10 +4601,10 @@ body.template-color-4 {
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
-    background: #0055d9; }
+    background: #008080; }
     .employer-item .featured-employer-label.color-green {
-      background-color: #d0f7ca;
-      color: #0055d9; }
+      background-color: #008080;
+      color: #008080; }
   .employer-item .for-grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4655,7 +4656,7 @@ body.template-color-4 {
     margin-bottom: 0; }
     .employer-item .employer-info-top .employer-name i {
       font-size: 14px;
-      color: #0055d9; }
+      color: #008080; }
   .employer-item .employer-info-top .employer-info-rate {
     margin-top: 5px; }
     .employer-item .employer-info-top .employer-info-rate .star {
@@ -4676,11 +4677,11 @@ body.template-color-4 {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin-top: 15px;
-    background-color: #0055d9; }
+    background-color: #008080; }
   .employer-item.border {
     border: 1px solid #e5e5e5; }
     .employer-item.border:hover {
-      border-color: #0055d9 !important; }
+      border-color: #008080 !important; }
 
 .single-employer-item {
   display: -webkit-box;
@@ -4897,7 +4898,7 @@ body.template-color-4 {
           line-height: 20px;
           border-radius: 3px;
           border-color: transparent;
-          background-color: #0055d9; }
+          background-color: #008080; }
       .single-employer-list .employer-info .employer-info-inner .employer-meta {
         font-size: 14px;
         line-height: 24px;
@@ -4963,9 +4964,9 @@ body.template-color-4 {
           background: #eff1f8;
           color: #999; }
           .single-employer-list .employer-info .employer-info-inner .employer-skill-tag a:hover {
-            color: #0055d9; }
+            color: #008080; }
   .single-employer-list:hover {
-    border-color: #0055d9; }
+    border-color: #008080; }
 
 /* Employer Details CSS */
 .employer-head-info {
@@ -5012,7 +5013,7 @@ body.template-color-4 {
         margin-top: 20px; } }
     .employer-head-info .employer-content .employer-name i {
       font-size: 18px;
-      color: #0055d9; }
+      color: #008080; }
   .employer-head-info .employer-content .employer-rate {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5140,7 +5141,7 @@ body.template-color-4 {
         margin-top: 20px; } }
     .candidate-head-info .candidate-content .candidate-name i {
       font-size: 18px;
-      color: #0055d9; }
+      color: #008080; }
   .candidate-head-info .candidate-content .candidate-meta {
     margin-top: 10px; }
     .candidate-head-info .candidate-content .candidate-meta li {
@@ -5257,7 +5258,7 @@ body.template-color-4 {
     width: 40px;
     display: inline-block;
     font-size: 16px;
-    color: #0055d9;
+    color: #008080;
     vertical-align: middle; }
   .meta-field li .meta-field-item .field-label span {
     font-size: 14px;
@@ -5273,7 +5274,7 @@ body.template-color-4 {
     color: #ff2626;
     font-weight: 600; }
   .meta-field li .meta-field-item .field-value a {
-    color: #0055d9; }
+    color: #008080; }
 
 /*----------------------------------------*/
 /*  15. Fun Fact CSS
@@ -5402,7 +5403,7 @@ body.template-color-4 {
     .single-funfact.funfact-style-two .funfact-content .counter {
       font-size: 34px;
       line-height: 1.2;
-      color: #0055d9; }
+      color: #008080; }
 
 .single-funfact-style-4 .funfact-content .sub-text {
   font-size: 16px;
@@ -5676,7 +5677,7 @@ body.template-color-4 {
       text-indent: -9999px;
       border-radius: 50px; }
     .testimonial-slider-four.slick-slider .slick-dots li.slick-active button {
-      background-color: #0055d9; }
+      background-color: #008080; }
 
 .bg-image-testimonial {
   background-image: url("https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/bg/bk-banner-home-4-3.png");
@@ -5960,12 +5961,12 @@ body.template-color-4 {
         display: block;
         color: #999999; }
         .single-team .item-box .item-content .skills .skill-item a:hover {
-          color: #0055d9; }
+          color: #008080; }
   .single-team:hover {
     border-color: #d0d0d0;
     background: #ffffff; }
     .single-team:hover .team-content .team-title a {
-      color: #0055d9; }
+      color: #008080; }
     .single-team:hover .item-box {
       opacity: 1;
       padding-top: 15px;
@@ -6007,13 +6008,13 @@ body.template-color-4 {
             font-size: 20px;
             color: #999; }
             .single-team.team-style-two .item-box .team-info-social .social-link-hover li a:hover {
-              color: #0055d9; }
+              color: #008080; }
 
 .all-team {
   text-align: center; }
   .all-team a {
     font-size: 16px;
-    color: #0055d9; }
+    color: #008080; }
 
 /*----------------------------------------*/
 /*  20. Service CSS
@@ -6046,7 +6047,7 @@ body.template-color-4 {
   margin-bottom: 15px; }
 
 .single-service .service-content a {
-  color: #0055d9; }
+  color: #008080; }
 
 /*----------------------------------------*/
 /*  21. Banner CSS
@@ -6098,7 +6099,7 @@ body.template-color-4 {
 .single-faq p {
   margin-bottom: 20px; }
   .single-faq p a {
-    color: #0055d9; }
+    color: #008080; }
 
 .single-faq ul {
   margin-left: 15px;
@@ -6156,7 +6157,7 @@ body.template-color-4 {
     font-size: 17px;
     font-weight: 600; }
     .faq-contact p a {
-      color: #0055d9; }
+      color: #008080; }
 
 /*----------------------------------------*/
 /*  23. Keyword CSS
@@ -6197,8 +6198,8 @@ body.template-color-4 {
     line-height: 22px;
     margin-right: 0; }
     .keywords.style-two ul li a:hover {
-      color: #0055d9;
-      border-color: #0055d9; }
+      color: #008080;
+      border-color: #008080; }
   .keywords.style-three ul li a {
     font-weight: 500;
     color: #000;
@@ -6214,7 +6215,7 @@ body.template-color-4 {
     color: #fff;
     font-weight: 600;
     margin-right: 24px;
-    background-color: #0055d9;
+    background-color: #008080;
     padding: 5px 10px;
     border-radius: 3px;
     line-height: 1;
@@ -6316,7 +6317,7 @@ body.template-color-4 {
     font-size: 14px;
     line-height: 1; }
     .register-account label a {
-      color: #0055d9; }
+      color: #008080; }
 
 .divider {
   position: relative;
@@ -6400,11 +6401,11 @@ body.template-color-4 {
         border-width: 0 1px 1px 0;
         content: '';
         border-style: solid;
-        color: #0055d9; }
+        color: #008080; }
   .login-instruction .login-instruction-content .sale-text {
     padding: 15px 30px;
     background: #d8f9d2;
-    border: 3px dashed #0055d9;
+    border: 3px dashed #008080;
     margin-top: 60px;
     display: inline-block;
     font-weight: 600;
@@ -6548,7 +6549,7 @@ body.template-color-4 {
     .recruit-content .recruit-list ul li:not(:last-child) {
       padding-bottom: calc(10px/2); }
     .recruit-content .recruit-list ul li .list-icon i {
-      color: #0055d9;
+      color: #008080;
       font-size: 18px; }
     .recruit-content .recruit-list ul li .list-text {
       color: #000;
@@ -6590,7 +6591,7 @@ body.template-color-4 {
 
 .title-featured {
   display: block;
-  color: #0055d9;
+  color: #008080;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.75em;
@@ -6686,7 +6687,7 @@ body.template-color-4 {
         .single-pricing .price-table-feature ul li:last-child {
           margin-bottom: 0; }
         .single-pricing .price-table-feature ul li i {
-          color: #0055d9;
+          color: #008080;
           margin-right: 8px; }
   .single-pricing .item_button {
     margin-top: 40px; }
@@ -6776,9 +6777,9 @@ body.template-color-4 {
         top: 50%;
         left: 50%; }
     .company-history-slider.slick-slider .slick-dots li.slick-active button::before {
-      border: 1px solid #0055d9; }
+      border: 1px solid #008080; }
     .company-history-slider.slick-slider .slick-dots li.slick-active button::after {
-      background: #0055d9; }
+      background: #008080; }
 
 .single-company-history {
   display: -webkit-box;
@@ -6808,7 +6809,7 @@ body.template-color-4 {
     .single-company-history .item-meta .name {
       font-size: 13px;
       font-weight: 600;
-      color: #0055d9;
+      color: #008080;
       margin-bottom: 10px; }
     .single-company-history .item-meta .item-comment {
       color: #333333;
@@ -6836,7 +6837,7 @@ body.template-color-4 {
     .single-sponsors .item-meta .text .name {
       font-size: 15px;
       font-weight: 700;
-      color: #0055d9; }
+      color: #008080; }
 
 /*----------------------------------------*/
 /*  29. Brand CSS
@@ -6921,7 +6922,7 @@ body.template-color-4 {
     line-height: 16px;
     text-align: center;
     color: #ffffff;
-    background-color: #0055d9;
+    background-color: #008080;
     padding: 5px 10px;
     border-radius: 4px; }
   .single-product .product-image .add-to-cart {
@@ -6947,7 +6948,7 @@ body.template-color-4 {
     visibility: hidden;
     opacity: 0; }
     .single-product .product-image .add-to-cart:hover {
-      background-color: #0055d9;
+      background-color: #008080;
       color: #ffffff; }
 
 .single-product .product-content .title {
@@ -7072,7 +7073,7 @@ body.template-color-4 {
     width: 160px;
     height: 46px;
     line-height: 46px;
-    background: #0055d9;
+    background: #008080;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -7105,7 +7106,7 @@ body.template-color-4 {
       border-bottom-color: transparent;
       text-decoration: none; }
       .product-details-tab-list li a.active {
-        border-color: #0055d9; }
+        border-color: #008080; }
 
 .review-form h4 {
   font-size: 18px;
@@ -7211,7 +7212,7 @@ body.template-color-4 {
   font-weight: 600;
   color: #444444; }
   .cart-table td.pro-title a:hover {
-    color: #0055d9; }
+    color: #008080; }
 
 .cart-table td.pro-price span {
   display: block;
@@ -7297,13 +7298,13 @@ body.template-color-4 {
     .calculate-shipping form input[type="submit"] {
       font-weight: 700;
       color: #333333;
-      background-color: #0055d9;
-      border-color: #0055d9;
+      background-color: #008080;
+      border-color: #008080;
       width: 140px; }
       .calculate-shipping form input[type="submit"]:hover {
         background-color: #333333;
         border-color: #333333;
-        color: #0055d9; }
+        color: #008080; }
 
 /*-- Discount Coupon --*/
 .discount-coupon h4 {
@@ -7325,13 +7326,13 @@ body.template-color-4 {
   .discount-coupon form input[type="submit"] {
     font-weight: 700;
     color: #333333;
-    background-color: #0055d9;
-    border-color: #0055d9;
+    background-color: #008080;
+    border-color: #008080;
     width: 140px; }
     .discount-coupon form input[type="submit"]:hover {
       background-color: #333333;
       border-color: #333333;
-      color: #0055d9; }
+      color: #008080; }
 
 /*-- Cart Summary --*/
 .cart-summary {
@@ -7413,11 +7414,11 @@ body.template-color-4 {
         margin-left: 0; }
       .cart-summary .cart-summary-button button.checkout-btn {
         color: #333333;
-        background-color: #0055d9;
-        border-color: #0055d9; }
+        background-color: #008080;
+        border-color: #008080; }
       .cart-summary .cart-summary-button button:hover {
-        background-color: #0055d9;
-        border-color: #0055d9;
+        background-color: #008080;
+        border-color: #008080;
         color: #ffffff; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .cart-summary .cart-summary-button button {
@@ -7625,7 +7626,7 @@ body.template-color-4 {
         display: block;
         content: "";
         opacity: 0;
-        background-color: #0055d9;
+        background-color: #008080;
         width: 10px;
         text-align: center;
         height: 10px;
@@ -7633,7 +7634,7 @@ body.template-color-4 {
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s; }
     .single-method input[type="radio"]:checked + label::before {
-      border: 2px solid #0055d9; }
+      border: 2px solid #008080; }
     .single-method input[type="radio"]:checked + label::after {
       opacity: 1; }
   .single-method input[type="checkbox"] {
@@ -7665,7 +7666,7 @@ body.template-color-4 {
         display: block;
         content: "";
         opacity: 0;
-        background-color: #0055d9;
+        background-color: #008080;
         width: 8px;
         text-align: center;
         height: 8px;
@@ -7673,7 +7674,7 @@ body.template-color-4 {
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s; }
     .single-method input[type="checkbox"]:checked + label::before {
-      border: 2px solid #0055d9; }
+      border: 2px solid #008080; }
     .single-method input[type="checkbox"]:checked + label::after {
       opacity: 1; }
   .single-method p {
@@ -7716,8 +7717,8 @@ body.template-color-4 {
   .blog-gallery-slider.slick-slider .slick-arrow.slick-next {
     right: 20px; }
   .blog-gallery-slider.slick-slider .slick-arrow:hover {
-    border-color: #0055d9;
-    background-color: #0055d9; }
+    border-color: #008080;
+    background-color: #008080; }
     .blog-gallery-slider.slick-slider .slick-arrow:hover i {
       color: #ffffff; }
 
@@ -7750,7 +7751,7 @@ body.template-color-4 {
       padding: 0 7px;
       border-radius: 3px;
       color: #ffffff;
-      background-color: #0055d9; }
+      background-color: #008080; }
       .single-blog .blog-image .blog-cat a {
         display: inline-block;
         font-weight: 700;
@@ -7866,7 +7867,7 @@ body.template-color-4 {
         color: #aaa;
         font-weight: 600; }
       .single-list-blog .blog-content .blog-meta p .author {
-        color: #0055d9; }
+        color: #008080; }
       .single-list-blog .blog-content .blog-meta p::after {
         position: absolute;
         content: "";
@@ -7897,7 +7898,7 @@ body.template-color-4 {
   text-align: left;
   margin-top: 30px; }
   .all-articale a {
-    color: #0055d9;
+    color: #008080;
     display: block; }
 
 .blog-wrapper {
@@ -7974,7 +7975,7 @@ body.template-color-4 {
   padding: 25px 25px 25px 40px;
   margin: 40px 0;
   color: #333;
-  border-left: 4px solid #0055d9;
+  border-left: 4px solid #008080;
   background: #f5f5f5; }
   .single-blog-post .blog-content blockquote p i {
     font-size: 26px;
@@ -8010,7 +8011,7 @@ body.template-color-4 {
       margin: 0 5px 5px 0;
       background: #eff1f8; }
       .post-tags ul li a:hover {
-        color: #0055d9; }
+        color: #008080; }
 
 .post-author-info {
   padding: 50px 65px;
@@ -8071,7 +8072,7 @@ body.template-color-4 {
     .post-navigation .prev-post a:hover {
       text-decoration: none; }
       .post-navigation .prev-post a:hover .title {
-        color: #0055d9; }
+        color: #008080; }
   .post-navigation .next-post a {
     display: inline-block;
     font-size: 16px;
@@ -8094,7 +8095,7 @@ body.template-color-4 {
     .post-navigation .next-post a:hover {
       text-decoration: none; }
       .post-navigation .next-post a:hover .title {
-        color: #0055d9; }
+        color: #008080; }
 
 .related-post {
   padding-bottom: 30px;
@@ -8456,15 +8457,15 @@ body.template-color-4 {
   border: 0; }
 
 .sidebar-location-range .ui-widget-header {
-  background-color: #0055d9; }
+  background-color: #008080; }
 
 .sidebar-location-range .ui-slider-handle {
-  background-color: #0055d9;
+  background-color: #008080;
   min-width: 18px;
   height: 18px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: 1px solid #0055d9;
+  border: 1px solid #008080;
   outline: none;
   top: -6px;
   margin-left: -6px;
@@ -8497,7 +8498,7 @@ body.template-color-4 {
     color: #333333;
     display: block; }
     .sidebar-list li a:hover {
-      color: #0055d9; }
+      color: #008080; }
 
 /*-- Sidebar cbx List --*/
 .sidebar-cbx-list li {
@@ -8535,14 +8536,14 @@ body.template-color-4 {
       position: absolute;
       top: 0;
       height: 100%;
-      background-color: #0055d9; }
+      background-color: #008080; }
     .sidebar-salary #salary-range .ui-slider-handle {
-      background-color: #0055d9;
+      background-color: #008080;
       min-width: 18px;
       height: 18px;
       -webkit-box-shadow: none !important;
       box-shadow: none !important;
-      border: 1px solid #0055d9;
+      border: 1px solid #008080;
       outline: none;
       top: -6px;
       margin-left: -6px;
@@ -8604,7 +8605,7 @@ body.template-color-4 {
     z-index: 10;
     position: relative;
     background: #ffffff;
-    color: #0055d9; }
+    color: #008080; }
   .sidebar-job-apply .action-button .line {
     height: 1px;
     width: 100%;
@@ -8617,7 +8618,7 @@ body.template-color-4 {
 .sidebar-job-share .job-share {
   text-align: center; }
   .sidebar-job-share .job-share ul li {
-    color: #0055d9;
+    color: #008080;
     display: inline-block;
     position: relative;
     padding-left: 15px;
@@ -8680,16 +8681,16 @@ body.template-color-4 {
         padding: 8px 12px;
         font-weight: 600;
         border-radius: 3px;
-        border: 1px solid #0055d9;
+        border: 1px solid #008080;
         width: auto; }
         .sidebar-job-share .job-share.candidate-action > ul > li > a:hover {
-          background-color: #0055d9;
+          background-color: #008080;
           color: #ffffff; }
     .sidebar-job-share .job-share.candidate-action.color-white ul li a {
       border-color: #ffffff;
       color: #ffffff; }
       .sidebar-job-share .job-share.candidate-action.color-white ul li a:hover {
-        border-color: #0055d9; }
+        border-color: #008080; }
 
 .social-share {
   position: absolute;
@@ -8732,9 +8733,9 @@ body.template-color-4 {
       line-height: 1 !important;
       margin-right: 0 !important; }
   .social-share.candidate-share {
-    background-color: #0055d9; }
+    background-color: #008080; }
     .social-share.candidate-share::before {
-      border-bottom: 5px solid #0055d9; }
+      border-bottom: 5px solid #008080; }
     .social-share.candidate-share li a {
       color: #ffffff; }
 
@@ -8833,8 +8834,8 @@ body.template-color-4 {
     .sidebar-search-letter .search-by-first-letter li a:hover {
       color: #ffffff; }
       .sidebar-search-letter .search-by-first-letter li a:hover::before {
-        border-color: #0055d9;
-        background-color: #0055d9; }
+        border-color: #008080;
+        background-color: #008080; }
 
 /*-- Sidebar Job Employer --*/
 .job-employer-widget {
@@ -8880,7 +8881,7 @@ body.template-color-4 {
     margin-bottom: 0; }
     .job-employer-widget .content-box .title i {
       font-size: 16px;
-      color: #0055d9;
+      color: #008080;
       margin-left: 5px; }
   .job-employer-widget .content-box .employer-rate {
     display: -webkit-box;
@@ -8907,7 +8908,7 @@ body.template-color-4 {
       line-height: 25px;
       margin-bottom: 10px; }
     .job-employer-widget.style-two .content-box p i {
-      color: #0055d9; }
+      color: #008080; }
     .job-employer-widget.style-two .content-box .company-size {
       text-transform: inherit; }
     .job-employer-widget.style-two .content-box .employer-link {
@@ -8917,7 +8918,7 @@ body.template-color-4 {
       font-weight: 500;
       line-height: 1.75em;
       padding: 0 16px 0 11px;
-      background-color: #0055d9;
+      background-color: #008080;
       border-radius: 3px;
       margin-top: 15px; }
 
@@ -9032,7 +9033,7 @@ body.template-color-4 {
       color: #555555;
       border-radius: 3px; }
       .sidebar-tag li a:hover {
-        color: #0055d9; }
+        color: #008080; }
 
 /*-- Sidebar Product --*/
 .sidebar-product {
@@ -9080,7 +9081,7 @@ body.template-color-4 {
         font-size: 12px;
         line-height: 18px;
         margin-right: 5px;
-        color: #0055d9; }
+        color: #008080; }
         .sidebar-product .content .ratting i:last-child {
           margin-right: 0; }
 
@@ -9128,7 +9129,7 @@ body.template-color-4 {
     font-weight: 500;
     padding: 0 10px 10px; }
     .contact-information .info .text.phone {
-      color: #0055d9;
+      color: #008080;
       font-size: 17px;
       font-weight: 600; }
 
@@ -9344,7 +9345,7 @@ body.template-color-4 {
       margin-right: 0;
       border-right: none; }
     .footer-social a:hover {
-      color: #0055d9; }
+      color: #008080; }
 
 /*-- Footer Social --*/
 .footer-nav ul {
@@ -9390,9 +9391,9 @@ body.template-color-4 {
     margin-bottom: 15px; } }
 
 .copyright p a {
-  color: #0055d9; }
+  color: #008080; }
   .copyright p a:hover {
-    color: #0055d9; }
+    color: #008080; }
 
 /*----------------------------------------*/
 /*  39. 404 CSS
@@ -9433,7 +9434,7 @@ body.template-color-4 {
     max-width: 540px;
     margin: 0 auto 30px; }
     .error-404 .home-link a {
-      color: #0055d9;
+      color: #008080;
       display: inline; }
 
 .search-404 {
@@ -9456,7 +9457,7 @@ body.template-color-4 {
     .search-404 .search-box .search-submit {
       font-size: 14px;
       color: #ffffff;
-      background-color: #0055d9;
+      background-color: #008080;
       font-weight: 600;
       position: absolute;
       height: calc(100% - 10px);
@@ -9601,10 +9602,10 @@ body.template-color-4 {
           top: 2px; }
         .dashboard-menu > ul > li ul li a:hover, .dashboard-menu > ul > li ul li a.active {
           background-color: #f2f5fc;
-          border-left-color: #0055d9;
+          border-left-color: #008080;
           text-decoration: none; }
           .dashboard-menu > ul > li ul li a:hover i, .dashboard-menu > ul > li ul li a.active i {
-            color: #0055d9; }
+            color: #008080; }
 
 .dashboard-main-inner {
   padding: 45px 30px 72px;
@@ -9793,7 +9794,7 @@ body.template-color-4 {
             .applications-main-block .applications-table table tbody tr td.status span.rejected, .applications-main-block .job-applications-table table tbody tr td.status span.rejected, .job-applications-main-block .applications-table table tbody tr td.status span.rejected, .job-applications-main-block .job-applications-table table tbody tr td.status span.rejected {
               background-color: #ff2626; }
             .applications-main-block .applications-table table tbody tr td.status span.approved, .applications-main-block .job-applications-table table tbody tr td.status span.approved, .job-applications-main-block .applications-table table tbody tr td.status span.approved, .job-applications-main-block .job-applications-table table tbody tr td.status span.approved {
-              background-color: #0055d9; }
+              background-color: #008080; }
           .applications-main-block .applications-table table tbody tr td.application-rating .star, .applications-main-block .job-applications-table table tbody tr td.application-rating .star, .job-applications-main-block .applications-table table tbody tr td.application-rating .star, .job-applications-main-block .job-applications-table table tbody tr td.application-rating .star {
             color: #ffbf02; }
             .applications-main-block .applications-table table tbody tr td.application-rating .star i, .applications-main-block .job-applications-table table tbody tr td.application-rating .star i, .job-applications-main-block .applications-table table tbody tr td.application-rating .star i, .job-applications-main-block .job-applications-table table tbody tr td.application-rating .star i {
@@ -9858,11 +9859,11 @@ body.template-color-4 {
               display: inline-block;
               margin-right: 5px; }
           .applications-main-block .applications-table table tbody tr td.view-application a, .applications-main-block .job-applications-table table tbody tr td.view-application a, .job-applications-main-block .applications-table table tbody tr td.view-application a, .job-applications-main-block .job-applications-table table tbody tr td.view-application a {
-            color: #0055d9; }
+            color: #008080; }
           .applications-main-block .applications-table table tbody tr td.application-query a, .applications-main-block .job-applications-table table tbody tr td.application-query a, .job-applications-main-block .applications-table table tbody tr td.application-query a, .job-applications-main-block .job-applications-table table tbody tr td.application-query a {
-            color: #0055d9; }
+            color: #008080; }
           .applications-main-block .applications-table table tbody tr td.application-id a, .applications-main-block .job-applications-table table tbody tr td.application-id a, .job-applications-main-block .applications-table table tbody tr td.application-id a, .job-applications-main-block .job-applications-table table tbody tr td.application-id a {
-            color: #0055d9; }
+            color: #008080; }
           .applications-main-block .applications-table table tbody tr td.application-status span, .applications-main-block .job-applications-table table tbody tr td.application-status span, .job-applications-main-block .applications-table table tbody tr td.application-status span, .job-applications-main-block .job-applications-table table tbody tr td.application-status span {
             font-size: 16px;
             line-height: 30px;
@@ -9870,7 +9871,7 @@ body.template-color-4 {
             .applications-main-block .applications-table table tbody tr td.application-status span.hold, .applications-main-block .job-applications-table table tbody tr td.application-status span.hold, .job-applications-main-block .applications-table table tbody tr td.application-status span.hold, .job-applications-main-block .job-applications-table table tbody tr td.application-status span.hold {
               color: #c0c; }
             .applications-main-block .applications-table table tbody tr td.application-status span.paid, .applications-main-block .job-applications-table table tbody tr td.application-status span.paid, .job-applications-main-block .applications-table table tbody tr td.application-status span.paid, .job-applications-main-block .job-applications-table table tbody tr td.application-status span.paid {
-              color: #0055d9; }
+              color: #008080; }
             .applications-main-block .applications-table table tbody tr td.application-status span.reject, .applications-main-block .job-applications-table table tbody tr td.application-status span.reject, .job-applications-main-block .applications-table table tbody tr td.application-status span.reject, .job-applications-main-block .job-applications-table table tbody tr td.application-status span.reject {
               color: #ff2626; }
           .applications-main-block .applications-table table tbody tr td.delete-application, .applications-main-block .job-applications-table table tbody tr td.delete-application, .job-applications-main-block .applications-table table tbody tr td.delete-application, .job-applications-main-block .job-applications-table table tbody tr td.delete-application {
@@ -9924,7 +9925,7 @@ body.template-color-4 {
           line-height: 1;
           color: #666666; }
           .bookmark-main-block .bookmark-table table tbody tr td.delete-bookmark a:hover {
-            color: #0055d9; }
+            color: #008080; }
       .bookmark-main-block .bookmark-table table tbody tr:hover {
         border-left-color: #4c53b6;
         background-color: #f2f5fc; }
