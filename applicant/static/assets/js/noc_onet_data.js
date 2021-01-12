@@ -5,6 +5,7 @@ function autocomplete(inp, arr) {
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
+      val1=val.toLowerCase();
       /*close any already open lists of autocompleted values*/
       closeAllLists();
       if (!val) { return false;}
@@ -18,7 +19,9 @@ function autocomplete(inp, arr) {
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+        // if (arr[i].substr(0, val.length).toUpperCase() === val.toUpperCase()) {
+          if(arr[i].toLowerCase().indexOf(val1)!=-1){
+          
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
