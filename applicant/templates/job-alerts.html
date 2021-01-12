@@ -5,40 +5,36 @@
         <div class="dashboard-content-section section bg_color--5 pt-80">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
-                    <div class="col-xl-2 col-lg-3">
-                        <div class="dashboard-sidebar">
-                            <div class="dashboard-menu">
-                                <ul class="nav">
-                                    <li>
-                                        <h3>Main</h3>
-                                        <ul>
-                                            <li><a href="dashboard.html"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
-                                            <li><a href="message.html"><i class="lnr lnr-bubble"></i> Messages </a></li>
-                                            <li><a class="active" href="job-alerts.html"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
-                                            <li><a href="reviews.html"><i class="lnr lnr-star"></i> Reviews </a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h3>Jobs</h3>
-                                        <ul>
-                                            <li><a href="applications.html"><i class="lnr lnr-briefcase"></i> Applications </a></li>
-                                            <li><a href="bookmarks.html"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
-                                            <li><a href="follows.html"><i class="lnr lnr-pointer-right"></i> Follows </a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h3>Account</h3>
-                                        <ul>
-                                            <li><a href="profile.html"><i class="lnr lnr-user"></i> Profile </a></li>
-                                            <li><a href="orders.html"><i class="lnr lnr-cart"></i> Orders </a></li>
-                                            <li><a href="login-register.html"><i class="lnr lnr-exit-up"></i> Logout </a></li>
-                                        </ul>
-                                    </li>
+                  <div class="col-xl-2 col-lg-3">
+                      <div class="dashboard-sidebar">
+                          <div class="dashboard-menu">
+                              <ul class="nav">
+                                  <li>
+                                      <h3>Main</h3>
+                                      <ul>
+                                          <li><a href="{% url 'applicant:dashboard' %}"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
+                                          <li><a class="active" href="{% url 'applicant:job_alert' %}"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <h3>Jobs</h3>
+                                      <ul>
+                                          <li><a href="{% url 'applicant:applications' %}"><i class="lnr lnr-briefcase"></i> Applications </a></li>
+                                          <li><a href="{% url 'applicant:bookmarks' %}"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <h3>Account</h3>
+                                      <ul>
+                                          <li><a href="{% applicant:profile %}"><i class="lnr lnr-user"></i> Profile </a></li>
+                                          <li><a href="{% url 'logout' %}"><i class="lnr lnr-exit-up"></i> Logout </a></li>
+                                      </ul>
+                                  </li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
                     <div class="col-xl-10 col-lg-9">
 
                         <div class="dashboard-main-inner">

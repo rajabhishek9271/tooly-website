@@ -58,6 +58,9 @@ class Job(models.Model):
     keywords = models.CharField(max_length=300)
     experience = models.CharField(max_length=100)
     extra_description = models.CharField(max_length=500, blank=True, null=True)
+    onet_codes = models.CharField(max_length=50, blank=True, null=True)
+    noc_codes = models.CharField(max_length=50, blank=True, null=True)
+
 
     def __str__(self):
         return f"{self.job_title} -> {self.company.company_name}"

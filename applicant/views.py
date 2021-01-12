@@ -415,8 +415,8 @@ class ReviewsPage(TemplateView):
 class ShopPage(TemplateView):
     template_name = "shop.html"
 
-class WishlistPage(TemplateView):
-    template_name = "wishlist.html"
+class BookmarkPage(TemplateView):
+    template_name = "bookmarks.html"
 
 
 def handler404(request, exception):

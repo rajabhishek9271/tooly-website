@@ -39,7 +39,7 @@ urlpatterns = [
     path('resume_profile/', views.ResumeProfilePage.as_view(),name='resume_profile'),
     path('reviews/', views.ReviewsPage.as_view(),name='reviews'),
     path('shop/', views.ShopPage.as_view(),name='shop'),
-    path('wishlist/', views.WishlistPage.as_view(),name='wishlist'),
+    path('bookmarks/', views.BookmarkPage.as_view(),name='bookmarks'),
     path('jobs_list/<int:pk>/',views.JobDetailView.as_view(),name='job_detail'),
     path('jobs_list/', views.JobListingPage.as_view(),name='jobs_list'),
 

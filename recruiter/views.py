@@ -8,6 +8,7 @@ from django.core.paginator import Paginator
 from . import models
 from applicant.models import Application, Applicant
 from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
 
 
 
@@ -22,6 +23,7 @@ class RecruiterRegisterPage(View):
         return render(request, 'recruiter_register.html', {'form':user_form})
 
     def post(self, request, *args, **kwargs):
+
         registered = False
         if request.method == "POST":
 
@@ -57,9 +59,23 @@ class RecruiterRegisterPage(View):
 
                 new_company.save()
 
-                registered = True
+                user = authenticate(request, username=company.username, password=company.password)
+                
+                if user is not None:
+                    login(request, user)
+                
 
-        return render(request,'index.html')
+
+                registered = True
+                messages.success(request,"Your Company has been successfully registered")
+                return redirect('recruiter:home')
+
+            else:
+                messages.warning(request,"Please the Fill the correct Fields")
+                return redirect('recruiter:home')
+        else:
+            messages.warning(request,"Please the Fill the correct Fields")
+            return redirect('recruiter:home')
 
 class CompanyDetailView(DetailView):
     context_object_name = 'company'
@@ -93,7 +109,7 @@ class PostJobView(TemplateView):
 
         )
         new_job.save()
-        print(form.get('job_title'))
+
 
         return render(request,'index.html')
 
