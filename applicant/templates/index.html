@@ -50,28 +50,30 @@ Our platform makes it easy for foreign job seekers to find the perfect<br>job pr
                                     <div class="job-search-form">
                                         <form method="POST" autocomplete="off">{% csrf_token %}
                                             <div class="row row-5">
+                                              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                                  <!-- Single Field Item Start  -->
+                                                  <div class="single-field-item">
+                                                      <select id="location" class="nice-select wide location">
+                                                          <option value="nil">
+                                                            Select a country
+                                                          </option>
+                                                          <option value="USA">
+                                                            USA</option>
+                                                          <option value="Canada">Canada</option>
+                                                      </select>
+                                                  </div>
+                                                  <!-- Single Field Item End  -->
+                                              </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                                                     <!-- Single Field Item Start  -->
                                                     <div class="autocomplete single-field-item">
                                                         <i class="lnr lnr-magnifier"></i>
                                                         <input id="myInput1" type="text" placeholder="What jobs you want?" name="keyword">
+
                                                     </div>
                                                     <!-- Single Field Item End  -->
                                                 </div>
-                                                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                                    <!-- Single Field Item Start  -->
-                                                    <div class="single-field-item">
-                                                        <select id="location" class="nice-select wide location">
-                                                            <option value="0">
-                                                              <i class="lnr lnr-map-marker"></i>Looking for jobs in?
-                                                            </option>
-                                                            <option value="USA">
-                                                              USA</option>
-                                                            <option value="Canada">Canada</option>
-                                                        </select>
-                                                    </div>
-                                                    <!-- Single Field Item End  -->
-                                                </div>
+
 
                                                 <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                                                     <div class="submit-btn">

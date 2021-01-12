@@ -8,7 +8,6 @@ from django.core.paginator import Paginator
 from . import models
 from applicant.models import Application, Applicant
 from django.contrib import messages
-from django.db import IntegrityError
 
 
 

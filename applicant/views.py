@@ -14,6 +14,8 @@ from .mixins import MustBeApplicantMixin
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.db import IntegrityError
+
 
 
 # Create your views here.
@@ -149,13 +151,6 @@ class FollowsPage(TemplateView):
 class JobAlertsPage(TemplateView):
     template_name = "job-alerts.html"
 
-class JobDetailsTwoPage(TemplateView):
-    template_name = "job-details-two.html"
-
-class JobDetailsPage(TemplateView):
-    template_name = "job-details.html"
-
-
 
 class JobListingPage(View):
     def get(self, request, *args, **kwargs):
@@ -233,12 +228,12 @@ class JobDetailView(DetailView):
 
     def post(self, request, *args, **kwargs):
         user = request.user
-        job_id = (request.path[-2])
+        job_id = self.kwargs['pk']
         job = Job.objects.get(id=job_id)
-        applicant = Applicant.objects.get(user=user)
+        applicant = models.Applicant.objects.get(user=user)
 
         try:
-            application = Application.objects.create(
+            application = models.Application.objects.create(
             applicant=applicant,
             applied_job=job,
             )
@@ -248,7 +243,7 @@ class JobDetailView(DetailView):
             return redirect('applicant:home')
 
         messages.success(request, "Your Application has been submited! You can check its status in the Dashboard")
-        return render(request, 'index1.html')
+        return redirect('applicant:home')
 
 
 class JobwithMapPage(TemplateView):
