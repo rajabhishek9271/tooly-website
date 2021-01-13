@@ -440,6 +440,12 @@ img {
   margin-right: 0;
   background-color:white;
 }
+.no-gutters1{
+  margin-left: 0;
+  margin-right: 0;
+  background-color:white;
+}
+
   .no-gutters > .col, .no-gutters > [class*="col-"] {
     padding-right: 0;
     padding-left: 0;
