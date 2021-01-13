@@ -38,10 +38,8 @@ class Application(models.Model):
         required_job = Job.objects.get(id=self.applied_job.id)
         if(self.status == "Approved"):
             required_job.vaccancies -= 1
-            required_job.save()
 
             super().save(*args, **kwargs)  # Call the "real" save() method.
             return None
         required_job.no_of_applicants += 1
-        required_job.save()
         super().save(*args, **kwargs)  # Call the "real" save() method.

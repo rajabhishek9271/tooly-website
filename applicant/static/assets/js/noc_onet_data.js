@@ -21,7 +21,7 @@ function autocomplete(inp, arr) {
         /*check if the item starts with the same letters as the text field value:*/
         // if (arr[i].substr(0, val.length).toUpperCase() === val.toUpperCase()) {
           if(arr[i].toLowerCase().indexOf(val1)!=-1){
-          
+
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
@@ -2178,7 +2178,7 @@ onet_data = [
 
 $("#location").change(function(){
   var data = $(this).val();
-  if(data == "USA"){
+  if(data == "United States of America"){
     autocomplete(document.getElementById("myInput1"), onet_data);
 
   }

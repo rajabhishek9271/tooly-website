@@ -42,6 +42,8 @@ if (socket.gethostname() == 'LAPTOP-KSPUN68R'): # Add your Local Computer's host
 
     DEBUG = True
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 
 ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website.herokuapp.com']
 

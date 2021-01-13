@@ -51,7 +51,7 @@ class Job(models.Model):
     expires_on = models.DateTimeField(blank=True, null=True)
     education_level = models.CharField(max_length=100)
     vaccancies = models.IntegerField(blank=True, null=True)
-    no_of_applicants = models.IntegerField(blank=True, null=True)
+    no_of_applicants = models.IntegerField(default=0)
     salary = models.BigIntegerField()
     skills = models.CharField(max_length=300)
     about_job = models.CharField(max_length=800)

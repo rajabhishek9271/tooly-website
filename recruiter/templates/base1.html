@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/favicon.ico" type="img/x-icon" rel="shortcut icon">
+    <link href="{% static 'assets\images\Toolylogo-LOGO-1A-final.png' %}" type="img/x-icon" rel="shortcut icon">
     <!-- All css files are included here. -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="{% static 'assets/css/chosen.min.css' %}">
@@ -306,7 +306,7 @@
 
                 {% if user.is_authenticated %}
 
-                <a 
+                <a
                 href="{% url 'recruiter:post_job' %}">
                   <span class="fw-400"><i class="fas fa-sign-out-alt"></i>&nbsp;Post a job!</span>
                 </a>
@@ -606,14 +606,21 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#mselect').chosen();
-        $('#mkselect').chosen();
-        $('#msselect').chosen();
-        $('#mselectNoc').chosen();
-        $('#mselectOnet').chosen();
-        
     });
-</script>
 
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#mkselect').chosen();
+    });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#msselect').chosen();
+    });
+
+</script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

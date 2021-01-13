@@ -60,10 +60,10 @@ class RecruiterRegisterPage(View):
                 new_company.save()
 
                 user = authenticate(request, username=company.username, password=company.password)
-                
+
                 if user is not None:
                     login(request, user)
-                
+
 
 
                 registered = True
@@ -88,9 +88,12 @@ class PostJobView(TemplateView):
     def post(self, request, *args,**kwargs):
 
         form = request.POST
+        print(form.getlist('onet'))
+        print(form.getlist('noc'))
         company = models.Company.objects.get(
             user = request.user
         )
+
         new_job = models.Job.objects.create(
                 company = company,
                 job_title = form.get('job_title'),
@@ -106,12 +109,14 @@ class PostJobView(TemplateView):
                 about_job = form.get('about_job'),
                 keywords = form.get('keywords'),
                 experience = form.get('experience'),
+                noc_codes = form.getlist('noc'),
+                onet_codes = form.getlist('onet')
 
         )
         new_job.save()
 
-
-        return render(request,'index.html')
+        messages.success(request, "The job has been added successfully!")
+        return redirect('recruiter:home')
 
 
 class RecruiterHomePage(TemplateView):

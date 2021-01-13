@@ -26,9 +26,10 @@ class HomePage(TemplateView):
     def post(self, request, *args,**kwargs):
 
         form = request.POST
-
+        country = form.get('country')
         keyword = form.get('keyword')
 
+        request.session['country'] = country
         request.session['keyword'] = keyword
 
         return redirect('applicant:jobs_list')
@@ -157,10 +158,21 @@ class JobListingPage(View):
 
         try:
             keyword = request.session['keyword']
+            country = request.session['country']
         except KeyError:
             # If user did'nt search anything and pressed search button
             keyword = ""
-        jobs=Job.objects.filter(job_title__contains=keyword)
+            country = ""
+            jobs = Job.objects.all()
+
+        # Get code from keyword
+        keyword_list = keyword.split(", ")
+        code = keyword_list[-1][4:]
+
+        if country == "United States of America":
+            jobs = Job.objects.filter(company__country=country, onet_codes__contains=code)
+        elif country == "Canada":
+            jobs = Job.objects.filter(company__country=country, noc_codes__contains=code)
 
         p = Paginator(jobs,10)
         page_no = request.GET.get('page',1)
@@ -298,7 +310,7 @@ class RegisterPage(View):
         # This is the render and context dictionary to feed
         # back to the registration.html file page.
         messages.success(request, "You have been successfully registered.")
-        return render(request,'index.html')
+        return redirect('applicant:home')
 
 class MessagePage(TemplateView):
     template_name = "message.html"
