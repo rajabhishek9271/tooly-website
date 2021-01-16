@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
+{% load templatehelpers %}
 
 
 
@@ -38,7 +39,7 @@
                                 <div class="sidebar-search-form-two">
                                     <form method="GET">
                                         <div class="input-group">
-                                            <input type="text" name="title" placeholder="Search..." value="{{ keyword }}">
+                                            <input type="text" name="title" placeholder="Search..." value="{{ job_title }}">
                                             <i class="lnr lnr-magnifier"></i>
                                         </div>
                                         <button type="submit" class="ht-btn theme-btn theme-btn-two w-100">Search</button>
@@ -74,7 +75,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="common-sidebar-widget sidebar-two">
+                            <!-- <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Location</h2>
                                 <div class="sidebar-location-form">
                                     <form action="#">
@@ -84,14 +85,14 @@
                                         </div>
                                     </form>
                                 </div>
-                                <!-- <div class="sidebar-location-range mt-10">
+                                 <div class="sidebar-location-range mt-10">
                                     <div class="location-range">
                                         <label for="amount">Radius:</label>
                                         <input type="text" id="amount" readonly>
                                     </div>
                                     <div id="slider-range-min"></div>
-                                </div> -->
-                            </div>
+                                </div>
+                            </div> -->
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Salaries</h2>
                                 <div class="sidebar-salary">
@@ -105,78 +106,38 @@
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Type</h2>
                                 <ul class="sidebar-cbx-list">
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx">
-                                            <label for="type-cbx">Contract (0)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-two">
-                                            <label for="type-cbx-two"> Freelancer (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-three">
-                                            <label for="type-cbx-three">Full Time (13)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-four">
-                                            <label for="type-cbx-four">Internship (1)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-five">
-                                            <label for="type-cbx-five">Part Time (2)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-six">
-                                            <label for="type-cbx-six">Remote (2)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="type-cbx-seven">
-                                            <label for="type-cbx-seven">Temporary (2)</label>
-                                        </div>
-                                    </li>
+                                  <div class="dropdown">
+                                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                        {{ job_type }}
+                                      </button>
+                                      <ul class="dropdown-menu">
+                                        {% with params=request.GET.urlencode %}
+                                          <li><a href="{% relative_url 'Part Time' 'type' params %}">Part Time</a></li>
+                                          <li><a href="{% relative_url 'Full Time' 'type' params %}">Full Time</a></li>
+                                          <li><a href="{% relative_url 'Remote' 'type' params %}">Remote</a></li>
+                                          <li><a href="{% relative_url '' 'type' params %}">All</a></li>
+
+                                        {% endwith %}
+                                      </ul>
+                                  </div>
+
                                 </ul>
                             </div>
                             <div class="common-sidebar-widget sidebar-two">
-                                <h2 class="sidebar-title">Level</h2>
-                                <ul class="sidebar-cbx-list">
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="level-cbx">
-                                            <label for="level-cbx">Junior (1)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="level-cbx-two">
-                                            <label for="level-cbx-two"> Manager (6)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="level-cbx-three">
-                                            <label for="level-cbx-three">Professional (3)</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="filter-name-item">
-                                            <input type="checkbox" name="expericence" id="level-cbx-four">
-                                            <label for="level-cbx-four">Senior (3)</label>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <h2 class="sidebar-title">Education Level</h2>
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                      {{ job_edu }}
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      {% with params=request.GET.urlencode %}
+                                        <li><a href="{% relative_url 'High School' 'edu' params %}">High School</a></li>
+                                        <li><a href="{% relative_url 'Graduate' 'edu' params %}">Graduate</a></li>
+                                        <li><a href="{% relative_url 'Post Graduate' 'edu' params %}">Post Graduate</a></li>
+                                        <li><a href="{% relative_url '' 'edu' params %}">All</a></li>
+                                      {% endwith %}
+                                    </ul>
+                                </div>
                             </div>
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Skills</h2>
@@ -290,7 +251,7 @@
                         <div class="filter-form">
                             <div class="result-sorting">
                                 <div class="total-result">
-                                    <span class="total">({{ jobs.count }})</span>
+                                    <span class="total">({{ total_results }})</span>
                                     Jobs &amp; Vacancies
                                 </div>
                                 <div class="job-alert-form">
@@ -341,6 +302,10 @@
                         <div class="tab-content">
                             <div id="list" class="tab-pane fade show active">
                                 <div class="row">
+
+                                  {% if total_results == 0 %}
+                                    <h2>No results found</h2>
+                                  {% endif %}
 
                                   {% for job in jobs %}
 
@@ -507,155 +472,13 @@
         </div>
         <!-- Job Listing Section End -->
 
-
-        <!-- Modal Area Strat -->
-        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col-xl-12 col-lg-12">
-                            <div class="row no-gutters">
-
-                                <div class="col-lg-4">
-                                    <div class="login-register-form-area">
-                                        <div class="login-tab-menu">
-                                            <ul class="nav">
-                                                <li><a class="active show" data-toggle="tab" href="#login">Login</a></li>
-                                                <li><a data-toggle="tab" href="#register">Register</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-content">
-                                            <div id="login" class="tab-pane fade show active">
-                                                <div class="login-register-form">
-                                                    <form action="#" method="post">
-                                                        <p>Login to Tooly with your registered account</p>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="single-input">
-                                                                    <input type="text" placeholder="Username or Email" name="name">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="single-input">
-                                                                    <input type="password" placeholder="Password" name="password">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="checkbox-input">
-                                                                    <input type="checkbox" name="login-form-remember" id="login-form-remember">
-                                                                    <label for="login-form-remember">Remember me</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mb-25"><button class="ht-btn">Login</button></div>
-                                                        </div>
-                                                    </form>
-                                                    <div class="divider">
-                                                        <span class="line"></span>
-                                                        <span class="circle">or login with</span>
-                                                    </div>
-                                                    <div class="social-login">
-                                                        <ul class="social-icon">
-                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="register" class="tab-pane fade">
-                                                <div class="login-register-form">
-                                                    <form action="#" method="post">
-                                                        <p>Create Your account</p>
-                                                        <div class="row row-5">
-                                                            <div class="col-12">
-                                                                <div class="single-input">
-                                                                    <input type="text" placeholder="Your Username" name="name">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="single-input">
-                                                                    <input type="email" placeholder="Your Email Address" name="emain">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="single-input">
-                                                                    <input type="password" placeholder="Password" name="password">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="single-input">
-                                                                    <input type="password" placeholder="Confirm Password" name="conPassword">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <div class="checkbox-input">
-                                                                    <input type="checkbox" name="login-form-candidate" id="login-form-candidate">
-                                                                    <label for="login-form-candidate">I am a candidate</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <div class="checkbox-input">
-                                                                    <input type="checkbox" name="login-form-employer" id="login-form-employer">
-                                                                    <label for="login-form-employer">I am a employer</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="register-account">
-                                                                    <input id="register-terms-conditions" type="checkbox" class="checkbox" checked="" required="">
-                                                                    <label for="register-terms-conditions">I read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mb-25"><button class="ht-btn">Register</button></div>
-                                                        </div>
-                                                    </form>
-                                                    <div class="divider">
-                                                        <span class="line"></span>
-                                                        <span class="circle">or login with</span>
-                                                    </div>
-                                                    <div class="social-login">
-                                                        <ul class="social-icon">
-                                                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                                            <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="login-instruction">
-                                        <div class="login-instruction-content">
-                                            <h3 class="title">Why Login To Us</h3>
-                                            <p>It’s important for you to have an account and login in order to have full access at Tooly. We need to know your account details in order to allow work together</p>
-                                            <ul class="list-reasons">
-                                                <li class="reason">Be alerted to the latest jobs</li>
-                                                <li class="reason">Apply for jobs with a single click</li>
-                                                <li class="reason">Showcase your CV to thousands of employers</li>
-                                                <li class="reason">Keep a record of all your applications</li>
-                                            </ul>
-                                            <span class="sale-text theme-color border-color">Login today &amp; Get 15% Off Coupon for the first planning purchase</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- Modal Area End -->
-
         <script type="text/javascript" src="{% static 'applicant/assets/js/filters.js' %}"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+              $("#type").on("change", "input:checkbox", function(){
+                  $("#type").submit();
+              });
+          });
+        </script>
 
 {% endblock %}

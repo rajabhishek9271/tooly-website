@@ -175,18 +175,29 @@ class JobListingPage(View):
             country = ""
             jobs = Job.objects.all()
 
-        filter_data = request.GET.get('title')
+        form = request.GET
+        job_title = form.get('title', '')
+        job_type = form.get('type', '')
+        job_edu = form.get('edu', '')
 
-        print(filter_data)
         # Get code from keyword
         keyword_list = keyword.split(", ")
         code = keyword_list[-1][4:]
 
         if country == "United States of America":
-            jobs = Job.objects.filter(company__country=country, onet_codes__contains=code).filter(job_title__contains=filter_data)
+            jobs = Job.objects.filter(company__country=country, onet_codes__contains=code)
         elif country == "Canada":
             jobs = Job.objects.filter(company__country=country, noc_codes__contains=code)
 
+        # Additional filters from get request
+        jobs = jobs.filter(
+            job_title__icontains=job_title,
+            job_type__contains=job_type,
+            education_level__contains=job_edu
+
+        )
+
+        total_results = jobs.count()
         p = Paginator(jobs,10)
         page_no = request.GET.get('page',1)
         jobs = p.page(page_no)
@@ -202,36 +213,17 @@ class JobListingPage(View):
     # Get our new page range. In the latest versions of Django page_range returns
     # an iterator. Thus pass it to list, to make our slice possible again.
         page_range = list(p.page_range)[start_index:end_index]
-
-        # jobs = Job.objects.all()
-
-        # if request.is_ajax():
-        #     exp = request.GET.get('exp')
-        #     jobs=Job.objects.filter(job_title__contains=keyword)
-        #     total_ids=[]
-        #     for job in jobs:
-        #         total_ids.append(job.id)
-        #
-        #     if exp == ">5":
-        #         ids=[]
-        #         jobs=Job.objects.filter(job_title__contains=keyword).filter(experience__gte=5)
-        #         for job in jobs:
-        #             ids.append(job.id)
-        #
-        #         context = {
-        #             'ids':ids,
-        #             'total_ids':total_ids
-        #         }
-        #         print("returning from ajax")
-        #         return JsonResponse(context)
-
         # f = JobTitleFilter(request.GET, queryset=Job.objects.all())
-
         context = {
         'jobs':jobs,
         'keyword':keyword,
         'page_range': page_range,
+        'title': job_title,
+        'job_type':job_type,
+        'job_edu':job_edu,
+        'total_results':total_results
         # 'filter':f
+
         }
 
 
