@@ -20,8 +20,17 @@ from django.db import IntegrityError
 
 # Create your views here.
 
-class HomePage(TemplateView):
-    template_name = "index.html"
+class HomePage(View):
+    def get(self, request, *args, **kwargs):
+        curr_jobs = models.Job.objects.all().order_by('-id')[:10]
+        curr_companies = Company.objects.all().order_by('-id')[:10]
+
+        context = {
+            'curr_jobs':curr_jobs,
+            'curr_companies':curr_companies
+        }
+        return render(request, 'index.html', context)
+
 
     def post(self, request, *args,**kwargs):
 
