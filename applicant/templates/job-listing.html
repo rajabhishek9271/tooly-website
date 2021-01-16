@@ -349,7 +349,7 @@
                                                       {% if job.company.company_logo %}
                                                         <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{{ job.company.imageURL }}"></a>
                                                       {% else %}
-                                                      <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>
+                                                      <a href="{% url 'recruiter:employer_detail' job.company.id %}"><img src="{% static 'applicant/assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>
 
                                                       {% endif %}
                                                     </a>
@@ -437,7 +437,7 @@
                                                   {% if job.company.company_logo %}
                                                       <img src="{{ job.company.imageURL }}">
                                                   {% else %}
-                                                    <img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo">
+                                                    <img src="{% static 'applicant/assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo">
 
                                                   {% endif %}
                                                 </a>
@@ -652,6 +652,6 @@
         </div>
         <!-- Modal Area End -->
 
-        <script type="text/javascript" src="{% static 'assets/js/filters.js' %}"></script>
+        <script type="text/javascript" src="{% static 'applicant/assets/js/filters.js' %}"></script>
 
 {% endblock %}
