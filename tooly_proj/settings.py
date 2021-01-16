@@ -13,13 +13,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import environ
-import mimetypes
+# import mimetypes
 from urllib.parse import urlparse
 import django_heroku
 import socket
 
-
-mimetypes.add_type("text/css", ".css", True)
+#
+# mimetypes.add_type("text/css", ".css", True)
 
 env = environ.Env()
 # reading .env file
@@ -37,7 +37,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 if (socket.gethostname() == 'LAPTOP-KSPUN68R'): # Add your Local Computer's hostname TO RUN IN DEBUG MODE
 
     DEBUG = True
