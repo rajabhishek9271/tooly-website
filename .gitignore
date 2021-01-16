@@ -5,3 +5,4 @@ applicant/__pycache__
 applicant/migrations/__pycache__
 tooly_proj/.env
 __pycache__
+staticfiles

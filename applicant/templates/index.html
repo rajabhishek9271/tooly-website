@@ -187,7 +187,7 @@ and ensure that you'll be a perfect fit for them.</p>
                               {% if curr_company.company_logo %}
                                 <img src="{{ curr_company.imageURL }}" alt="">
                               {% else %}
-                                <img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="">
+                                <img src="{% static 'applicant/assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="">
                               {% endif %}
                               </a>
                             </div>
@@ -331,7 +331,7 @@ and ensure that you'll be a perfect fit for them.</p>
                                                     {% if curr_job.company.company_logo %}
                                                       <a href="{% url 'recruiter:employer_detail' curr_job.company.id %}"><img src="{{ job.company.imageURL }}"></a>
                                                     {% else %}
-                                                    <a href="{% url 'recruiter:employer_detail' curr_job.company.id %}"><img src="{% static 'assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>
+                                                    <a href="{% url 'recruiter:employer_detail' curr_job.company.id %}"><img src="{% static 'applicant/assets/images/Toolylogo-LOGO-1A-final.png' %}" alt="logo"></a>
 
                                                     {% endif %}
                                                   </a>
