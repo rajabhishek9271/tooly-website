@@ -30,11 +30,15 @@
                     <div class="col-lg-4 order-lg-1 order-2 pr-55 pr-md-15 pr-sm-15 pr-xs-15">
                         <div class="sidebar-wrapper-two mt-sm-40 mt-xs-40">
                             <div class="common-sidebar-widget sidebar-two">
+                              <!-- <form method="get">
+                                    {{ filter.form.as_p }}
+                                    <input type="submit" />
+                                </form> -->
                                 <h2 class="sidebar-title">Find a job</h2>
                                 <div class="sidebar-search-form-two">
-                                    <form method="POST"> {% csrf_token %}
+                                    <form method="GET">
                                         <div class="input-group">
-                                            <input type="text" name="keyword" placeholder="Search..." value="{{ keyword }}">
+                                            <input type="text" name="title" placeholder="Search..." value="{{ keyword }}">
                                             <i class="lnr lnr-magnifier"></i>
                                         </div>
                                         <button type="submit" class="ht-btn theme-btn theme-btn-two w-100">Search</button>

@@ -1,0 +1,211 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block body_block %}
+
+        <!-- Dashboard Content Section Start -->
+        <div class="dashboard-content-section section bg_color--5 pt-80">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="dashboard-sidebar">
+                            <div class="dashboard-menu">
+                                <ul class="nav">
+                                    <li>
+                                        <h3>Main</h3>
+                                        <ul>
+                                            <li><a class="active" href="{% url 'applicant:dashboard' %}"><i class="lnr lnr-chart-bars"></i> Dashboard </a></li>
+                                            <li><a href="{% url 'applicant:job_alert' %}"><i class="lnr lnr-envelope"></i> Job Alerts </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Jobs</h3>
+                                        <ul>
+                                            <li><a href="{% url 'applicant:applications' %}"><i class="lnr lnr-briefcase"></i> Applications </a></li>
+                                            <li><a href="{% url 'applicant:bookmarks' %}"><i class="lnr lnr-bookmark"></i> Bookmarks </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3>Account</h3>
+                                        <ul>
+                                            <li><a href="{% url 'applicant:profile' %}"><i class="lnr lnr-user"></i> Profile </a></li>
+                                            <li><a href="{% url 'logout' %}"><i class="lnr lnr-exit-up"></i> Logout </a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-9">
+                        <div class="dashboard-main-inner">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-breadcrumb-content mb-40">
+                                        <h1 style="text-transform: capitalize;">{{ request.user }}'s Dashboard</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard-overview">
+                                <div class="row">
+                                    <div class="col-xl-8 col-12">
+                                        <div class="submited-applications mb-50">
+                                            <div class="applications-heading">
+                                                <h3>Most recent Applications</h3>
+                                            </div>
+                                            <div class="applications-main-block">
+                                                <div class="applications-table">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="width-35">Applied Job</th>
+                                                                <th class="width-15">Employer</th>
+                                                                <th class="width-12">Status</th>
+                                                                <th class="width-15">Applied Date</th>
+                                                                <th class="width-23 text-right">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          {% for application in applications %}
+                                                            <tr class="application-item">
+                                                                <td class="application-job">
+                                                                    <h3><a href="{% url 'applicant:job_detail' application.applied_job.id %}">{{ application.applied_job.job_title }}
+                                                                    </a>
+                                                                  </h3>
+                                                                </td>
+
+                                                                <td class="application-employer">
+                                                                    <a class="dotted" href="{% url 'recruiter:employer_detail' application.applied_job.company.id %}">
+                                                                      {{ application.applied_job.company.company_name }}
+                                                                    </a>
+                                                                </td>
+
+                                                                <td class="status">
+                                                                    {% if application.status == "Pending" %}
+                                                                      <span class="pending">Pending</span>
+                                                                    {% elif application.status == "Rejected" %}
+                                                                      <span class="rejected">Rejected</span>
+                                                                    {% elif application.status == "Approved" %}
+                                                                      <span class="approved">Approved</span>
+                                                                    {% endif %}
+                                                                </td>
+
+                                                                <td class="application-created">
+                                                                    <span>{{ application.applied_date }}</span>
+                                                                </td>
+
+                                                                <td class="view-application text-xl-right">
+                                                                    <a href="{% url 'applicant:profile' %}" class="view-application">View Application</a>
+                                                                </td>
+                                                            </tr>
+                                                          {% endfor %}
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="application-pagination mb-30">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul class="page-pagination justify-content-center">
+                                                              {% if jobs.has_previous %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                                                {% endif %}
+
+                                                                {% for pg in page_range %}
+                                                                 {% if jobs.number == pg %}
+                                                                     <li><a href="?page={{pg}}" style="background-color: #008080; color: black" class="btn">{{pg}}</a></li>
+                                                                 {% else %}
+                                                                     <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+                                                                 {% endif %}
+                                                                {% endfor %}
+
+                                                                {% if jobs.has_next %}
+                                                                <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                                                {% endif %}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bookmark-applications mb-50">
+                                            <div class="bookmark-heading">
+                                                <h3>Bookmarked</h3>
+                                                <a href="#">View All  <i class="lnr lnr-chevron-right"></i></a>
+                                            </div>
+                                            <div class="bookmark-main-block">
+                                                <div class="bookmark-table">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr class="bookmark-item">
+                                                                <td class="bookmark-job">
+                                                                    <!-- Single Job Start  -->
+                                                                    <div class="single-job style-two border-0 p-0 bg-transparent">
+                                                                        <div class="info-top">
+                                                                            <div class="job-image ml-0 mr-10 mr-xs-0">
+                                                                                <a href="job-details.html">
+                                                                                    <img src="https://demo.hasthemes.com/jetapo-preview/jetapo/assets/images/companies_logo/logo-100/logo1.jpg" alt="logo">
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="job-info">
+                                                                                <div class="job-info-inner">
+                                                                                    <div class="job-info-top">
+                                                                                        <div class="title-name">
+                                                                                            <h5 class="job-title">
+                                                                                                <a href="#">Chief Accountant</a>
+                                                                                            </h5>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="job-meta-two flex-wrap">
+                                                                                        <div class="field-salary_from">
+                                                                                            <i class="gj-icon gj-icon-money"></i>
+                                                                                            $500 - $1,000 / month
+                                                                                        </div>
+                                                                                        <div class="field-datetime"><i class="lnr lnr-clock"></i>8 months ago</div>
+                                                                                        <div class="field-map"><i class="lnr lnr-map-marker"></i>Hanoi, Hanoi</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Single Job End -->
+                                                                </td>
+
+                                                                <td class="delete-bookmark text-xl-right">
+                                                                    <a href="#"> <i class="lnr lnr-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-12">
+                                        <div class="notifications-applications mb-20 mb-sm-80 mb-xs-80">
+                                            <div class="notifications-heading">
+                                                <h3>Notifications</h3>
+                                            </div>
+                                            <div class="notifications-main-block">
+                                                <div class="notification-listing">
+                                                    <div class="empty">
+                                                        <h3>There are no notifications</h3>
+                                                        <p>Your latest notifications will be displayed here</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard Content Section End -->
+{% endblock %}

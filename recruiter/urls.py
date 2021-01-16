@@ -12,5 +12,6 @@ urlpatterns = [
     path('post_job/', views.PostJobView.as_view(), name='post_job'),
     path('employer_detail/<int:pk>/', views.CompanyDetailView.as_view(),name='employer_detail'),
     path('recruiter_home/', views.RecruiterHomePage.as_view(),name='home'),
+    path('dashboard/', views.CompanyDashboard.as_view(), name='dashboard')
 
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

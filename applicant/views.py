@@ -16,6 +16,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator
 from django.db import IntegrityError
 
+# from .filters import JobTitleFilter
 
 
 # Create your views here.
@@ -174,12 +175,15 @@ class JobListingPage(View):
             country = ""
             jobs = Job.objects.all()
 
+        filter_data = request.GET.get('title')
+
+        print(filter_data)
         # Get code from keyword
         keyword_list = keyword.split(", ")
         code = keyword_list[-1][4:]
 
         if country == "United States of America":
-            jobs = Job.objects.filter(company__country=country, onet_codes__contains=code)
+            jobs = Job.objects.filter(company__country=country, onet_codes__contains=code).filter(job_title__contains=filter_data)
         elif country == "Canada":
             jobs = Job.objects.filter(company__country=country, noc_codes__contains=code)
 
@@ -201,30 +205,33 @@ class JobListingPage(View):
 
         # jobs = Job.objects.all()
 
-        if request.is_ajax():
-            exp = request.GET.get('exp')
-            jobs=Job.objects.filter(job_title__contains=keyword)
-            total_ids=[]
-            for job in jobs:
-                total_ids.append(job.id)
+        # if request.is_ajax():
+        #     exp = request.GET.get('exp')
+        #     jobs=Job.objects.filter(job_title__contains=keyword)
+        #     total_ids=[]
+        #     for job in jobs:
+        #         total_ids.append(job.id)
+        #
+        #     if exp == ">5":
+        #         ids=[]
+        #         jobs=Job.objects.filter(job_title__contains=keyword).filter(experience__gte=5)
+        #         for job in jobs:
+        #             ids.append(job.id)
+        #
+        #         context = {
+        #             'ids':ids,
+        #             'total_ids':total_ids
+        #         }
+        #         print("returning from ajax")
+        #         return JsonResponse(context)
 
-            if exp == ">5":
-                ids=[]
-                jobs=Job.objects.filter(job_title__contains=keyword).filter(experience__gte=5)
-                for job in jobs:
-                    ids.append(job.id)
-
-                context = {
-                    'ids':ids,
-                    'total_ids':total_ids
-                }
-                print("returning from ajax")
-                return JsonResponse(context)
+        # f = JobTitleFilter(request.GET, queryset=Job.objects.all())
 
         context = {
         'jobs':jobs,
         'keyword':keyword,
-        'page_range': page_range
+        'page_range': page_range,
+        # 'filter':f
         }
 
 

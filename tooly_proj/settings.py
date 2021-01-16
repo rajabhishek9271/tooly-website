@@ -42,7 +42,7 @@ if (socket.gethostname() == 'LAPTOP-KSPUN68R' or socket.gethostname() == 'DESKTO
 
     DEBUG = True
 
-DEBUG_PROPAGATE_EXCEPTIONS = True
+# DEBUG_PROPAGATE_EXCEPTIONS = True
 
 
 ALLOWED_HOSTS = ['127.0.0.1', 'tooly-website.herokuapp.com']
@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'applicant',
     'recruiter',
-
     'django.contrib.sites',
     'allauth',
     'allauth.account',

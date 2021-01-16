@@ -118,6 +118,10 @@ class PostJobView(TemplateView):
         messages.success(request, "The job has been added successfully!")
         return redirect('recruiter:home')
 
+class CompanyDashboard(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'company_dashboard.html')
+
 
 class RecruiterHomePage(TemplateView):
     template_name = 'index1.html'
