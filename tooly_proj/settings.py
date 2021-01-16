@@ -40,7 +40,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = False
 if (socket.gethostname() == 'LAPTOP-KSPUN68R'): # Add your Local Computer's hostname TO RUN IN DEBUG MODE
 
-    DEBUG = True
+    DEBUG = False
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 

@@ -1,0 +1,4 @@
+function showModal(){
+  $('#modal').modal();
+
+}
