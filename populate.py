@@ -70,7 +70,7 @@ def get_data():
             about_job=fakegen.text(),
             keywords=skills_str,
             experience=fakegen.random_number(digits=1),
-            onet_codes=['15-1134.00', '15-1132.00']
+            onet_codes=['11-1021.00']
 
         )[0]
 

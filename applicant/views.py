@@ -179,6 +179,16 @@ class JobListingPage(View):
         job_title = form.get('title', '')
         job_type = form.get('type', '')
         job_edu = form.get('edu', '')
+        job_exp = form.get('exp', '')
+        jobs_sort = form.get('sort_by', '')
+
+        exp_min = 0
+        exp_max = 25
+
+        if job_exp!='':
+            exp_min = int(job_exp[0])
+            exp_max = int(job_exp[2:])
+
 
         # Get code from keyword
         keyword_list = keyword.split(", ")
@@ -193,9 +203,16 @@ class JobListingPage(View):
         jobs = jobs.filter(
             job_title__icontains=job_title,
             job_type__contains=job_type,
-            education_level__contains=job_edu
-
+            education_level__contains=job_edu,
+            experience__lte=exp_max,
+            experience__gte=exp_min,
         )
+
+        if(jobs_sort != ''):
+
+            jobs = jobs.order_by(
+                jobs_sort
+            )
 
         total_results = jobs.count()
         p = Paginator(jobs,10)
@@ -221,7 +238,8 @@ class JobListingPage(View):
         'title': job_title,
         'job_type':job_type,
         'job_edu':job_edu,
-        'total_results':total_results
+        'total_results':total_results,
+        'job_exp':job_exp
         # 'filter':f
 
         }
