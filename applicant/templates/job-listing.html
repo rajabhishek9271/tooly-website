@@ -396,19 +396,19 @@
                                     <div class="col-12">
                                         <ul class="page-pagination">
                                           {% if jobs.has_previous %}
-                                            <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                            <li><a href="{% relative_url jobs.previous_page_number 'page' request.GET.urlencode %}"><i class="fa fa-angle-left"></i></a></li>
                                             {% endif %}
 
                                             {% for pg in page_range %}
                                              {% if jobs.number == pg %}
-                                                 <li><a href="?page={{pg}}" style="background-color: #008080; color: black" class="btn">{{pg}}</a></li>
+                                                 <li><a href="{% relative_url pg 'page' request.GET.urlencode %}" style="background-color: #008080; color: black" class="btn">{{pg}}</a></li>
                                              {% else %}
-                                                 <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+                                                 <li><a href="{% relative_url pg 'page' request.GET.urlencode %}" class="btn">{{pg}}</a></li>
                                              {% endif %}
                                             {% endfor %}
 
                                             {% if jobs.has_next %}
-                                            <li><a href="{% url 'applicant:jobs_list' %}?page={{ jobs.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                            <li><a href="{% relative_url jobs.next_page_number 'page' request.GET.urlencode %}"><i class="fa fa-angle-right"></i></a></li>
                                             {% endif %}
 
                                         </ul>
