@@ -181,6 +181,7 @@ class JobListingPage(View):
         job_edu = form.get('edu', '')
         job_exp = form.get('exp', '')
         jobs_sort = form.get('sort_by', '')
+        jobs_skill = form.get('skill', '')
 
         exp_min = 0
         exp_max = 25
@@ -206,6 +207,7 @@ class JobListingPage(View):
             education_level__contains=job_edu,
             experience__lte=exp_max,
             experience__gte=exp_min,
+            skills__contains=jobs_skill
         )
 
         if(jobs_sort != ''):
@@ -231,6 +233,14 @@ class JobListingPage(View):
     # an iterator. Thus pass it to list, to make our slice possible again.
         page_range = list(p.page_range)[start_index:end_index]
         # f = JobTitleFilter(request.GET, queryset=Job.objects.all())
+        all_skills = {
+            'Python':'Python',
+            'Django':'Django',
+            'Programming':'Programming',
+            'Cooking':'Cooking',
+            'C':'C',
+
+        }
         context = {
         'jobs':jobs,
         'keyword':keyword,
@@ -239,8 +249,9 @@ class JobListingPage(View):
         'job_type':job_type,
         'job_edu':job_edu,
         'total_results':total_results,
-        'job_exp':job_exp
-        # 'filter':f
+        'job_exp':job_exp,
+        'job_skill':jobs_skill,
+        'all_skills':all_skills,
 
         }
 

@@ -71,6 +71,9 @@ class Job(models.Model):
     def get_category(self):
         return self.job_category.split(", ")
 
+    def get_date(self):
+        return self.posted_on.date()
+
 
 # TODO: Check its functionality
     def is_expired(self):
