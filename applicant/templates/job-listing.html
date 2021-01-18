@@ -3,6 +3,26 @@
 {% block body_block %}
 {% load templatehelpers %}
 
+<style media="screen">
+  .sort-area{
+    padding-left: 20%;
+  }
+
+  .dropdown>.btn{
+    color: white;
+  }
+
+  .layout-switcher > .nav{
+    padding-left: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+   .sort-area{
+    padding-left:0;
+  }
+}
+</style>
+
 
 
         <!-- Breadcrumb Section Start -->
@@ -48,21 +68,27 @@
                             </div>
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Experience</h2>
+                                    <ul class="sidebar-tag">
+                                      {% for exp in all_exps %}
+                                        {% if job_exp == exp %}
+                                          <li><a style="background: #008080; color:white;"
+                                            href="{% relative_url '' 'exp' request.GET.urlencode %}">
+                                            {{ exp }}&ensp;<i class="fas fa-times-circle"></i>
+                                          </a>
 
-                                    <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                          {{ job_exp }}
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                          {% with params=request.GET.urlencode %}
-                                            <li><a href="{% relative_url '5-50' 'exp' params %}">> 5 Years</a></li>
-                                            <li><a href="{% relative_url '3-5' 'exp' params %}">3-5 Years</a></li>
-                                            <li><a href="{% relative_url '1-3' 'exp' params %}">1-3 Years</a></li>
-                                            <li><a href="{% relative_url '' 'exp' params %}">All</a></li>
 
-                                          {% endwith %}
-                                        </ul>
-                                      </div>
+
+                                          </li>
+                                        {% else %}
+                                          <li><a href="{% relative_url exp 'exp' request.GET.urlencode %}">
+                                            {{ exp }} years</a>
+                                          </li>
+
+                                        {% endif %}
+
+                                      {% endfor %}
+
+                                    </ul>
                             </div>
                             <!-- <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Location</h2>
@@ -95,38 +121,55 @@
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Type</h2>
                                 <ul class="sidebar-cbx-list">
-                                  <div class="dropdown">
-                                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                        {{ job_type }}
-                                      </button>
-                                      <ul class="dropdown-menu">
-                                        {% with params=request.GET.urlencode %}
-                                          <li><a href="{% relative_url 'Part Time' 'type' params %}">Part Time</a></li>
-                                          <li><a href="{% relative_url 'Full Time' 'type' params %}">Full Time</a></li>
-                                          <li><a href="{% relative_url 'Remote' 'type' params %}">Remote</a></li>
-                                          <li><a href="{% relative_url '' 'type' params %}">All</a></li>
 
-                                        {% endwith %}
-                                      </ul>
-                                  </div>
+                                <ul class="sidebar-tag">
+                                  {% for type in all_types %}
+                                    {% if job_type == type %}
+                                      <li><a style="background: #008080; color:white;"
+                                        href="{% relative_url '' 'type' request.GET.urlencode %}">
+                                        {{ type }}&ensp;<i class="fas fa-times-circle"></i>
+                                      </a>
+
+
+
+                                      </li>
+                                    {% else %}
+                                      <li><a href="{% relative_url type 'type' request.GET.urlencode %}">
+                                        {{ type }}</a>
+                                      </li>
+
+                                    {% endif %}
+
+                                  {% endfor %}
+
+                                </ul>
 
                                 </ul>
                             </div>
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Education Level</h2>
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                      {{ job_edu }}
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      {% with params=request.GET.urlencode %}
-                                        <li><a href="{% relative_url 'High School' 'edu' params %}">High School</a></li>
-                                        <li><a href="{% relative_url 'Graduate' 'edu' params %}">Graduate</a></li>
-                                        <li><a href="{% relative_url 'Post Graduate' 'edu' params %}">Post Graduate</a></li>
-                                        <li><a href="{% relative_url '' 'edu' params %}">All</a></li>
-                                      {% endwith %}
-                                    </ul>
-                                </div>
+
+                                <ul class="sidebar-tag">
+                                  {% for edu in all_edu %}
+                                    {% if job_edu == edu %}
+                                      <li><a style="background: #008080; color:white;"
+                                        href="{% relative_url '' 'edu' request.GET.urlencode %}">
+                                        {{ edu }}&ensp;<i class="fas fa-times-circle"></i>
+                                      </a>
+
+
+
+                                      </li>
+                                    {% else %}
+                                      <li><a href="{% relative_url edu 'edu' request.GET.urlencode %}">
+                                        {{ edu }}</a>
+                                      </li>
+
+                                    {% endif %}
+
+                                  {% endfor %}
+
+                                </ul>
                             </div>
                             <div class="common-sidebar-widget sidebar-two">
                                 <h2 class="sidebar-title">Skills</h2>
@@ -291,28 +334,30 @@
                                             </select>
                                         </form>
                                     </div> -->
-
-                                    <div class="dropdown">
+                                    <div class="row sort-area">
+                                      <div class="dropdown">
                                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                                           Sort By
                                         </button>
                                         <ul class="dropdown-menu">
                                           {% with params=request.GET.urlencode %}
-                                            <li><a href="{% relative_url 'expires_on' 'sort_by' params %}">Expiring Date</a></li>
-                                            <li><a href="{% relative_url 'salary' 'sort_by' params %}">Salary(Ascending)</a></li>
-                                            <li><a href="{% relative_url '-salary' 'sort_by' params %}">Salary(Descending)</a></li>
-                                            <li><a href="{% relative_url '' 'sort_by' params %}">Most Recently Posted</a></li>
+                                          <li><a href="{% relative_url 'expires_on' 'sort_by' params %}">Expiring Date</a></li>
+                                          <li><a href="{% relative_url 'salary' 'sort_by' params %}">Salary(Ascending)</a></li>
+                                          <li><a href="{% relative_url '-salary' 'sort_by' params %}">Salary(Descending)</a></li>
+                                          <li><a href="{% relative_url '' 'sort_by' params %}">Most Recently Posted</a></li>
 
 
                                           {% endwith %}
                                         </ul>
-                                    </div>
+                                      </div>
 
-                                    <div class="layout-switcher">
+                                      <div class="layout-switcher">
                                         <ul class="nav">
-                                            <li><a class="active show" data-toggle="tab" href="#list"><i class="fa fa-list"></i></a></li>
-                                            <li><a data-toggle="tab" href="#grid"><i class="fa fa-th"></i></a></li>
+                                          <li><a class="active show" data-toggle="tab" href="#list"><i class="fa fa-list"></i></a></li>
+                                          <li><a data-toggle="tab" href="#grid"><i class="fa fa-th"></i></a></li>
                                         </ul>
+                                      </div>
+
                                     </div>
                                 </div>
                             </div>

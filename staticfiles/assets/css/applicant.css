@@ -58,10 +58,6 @@
 /*-- Google Font --*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Work+Sans:wght@400;500;600;700;900&display=swap");
 /*-- Common Style --*/
-
-
-
-
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -223,7 +219,7 @@ img {
   border-left: 1px solid #e5e5e5; }
 
 .nice-select .list {
-  z-index: 100; }
+  z-index: 999; }
 
 .fix {
   overflow: hidden; }
