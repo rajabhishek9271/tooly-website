@@ -33,13 +33,21 @@ class Application(models.Model):
     def __str__(self):
         return f"{self.applicant.user.first_name} -> {self.applied_job.job_title}"
 
-    def save(self, *args, **kwargs):
-
+    def inc_applicant(self, *args, **kwargs):
         required_job = Job.objects.get(id=self.applied_job.id)
-        if(self.status == "Approved"):
-            required_job.vaccancies -= 1
-
-            super().save(*args, **kwargs)  # Call the "real" save() method.
-            return None
         required_job.no_of_applicants += 1
-        super().save(*args, **kwargs)  # Call the "real" save() method.
+        required_job.save()
+
+        return None
+
+    # def save(self, *args, **kwargs):
+    #
+    #     required_job = Job.objects.get(id=self.applied_job.id)
+    #     if(self.status == "Approved"):
+    #         required_job.vaccancies -= 1
+    #
+    #         super().save(*args, **kwargs)  # Call the "real" save() method.
+    #         return None
+    #     required_job.no_of_applicants += 1
+    #     required_job.save()
+    #     super().save(*args, **kwargs)  # Call the "real" save() method.

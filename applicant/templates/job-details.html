@@ -18,16 +18,20 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        You can review your Profile before applying
-        <a href="{% url 'applicant:profile' %}" type="button" class="btn btn-primary" name="button">Preview</a>
-        <br>
-        OR
-        <br>
-        <form method="POST">
-          {% csrf_token %}
-          <input type="submit" class="btn btn-primary" name="button" value="Submit Your Application">
+        <div class="text-center">
+          Are you sure you want to apply? <br>
+          You can review your Profile before applying
+          <br><br>
+          <a href="{% url 'applicant:profile' %}" type="button" class="btn btn-primary" name="button">Preview</a>
+          <br>
+          OR
+          <br>
+          <form method="POST">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" name="button" value="Submit Your Application">
 
-        </form>
+          </form>
+        </div>
       </div>
 
       <!-- Modal footer -->

@@ -199,6 +199,9 @@ class JobListingPage(View):
             jobs = Job.objects.filter(company__country=country, onet_codes__contains=code)
         elif country == "Canada":
             jobs = Job.objects.filter(company__country=country, noc_codes__contains=code)
+        else: # No country provided
+            messages.info(request, "Please select a country to continue.")
+            return redirect('applicant:home')
 
         # Additional filters from get request
         jobs = jobs.filter(
@@ -286,11 +289,12 @@ class JobDetailView(DetailView):
             applicant=applicant,
             applied_job=job,
             )
-            application.save()
         except IntegrityError:
             messages.warning(request, "You have already applied to this job! You can check its status in the Dashboard")
             return redirect('applicant:home')
 
+        application.save()
+        application.inc_applicant()
         messages.success(request, "Your Application has been submited! You can check its status in the Dashboard")
         return redirect('applicant:home')
 

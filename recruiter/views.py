@@ -88,8 +88,6 @@ class PostJobView(TemplateView):
     def post(self, request, *args,**kwargs):
 
         form = request.POST
-        print(form.getlist('onet'))
-        print(form.getlist('noc'))
         company = models.Company.objects.get(
             user = request.user
         )
@@ -103,7 +101,6 @@ class PostJobView(TemplateView):
                 education_level = form.get('education_level'),
                 posted_on = form.get('posted_on'),
                 vaccancies = form.get('vaccancies'),
-                no_of_applicants = form.get('no_of_applicants'),
                 salary = form.get('salary'),
                 skills = form.get('skills'),
                 about_job = form.get('about_job'),
