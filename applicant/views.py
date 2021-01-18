@@ -244,17 +244,38 @@ class JobListingPage(View):
             'C':'C',
 
         }
+
+        all_exps = {
+            '1-3':'1-3',
+            '3-5':'3-5',
+            '5-50':'5-50',
+        }
+
+        all_types = {
+            'Part Time':'Part Time',
+            'Full Time':'Full Time',
+            'Remote':'Remote',
+        }
+
+        all_edu = {
+            'High School':'High School',
+            'Graduate':'Graduate',
+            'Post Graduate':'Post Graduate',
+        }
         context = {
-        'jobs':jobs,
-        'keyword':keyword,
-        'page_range': page_range,
-        'title': job_title,
-        'job_type':job_type,
-        'job_edu':job_edu,
-        'total_results':total_results,
-        'job_exp':job_exp,
-        'job_skill':jobs_skill,
-        'all_skills':all_skills,
+            'jobs':jobs,
+            'keyword':keyword,
+            'page_range': page_range,
+            'title': job_title,
+            'job_type':job_type,
+            'job_edu':job_edu,
+            'total_results':total_results,
+            'job_exp':job_exp,
+            'job_skill':jobs_skill,
+            'all_skills':all_skills,
+            'all_exps':all_exps,
+            'all_types':all_types,
+            'all_edu':all_edu
 
         }
 
