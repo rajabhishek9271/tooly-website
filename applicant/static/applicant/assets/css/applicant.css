@@ -56,7 +56,9 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 /*-- Google Font --*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Work+Sans:wght@400;500;600;700;900&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto Condensed:wght@300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto Condensed&family=Noto+Sans+JP:wght@300&family=Noto+Sans+KR:wght@300&family=PT+Sans&family=Roboto Condensed:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto Condensed&family=Noto+Sans+JP:wght@300&family=Noto+Sans+KR:wght@300;900&family=PT+Sans&family=Roboto Condensed:wght@300&display=swap');
 /*-- Common Style --*/
 
 
@@ -77,7 +79,7 @@ body {
   font-style: normal;
   font-weight: normal;
   visibility: visible;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #444444;
   position: relative; }
   body[data-rtl="rtl"] {
@@ -85,7 +87,7 @@ body {
     text-align: right; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #333333;
   font-weight: 400;
   margin-top: 0;
@@ -1898,7 +1900,7 @@ body.template-color-4 {
       line-height: 20px;
       font-weight: 500;
       letter-spacing: 0.25px;
-      font-family: "Volkorn";
+      font-family: "Roboto Condensed";
       color: #ffffff;
       display: block;
       padding: 20px 0;
@@ -1931,7 +1933,7 @@ body.template-color-4 {
         .main-menu > ul > li > a .icon-arrow::before {
           content: "\e874";
           display: inline-block;
-          font-family: "Linearicons-Free";
+          font-family: "Roboto Condensed";
           line-height: 1;
           font-weight: 600; }
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2021,7 +2023,7 @@ body.template-color-4 {
     .sub-menu li:last-child {
       margin-bottom: 0; }
     .sub-menu li a {
-      font-family: "Volkorn"/*"Work Sans", sans-serif;*/
+      font-family: "Roboto Condensed"/*"Work Sans", sans-serif;*/
       color: #333333;
       display: block;
       font-size: 15px;
@@ -2033,7 +2035,7 @@ body.template-color-4 {
         .sub-menu li a .icon-arrow:before {
           content: "\e876";
           display: inline-block;
-          font-family: "Linearicons-Free"; }
+          font-family: "Roboto Condensed"; }
     .sub-menu li:first-child a {
       border-top: 0; }
     .sub-menu li.active > a {
@@ -2060,7 +2062,7 @@ body.template-color-4 {
 /*-- Header Right --*/
 .btn-action-wrap .item {
   display: -webkit-box;
-  font-family: "Volkorn";
+  font-family: "Roboto Condensed";
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
@@ -4075,7 +4077,7 @@ body.template-color-4 {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         content: "\e874";
-        font-family: 'Linearicons-Free';
+        font-family: 'Roboto Condensed';
         font-size: 12px;
         color: #333333;
         font-weight: 600;
@@ -4208,7 +4210,7 @@ body.template-color-4 {
     cursor: pointer; }
     .action-advance span::after {
       content: "\e873";
-      font-family: 'Linearicons-Free';
+      font-family: 'Roboto Condensed';
       margin-left: 14px; }
 
 .action-after .btn-open-form {
@@ -7536,7 +7538,7 @@ body.template-color-4 {
         top: 0;
         display: block;
         content: "\";
-        font-family: "Linearicons-Free";
+        font-family: "Roboto Condensed";
         font-size: 12px;
         line-height: 20px;
         opacity: 0;
